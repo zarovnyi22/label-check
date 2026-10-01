@@ -55,6 +55,21 @@ services:
       db:
         condition: service_healthy
 
+  # One-off scripts that need the internet (make spike): the dev image, the repo mounted, the
+  # default network and the real keys from .env. Never part of `make test`.
+  tools:
+    profiles: ["tools"]
+    build:
+      context: .
+      target: dev
+    env_file: .env
+    environment:
+      # Scripts import `app` (settings): the repo root must be on the path.
+      PYTHONPATH: /src
+    volumes:
+      - .:/src
+    command: ["python", "-u", "scripts/spike_vision.py", "--help"]
+
 networks:
   offline:
     internal: true
