@@ -37,3 +37,7 @@ asyncio_default_fixture_loop_scope = "function"
 testpaths = ["tests"]
 # The project is not installed (package = false), so tests import `app` from the repo root.
 pythonpath = ["."]
+
+[tool.ruff.lint.per-file-ignores]
+# Verbatim model answers: long lines are the data.
+"tests/spike_outputs.py" = ["E501"]
