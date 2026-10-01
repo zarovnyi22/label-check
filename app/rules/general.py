@@ -43,6 +43,9 @@ def _readable(text: str | None) -> bool:
     return any(c.isalnum() for c in rest)
 
 
+ENERGY_BOTH_UK = "енергетична цінність (потрібні і кДж, і ккал)"
+
+
 def check_label_missing(extraction: LabelExtraction, facts: NutritionFacts | None) -> list[Finding]:
     """LABEL-MISSING: the ingredient list and the nutrition table are on the photos and the
     table's mandatory fields are readable."""
@@ -66,7 +69,9 @@ def check_label_missing(extraction: LabelExtraction, facts: NutritionFacts | Non
             "Таблиці поживної цінності на фото не знайдено — сфотографуйте таблицю.",
         )
     elif unreadable := facts.unreadable():
-        names = ", ".join(NUTRIENT_NAMES_UK[n] for n in unreadable)
+        names = ", ".join(
+            ENERGY_BOTH_UK if n == "energy" else NUTRIENT_NAMES_UK[n] for n in unreadable
+        )
         table = finding(
             "LABEL-MISSING",
             "nutrition",

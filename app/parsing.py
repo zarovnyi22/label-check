@@ -155,11 +155,13 @@ _LIST_END_RE = re.compile(
     r"маса\s+нетто|може\s+містити|може\s+вміщувати|"
     r"storage|store(?!\w)|manufacturer|produced\s+by|best\s+before|"
     r"nutrition(?:al)?\s+(?:information|facts|values?|declaration)|"
-    r"may\s+contain|net\s+weight|"
-    r"(?-i:ДСТУ|ТУ\s+У)"
+    r"may\s+contain|net\s+weight"
     r")",
     re.I,
 )
+# A standard ends the list only where a sentence starts: "пластівці (ДСТУ 4673:2006), цукор"
+# names the standard of one ingredient, and cutting there hid "цукор" (RR1 #1).
+_STANDARD_END_RE = re.compile(r"(?:^|(?<=[.;\n]))\s*\**(?:ДСТУ|ТУ\s+У)(?!\w)")
 _WORD_RE = re.compile(r"[^\W\d_]+(?:['’ʼ][^\W\d_]+)*")
 _STRIP = " \t\n.:;,-–—"
 _NEXT_WORD_RE = re.compile(r"\s+([^\W\d_])")
@@ -252,11 +254,12 @@ def split_list_end(marked: str) -> tuple[str, str | None]:
     prefix = _LIST_PREFIX_RE.match(marked)
     if prefix:
         marked = marked[prefix.end() :]
-    m = _LIST_END_RE.search(marked)
-    if not m:
+    starts = [m.start() for r in (_LIST_END_RE, _STANDARD_END_RE) if (m := r.search(marked))]
+    if not starts:
         return marked, None
-    tail = marked[m.start() :].strip()
-    return marked[: m.start()], tail or None
+    end = min(starts)
+    tail = marked[end:].strip()
+    return marked[:end], tail or None
 
 
 def parse_ingredients(marked: str | None) -> Ingredients:

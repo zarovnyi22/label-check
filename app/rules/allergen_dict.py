@@ -42,10 +42,15 @@ TERMS: dict[AllergenCategory, list[str]] = {
         r"моцарел\w*",
         r"пармезан\w*",
         r"масл\w*\s+вершков\w*",
+        r"масл\w*\s+топлен\w*",
+        r"топлен\w*\s+масл\w*",
+        r"пахт\w*",
+        r"сколотин\w*",
         r"milk\w*",
         r"cream\w*",
         r"butter\w*",
         r"whey",
+        r"ghee",
         r"casein\w*",
         r"lactose",
         r"cheese\w*",
@@ -58,6 +63,8 @@ TERMS: dict[AllergenCategory, list[str]] = {
         r"меланж\w*",
         r"альбумін\w*",
         r"лізоцим\w*",
+        rf"жовт(?:ок|к(?:а|и|ів|ом|ами)){_END}",
+        r"yolks?" + _END,
         r"eggs?" + _END,
         r"albumen",
     ],
@@ -76,6 +83,9 @@ TERMS: dict[AllergenCategory, list[str]] = {
         r"манн\w*\s+круп\w*",
         r"манк\w*",
         r"булгур\w*",
+        r"перлов\w*",
+        rf"солод(?:у|ом|ов\w*)?{_END}",  # barley malt; not "солодкий"
+        r"сухар\w*",  # breadcrumbs: wheat as a rule
         r"глютен\w*",
         r"клейковин\w*",
         r"wheat\w*",
@@ -83,6 +93,8 @@ TERMS: dict[AllergenCategory, list[str]] = {
         r"barley",
         r"oats?" + _END,
         r"oatmeal",
+        r"malt" + _END,
+        r"breadcrumbs?",
         r"spelt",
         r"kamut",
         r"gluten\w*",
@@ -110,12 +122,21 @@ TERMS: dict[AllergenCategory, list[str]] = {
         r"анчоус\w*",
         r"тріск\w*",
         r"минта\w*",
+        r"сардин\w*",
+        rf"хек(?:а|ом|у)?{_END}",
+        r"шпрот\w*",
+        r"тилапі\w*",
+        r"пангасіус\w*",
         r"форел\w*",
         r"fish\w*",
         r"anchov\w*",
         r"salmon",
         r"tuna",
         r"cod" + _END,
+        r"sardines?" + _END,
+        r"hake",
+        r"mackerel",
+        r"herring\w*",
     ],
     "peanuts": [
         r"арахіс\w*",
@@ -142,6 +163,9 @@ TERMS: dict[AllergenCategory, list[str]] = {
         r"пекан\w*",
         r"фісташк\w*",
         r"макадамі\w*",
+        r"марципан\w*",  # almonds
+        rf"нуг(?:а|и|ою|і){_END}",  # nougat: nuts as a rule
+        r"пралін\w*",
         r"nuts?" + _END,
         r"almonds?" + _END,
         r"hazelnuts?" + _END,
@@ -150,6 +174,7 @@ TERMS: dict[AllergenCategory, list[str]] = {
         r"pecans?" + _END,
         r"pistachios?" + _END,
         r"macadamia\w*",
+        r"marzipan",
     ],
     "celery": [r"селер\w*", r"celery", r"celeriac"],
     "mustard": [r"гірчиц\w*", r"гірчичн\w*", r"mustard\w*"],
@@ -160,7 +185,7 @@ TERMS: dict[AllergenCategory, list[str]] = {
         r"сульфіт\w*",
         r"бісульфіт\w*",
         r"метабісульфіт\w*",
-        r"піросульфіт\w*",
+        r"п[іи]росульфіт\w*",
         rf"[eе][\s-]?22[0-8]{_END}",
         r"sul(?:ph|f)ites?" + _END,
         r"sul(?:ph|f)ur\s+dioxide",
@@ -205,6 +230,35 @@ EXCLUSIONS: list[str] = [
     r"(?P<x>сульфітн\w*)[\s-]+аміачн\w*",
     r"(?P<x>sul(?:ph|f)ite)\s+ammonia",
 ]
+
+# "Глютен" is not the cereal's name: Annex II needs the cereal named (SPEC §2), so these
+# terms are found (the product has cereals) but never make ALG-EMPH or ALG-SPEC-MISSING pass.
+GLUTEN_RE = re.compile(r"(?<!\w)(?:глютен|клейковин|gluten)", re.I)
+
+# Annex II names the cereal and the nut: the recipe's wheat is not declared by the label's
+# oats (RR1 #5). Subtype -> stems; a term with no subtype ("горіхи", "глютен") names none.
+SUBTYPES: dict[AllergenCategory, dict[str, str]] = {
+    "cereals": {
+        "пшениця": r"пшени\w*|спельт\w*|камут\w*|манн\w*\s+круп\w*|манк\w*|булгур\w*|wheat\w*|"
+        r"spelt|kamut",
+        "жито": r"жит\w*|rye",
+        "ячмінь": r"ячм\w*|ячн\w*|перлов\w*|солод(?:у|ом|ов\w*)?(?!\w)|barley|malt(?!\w)",
+        "овес": r"овес|овс\w*|вівс\w*|oats?|oatmeal",
+    },
+    "nuts": {
+        "мигдаль": r"мигдал\w*|марципан\w*|almonds?|marzipan",
+        "фундук": r"фундук\w*|ліщин\w*|hazelnuts?",
+        "волоський горіх": r"волоськ\w*|walnuts?",
+        "кеш'ю": r"кеш\W?ю|cashews?",
+        "пекан": r"пекан\w*|pecans?",
+        "фісташки": r"фісташк\w*|pistachios?",
+        "макадамія": r"макадамі\w*|macadamia\w*",
+    },
+}
+SUBTYPE_PATTERNS: dict[AllergenCategory, dict[str, re.Pattern[str]]] = {
+    category: {name: re.compile(rf"(?<!\w)(?:{stems})", re.I) for name, stems in subtypes.items()}
+    for category, subtypes in SUBTYPES.items()
+}
 
 CATEGORY_NAMES_UK: dict[AllergenCategory, str] = {
     "cereals": "злаки з глютеном",

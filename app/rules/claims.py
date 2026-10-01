@@ -20,38 +20,43 @@ from app.rules.nutrition import NutritionFacts, at_least, fmt
 from app.schemas import Finding, LabelExtraction, ProductSpec, Status, TextItem
 
 _END = r"(?!\w)"
+# "без цукру та жиру", "без солі, цукру": other nutrients listed before this one (RR1 #3)
+_LISTED = r"(?:\w+(?:,| та| і| й| and|,? or) )*"
 
 CLAIM_PATTERNS: dict[str, list[str]] = {
     "sugar_free": [
-        r"без цукр\w*",
-        r"не містить цукр\w*",
-        r"0 ?% цукр\w*",
-        r"sugar free",
-        rf"no sugars?{_END}(?! added)",
-        r"0 ?% sugars?",
+        rf"без {_LISTED}цукр\w*",
+        rf"не містить {_LISTED}цукр\w*",
+        r"цукр\w* не містить",
+        r"0 ?(?:%|г|g) цукр\w*",
+        rf"(?:{_LISTED}sugar|zero sugars?) free",
+        rf"(?:no|zero) {_LISTED}sugars?{_END}(?! added)",
+        r"0 ?(?:%|g) (?:of )?sugars?",
     ],
-    "low_sugar": [r"(?<!дуже )низьк\w* вміст\w* цукр\w*", r"low sugars?"],
+    "low_sugar": [r"(?<!дуже )низьк\w* вміст\w* цукр\w*", r"low (?:in )?sugars?"],
     "no_added_sugar": [
-        r"без (?:додан\w*|додаванн\w*) цукр\w*",
+        rf"без {_LISTED}(?:додан\w*|додаванн\w*) цукр\w*",
         r"не містить додан\w* цукр\w*",
         r"no added sugars?",
         r"no sugars? added",
         r"without added sugars?",
     ],
-    "protein_source": [r"джерел\w* (?:білк\w*|протеїн\w*)", r"source of protein"],
+    "protein_source": [r"джерел\w* (?:білк\w*|протеїн\w*)", r"(?:good )?source of protein"],
     "protein_high": [
         r"(?:висок\w* вміст\w*|багат\w* на) (?:білк\w*|протеїн\w*)",
         r"high (?:in )?protein",
         r"rich in protein",
     ],
-    "fat_low": [r"(?<!дуже )низьк\w* вміст\w* жир\w*", r"low fat"],
+    "fat_low": [r"(?<!дуже )низьк\w* вміст\w* жир\w*", r"low (?:in )?fat"],
     "fat_free": [
-        r"без жир\w*",
+        rf"без {_LISTED}жир\w*",
         r"знежирен\w*",
-        r"не містить жир\w*",
-        r"0 ?% жир\w*",
-        r"fat free",
-        r"0 ?% fat",
+        rf"не містить {_LISTED}жир\w*",
+        r"жир\w* не містить",
+        r"0 ?(?:%|г|g) жир\w*",
+        rf"(?:{_LISTED}fat|zero fat) free",
+        r"(?:no|zero) fat" + _END,
+        r"0 ?(?:%|g) (?:of )?fat",
     ],
     "satfat_low": [r"низьк\w* вміст\w* насичен\w* жир\w*", r"low (?:in )?saturated fat"],
     "fibre_source": [
@@ -61,12 +66,16 @@ CLAIM_PATTERNS: dict[str, list[str]] = {
     "fibre_high": [
         r"(?:висок\w* вміст\w*|багат\w* на) (?:клітковин\w*|харчов\w* волок\w*)",
         r"high (?:in )?fib(?:re|er)",
+        r"rich in fib(?:re|er)",
     ],
     "salt_low": [
         r"(?<!дуже )низьк\w* вміст\w* (?:сол\w*|натрі\w*)",
-        r"(?<!very )low (?:salt|sodium)",
+        r"(?<!very )low (?:in )?(?:salt|sodium)",
     ],
-    "salt_very_low": [r"дуже низьк\w* вміст\w* (?:сол\w*|натрі\w*)", r"very low (?:salt|sodium)"],
+    "salt_very_low": [
+        r"дуже низьк\w* вміст\w* (?:сол\w*|натрі\w*)",
+        r"very low (?:in )?(?:salt|sodium)",
+    ],
     "energy_low": [
         r"низькокалорійн\w*",
         r"низьк\w* (?:калорійн\w*|енергетичн\w* цінн\w*)",
@@ -114,8 +123,9 @@ UNVERIFIABLE_PATTERNS: dict[str, list[str]] = {
     ],
     # nutrition claims outside the 13 automated ones
     "nutrition_other": [
-        r"без сол\w*",
-        r"не містить сол\w*",
+        rf"без {_LISTED}сол\w*",
+        rf"не містить {_LISTED}сол\w*",
+        r"нежирн\w*",  # not a term of Order 1145: low fat or fat free? (RR1 #3)
         r"salt free",
         r"без калорі\w*",
         r"(?:джерел\w*|багат\w* на) (?:вітамін|кальці|залі?з|омега|мінерал|енергі)\w*",
@@ -136,11 +146,15 @@ NATURAL_SUGARS_RE = re.compile(
 # Mono-/disaccharides and foods used for sweetening; lactose counts as an added sugar.
 ADDED_SUGAR_RE = re.compile(
     r"(?<!\w)(?:"
-    rf"цукор|цукр(?:у|ом|і|и|ів)?{_END}|цукров\w*|мед(?:у|ом)?{_END}|сироп\w*|паток\w*|"
-    r"декстроз\w*|глюкоз\w*|фруктоз\w*|сахароз\w*|мальтоз\w*|лактоз\w*|"
-    r"інвертн\w*|концентрован\w* (?:\w+ )?сок\w*|сік\w* концентрован\w*|"
-    rf"sugars?{_END}|honey|syrup\w*|dextrose|glucose|fructose|sucrose|maltose|lactose|"
-    r"juice concentrate"
+    rf"цукор|цукр(?:у|ом|і|и|ів)?{_END}|цукров\w*|мед(?:у|ом|ов\w*)?{_END}|сироп\w*|паток\w*|"
+    r"мел[яа]с\w*|декстроз\w*|глюкоз\w*|фруктоз\w*|сахароз\w*|мальтоз\w*|лактоз\w*|"
+    r"галактоз\w*|трегалоз\w*|інвертн\w*|"
+    # fruit juice concentrates in any word order, with the fruit in between
+    r"(?:концентрован|концентрат)\w* (?:\w+ ){0,2}с[оі]к\w*|"
+    r"с[оі]к\w* (?:\w+ ){0,2}концентрован\w*|"
+    r"солодов\w* екстракт\w*|екстракт\w* солод\w*|"
+    rf"sugars?{_END}|honey|syrup\w*|molasses|dextrose|glucose|fructose|sucrose|maltose|lactose|"
+    r"galactose|trehalose|malt extract|juice concentrate|concentrated \w+ juice"
     r")",
     re.I,
 )

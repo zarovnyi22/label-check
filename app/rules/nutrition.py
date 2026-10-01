@@ -47,8 +47,9 @@ class NutritionFacts:
     raw: dict[str, str | None]  # as printed, for evidence
 
     def unreadable(self) -> list[str]:
-        """Mandatory fields that are missing or did not parse."""
-        missing = [] if self.kcal is not None or self.kj is not None else ["energy"]
+        """Mandatory fields that are missing or did not parse. Energy needs both kJ and kcal
+        (Reg. 1169/2011 art. 32(1), Annex XV), so one unit alone is "energy" too (RR1 #7)."""
+        missing = [] if self.kcal is not None and self.kj is not None else ["energy"]
         return missing + [n for n in MANDATORY[1:] if self.amounts[n] is None]
 
 

@@ -120,6 +120,38 @@ def test_no_claim(text):
     assert find_claims(label([text])) == ({}, {})
 
 
+@pytest.mark.parametrize(
+    ("text", "claim_ids"),
+    [
+        ("Без цукру та жиру", ["sugar_free", "fat_free"]),
+        ("без жиру та доданого цукру", ["no_added_sugar", "fat_free"]),
+        ("0 г цукру", ["sugar_free"]),
+        ("Zero sugar", ["sugar_free"]),
+        ("Цукру не містить", ["sugar_free"]),
+        ("Low in fat", ["fat_low"]),
+        ("low in sugar", ["low_sugar"]),
+        ("rich in fibre", ["fibre_high"]),
+        ("low in salt", ["salt_low"]),
+    ],
+)
+def test_claims_rr1_wordings(text, claim_ids):
+    # RR1 #3: listed nutrients, "0 г", "zero", "low in", reversed word order.
+    claims, _ = find_claims(label([text]))
+    assert list(claims) == claim_ids
+
+
+def test_fat_free_in_a_list_is_checked_against_the_table():
+    findings, verdict = run_rules(label(["Без цукру та жиру"], sugars="0,4 г"), None)
+    assert rule(findings, "fat_free", "fat_free").status == "violation"  # fat 10 g
+    assert verdict == "fail"
+
+
+def test_nezhyrnyi_is_not_a_term_of_the_order_but_is_reviewed():
+    claims, unverifiable = find_claims(label(["нежирний"]))
+    assert not claims
+    assert list(unverifiable) == ["nutrition_other"]
+
+
 def test_no_added_sugar_is_not_sugar_free_and_very_low_is_not_low():
     claims, _ = find_claims(label(["без доданого цукру", "дуже низький вміст солі"]))
     assert list(claims) == ["no_added_sugar", "salt_very_low"]
@@ -344,6 +376,37 @@ def test_no_added_sugar_with_maltodextrin_needs_review(ingredients):
     assert rule(findings, "no_added_sugar", "no_added_sugar").status == "needs_review"
 
 
+@pytest.mark.parametrize(
+    "ingredients",
+    [
+        "пластівці, концентрат яблучного соку",
+        "пластівці, концентрований яблучний сік",
+        "пластівці, сік яблучний концентрований",
+        "пластівці, медова паста",
+        "пластівці, солодовий екстракт",
+        "пластівці, меляса",
+        "flakes, apple juice concentrate",
+        "flakes, malt extract",
+    ],
+)
+def test_no_added_sugar_rr1_sweetening_ingredients(ingredients):
+    # RR1 #2: each of these passed "без доданого цукру".
+    findings, _ = run_rules(
+        label(["без доданого цукру", "Містить природні цукри"], ingredients=ingredients), None
+    )
+    assert rule(findings, "no_added_sugar", "no_added_sugar").status == "violation"
+
+
+def test_no_added_sugar_sees_sugar_after_a_standard_reference():
+    # RR1 #1: the list was cut at "ДСТУ", so "цукор" was never checked.
+    ingredients = "Склад: **вівсяні** пластівці (ДСТУ 4673:2006), цукор, сіль."
+    findings, verdict = run_rules(
+        label(["Без доданого цукру", "Містить природні цукри"], ingredients=ingredients), None
+    )
+    assert rule(findings, "no_added_sugar", "no_added_sugar").status == "violation"
+    assert verdict == "fail"
+
+
 def test_no_added_sugar_truncated_list_needs_review():
     findings, _ = run_rules(label(["без доданого цукру"], ingredients="пластівці, мол[…]"), None)
     assert rule(findings, "no_added_sugar", "no_added_sugar").status == "needs_review"
@@ -423,8 +486,14 @@ def test_nut_kj(energy, status):
     assert rule(findings, "NUT-KJ", "energy").status == status
 
 
-def test_nut_kj_without_kj():
-    findings, _ = run_rules(label(energy="395 ккал"), None)
+@pytest.mark.parametrize("energy", ["395 ккал", "1650 кДж", "ккал 395 кДж 1650"])
+def test_energy_needs_both_units(energy):
+    # RR1 #7: Reg. 1169/2011 art. 32(1) / Annex XV -- kJ and kcal both; one alone is not pass.
+    findings, verdict = run_rules(label(energy=energy), recipe())
+    f = rule(findings, "LABEL-MISSING", "nutrition")
+    assert f.status == "needs_review"
+    assert "кДж, і ккал" in f.message
+    assert verdict == "needs_review"
     assert rule(findings, "NUT-KJ", "energy").status == "not_applicable"
 
 
@@ -568,7 +637,18 @@ def test_every_rule_in_findings_is_in_the_catalog():
 
 def test_catalog_covers_every_claim():
     assert set(CLAIM_PATTERNS) <= set(RULES)
-    assert all(info.legal_ref for info in RULES.values())
+
+
+SERVICE_RULES = {"IMG-QUALITY", "SIDE-FRONT-MISSING"}
+
+
+def test_every_rule_cites_the_law_or_says_it_is_a_service_requirement():
+    # RR1 #10: `finding()` copies legal_ref from RULES, so check the catalog itself.
+    for rule_id, info in RULES.items():
+        if rule_id in SERVICE_RULES:
+            assert info.legal_ref.startswith("Вимога сервісу"), rule_id
+        else:
+            assert any(src in info.legal_ref for src in ("Закон", "Наказ", "Регл.")), rule_id
 
 
 @pytest.mark.parametrize("raw", [P02, P03, P16, P17])

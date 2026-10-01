@@ -323,3 +323,23 @@ def test_spike_p02_p03_lists_parse():
     p03 = parse_ingredients(json.loads(P03)["ingredients_marked"]["text"])
     assert ("сульфітно-аміачна карамель", 1) in [(m.text, m.depth) for m in p03.mentions]
     assert p03.mentions[-1].text == "ацесульфам калію та сукралоза"
+
+
+@pytest.mark.parametrize(
+    "marked",
+    [
+        "**вівсяні** пластівці (ДСТУ 4673:2006), цукор, сіль.",
+        "борошно **пшеничне** ДСТУ 46.004, молоко сухе, яйця",
+    ],
+)
+def test_standard_inside_the_list_does_not_end_it(marked):
+    # RR1 #1: cutting at "ДСТУ" here hid "цукор", "молоко", "яйця" in the tail.
+    ing = parse_ingredients(marked)
+    assert ing.tail is None
+    assert ing.mentions[-1].text in ("сіль", "яйця")
+
+
+def test_standard_starting_a_sentence_ends_the_list():
+    ing = parse_ingredients("цукор, **молоко**.\nДСТУ 4069; ТУ У 10.8-123")
+    assert [m.text for m in ing.mentions] == ["цукор", "молоко"]
+    assert ing.tail.startswith("ДСТУ")

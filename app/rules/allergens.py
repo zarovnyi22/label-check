@@ -10,8 +10,14 @@ import re
 from dataclasses import dataclass
 from typing import get_args
 
-from app.parsing import Ingredients, Mention, parse_ingredients
-from app.rules.allergen_dict import CATEGORY_NAMES_UK, EXCLUSION_PATTERNS, PATTERNS
+from app.parsing import TRUNCATION_MARKERS, Ingredients, Mention, parse_ingredients
+from app.rules.allergen_dict import (
+    CATEGORY_NAMES_UK,
+    EXCLUSION_PATTERNS,
+    GLUTEN_RE,
+    PATTERNS,
+    SUBTYPE_PATTERNS,
+)
 from app.rules.catalog import finding
 from app.schemas import AllergenCategory, Finding, LabelExtraction, ProductSpec, Status
 
@@ -89,6 +95,36 @@ def _fragments(items: list[_LabelAllergen]) -> str:
     return "; ".join(dict.fromkeys(item.mention.text for item in items))
 
 
+def _named(items: list[_LabelAllergen]) -> list[_LabelAllergen]:
+    """Without "глютен": it is not the cereal's name (SPEC §2)."""
+    return [item for item in items if not GLUTEN_RE.match(item.hit.term)]
+
+
+def recipe_allergens(spec: ProductSpec) -> dict[AllergenCategory, list[str]]:
+    """Category -> recipe ingredient names: the declared allergens and the ones the
+    dictionary finds in the name ("молоко сухе" without `allergens` is still milk, RR1 #4)."""
+    recipe: dict[AllergenCategory, list[str]] = {}
+    for ingredient in spec.ingredients:
+        found = {h.category for h in find_allergens(ingredient.name)}
+        for category in (c for c in CATEGORIES if c in found or c in ingredient.allergens):
+            recipe.setdefault(category, []).append(ingredient.name)
+    return recipe
+
+
+def _subtypes(category: AllergenCategory, texts: list[str]) -> set[str]:
+    patterns = SUBTYPE_PATTERNS.get(category, {})
+    return {name for name, p in patterns.items() if any(p.search(t) for t in texts)}
+
+
+def _no_recipe_ingredients(rule_id: str) -> Finding:
+    return finding(
+        rule_id,
+        None,
+        "not_checked",
+        "У рецептурі немає інгредієнтів — алергени етикетки з рецептурою не звірити.",
+    )
+
+
 def check_emphasis(
     ing: Ingredients,
     found: dict[AllergenCategory, list[_LabelAllergen]],
@@ -110,7 +146,21 @@ def check_emphasis(
             )
         ]
     findings = []
-    for category, items in found.items():
+    for category, all_items in found.items():
+        items = _named(all_items)
+        if not items:
+            findings.append(
+                finding(
+                    "ALG-EMPH",
+                    category,
+                    "needs_review",
+                    f"У складі є лише «глютен» без назви злаку — для {_name(category)} "
+                    "потрібно назвати злак (пшениця, жито, ячмінь, овес) і виділити його.",
+                    photo_index,
+                    _fragments(all_items),
+                )
+            )
+            continue
         plain = [item for item in items if not item.emphasized]
         if not plain:
             findings.append(
@@ -156,10 +206,9 @@ def check_spec_missing(
                 "Без рецептури не перевірити, чи всі алергени зазначено на етикетці.",
             )
         ]
-    recipe: dict[AllergenCategory, list[str]] = {}
-    for ingredient in spec.ingredients:
-        for category in ingredient.allergens:
-            recipe.setdefault(category, []).append(ingredient.name)
+    if not spec.ingredients:
+        return [_no_recipe_ingredients("ALG-SPEC-MISSING")]
+    recipe = recipe_allergens(spec)
     if not recipe:
         return [
             finding("ALG-SPEC-MISSING", None, "pass", "У рецептурі алергенів немає.", photo_index)
@@ -167,10 +216,29 @@ def check_spec_missing(
     findings = []
     for category in (c for c in CATEGORIES if c in recipe):
         sources = ", ".join(recipe[category])
-        if category in found:
-            status: Status = "pass"
-            message = f"Алерген {_name(category)} з рецептури ({sources}) є у складі на етикетці."
+        named = _named(found.get(category, []))
+        missing = sorted(
+            _subtypes(category, recipe[category])
+            - _subtypes(category, [m.text for m in ing.mentions])
+        )
+        if category in found and not named:
+            status: Status = "needs_review"
+            message = (
+                f"Алерген {_name(category)} є в рецептурі ({sources}), а на етикетці — лише "
+                "«глютен» без назви злаку."
+            )
             fragment = _fragments(found[category])
+        elif named and missing:
+            status = "needs_review"
+            message = (
+                f"Алерген {_name(category)}: у рецептурі {', '.join(missing)} ({sources}), а на "
+                "етикетці названо інше — перевірте, чи зазначено саме цей злак/горіх."
+            )
+            fragment = _fragments(named)
+        elif named:
+            status = "pass"
+            message = f"Алерген {_name(category)} з рецептури ({sources}) є у складі на етикетці."
+            fragment = _fragments(named)
         elif not ing.mentions:
             status = "needs_review"
             message = (
@@ -214,9 +282,11 @@ def check_spec_extra(
                 "Без рецептури не перевірити, чи алергени етикетки відповідають рецептурі.",
             )
         ]
+    if not spec.ingredients:
+        return [_no_recipe_ingredients("ALG-SPEC-EXTRA")]
     if not ing.mentions:
         return []  # nothing read, nothing extra: LABEL-MISSING / ALG-SPEC-MISSING report it
-    recipe = {c for ingredient in spec.ingredients for c in ingredient.allergens}
+    recipe = recipe_allergens(spec)
     extra = [c for c in found if c not in recipe]
     if not extra:
         return [
@@ -249,7 +319,9 @@ def may_contain_text(
     item = extraction.may_contain_text
     if item and item.text:
         return item.text, item.photo_index
-    m = _MAY_CONTAIN_RE.search(ing.tail.replace("*", "")) if ing.tail else None
+    # "[...]" would end the sentence at its first dot: one-character marker first
+    tail = ing.tail.replace("*", "").replace("[...]", "[…]") if ing.tail else None
+    m = _MAY_CONTAIN_RE.search(tail) if tail else None
     return (m[0].strip(), list_photo) if m else (None, None)
 
 
@@ -269,6 +341,17 @@ def check_may_contain(
     text, photo_index = may_contain_text(extraction, ing, list_photo)
     label = {h.category for h in find_allergens(text)}
     recipe = set(spec.may_contain)
+    if text and any(t in text for t in TRUNCATION_MARKERS):
+        return [
+            finding(
+                "ALG-MAY-CONTAIN",
+                None,
+                "needs_review",
+                "Напис «може містити» прочитано не повністю ([…]) — перевірте його на фото.",
+                photo_index,
+                text,
+            )
+        ]
     if label == recipe:
         message = (
             "Напис «може містити» відповідає рецептурі."

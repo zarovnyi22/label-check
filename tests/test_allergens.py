@@ -379,3 +379,102 @@ def test_every_finding_rule_is_in_the_catalog():
     for finding in findings:
         assert finding.legal_ref == RULES[finding.rule_id].legal_ref
         assert "1169/2011" in finding.legal_ref
+
+
+# --- RR1 regressions -------------------------------------------------------------------------
+
+
+@pytest.mark.parametrize(
+    ("text", "expected"),
+    [
+        ("жовток яєчний сухий", ["eggs"]),
+        ("жовтки", ["eggs"]),
+        ("пахта", ["milk"]),
+        ("масло топлене", ["milk"]),
+        ("сколотини", ["milk"]),
+        ("ghee", ["milk"]),
+        ("крупа перлова", ["cereals"]),
+        ("солод ячмінний", ["cereals"]),
+        ("сухарі панірувальні", ["cereals"]),
+        ("сардина атлантична", ["fish"]),
+        ("філе хека", ["fish"]),
+        ("шпроти", ["fish"]),
+        ("sardines", ["fish"]),
+        ("марципан", ["nuts"]),
+        ("нуга", ["nuts"]),
+        ("пиросульфіт натрію", ["sulphites"]),
+    ],
+)
+def test_dictionary_rr1_additions(text, expected):
+    assert categories(text) == expected
+
+
+@pytest.mark.parametrize("text", ["солодкий перець", "жовтий барвник", "солодощі"])
+def test_dictionary_rr1_traps(text):
+    assert categories(text) == []
+
+
+def test_spec_allergen_found_in_the_ingredient_name():
+    # RR1 #4: "молоко сухе" without `allergens` is still milk.
+    s = ProductSpec(ingredients=[{"name": "молоко сухе знежирене"}])
+    findings = check_allergens(extraction("**вівсяні** пластівці, цукор"), s)
+    assert by_rule(findings, "ALG-SPEC-MISSING")["milk"].status == "violation"
+    assert "cereals" in by_rule(findings, "ALG-SPEC-EXTRA")
+
+
+def test_spec_without_ingredients_is_not_checked():
+    s = ProductSpec(form="solid")
+    findings = check_allergens(extraction("рисові пластівці, цукор"), s)
+    assert by_rule(findings, "ALG-SPEC-MISSING")[None].status == "not_checked"
+    assert by_rule(findings, "ALG-SPEC-EXTRA")[None].status == "not_checked"
+
+
+@pytest.mark.parametrize(
+    ("recipe", "label"),
+    [
+        ("борошно пшеничне", "**вівсяні** пластівці, цукор"),
+        ("фундук", "**мигдаль**, цукор"),
+    ],
+)
+def test_spec_missing_compares_the_cereal_and_the_nut(recipe, label):
+    # RR1 #5: Annex II names the cereal / nut; oats on the label do not declare wheat.
+    category = "cereals" if "борошно" in recipe else "nuts"
+    s = ProductSpec(ingredients=[{"name": recipe, "allergens": [category]}])
+    f = by_rule(check_allergens(extraction(label), s), "ALG-SPEC-MISSING")[category]
+    assert f.status == "needs_review"
+    same = by_rule(check_allergens(extraction(f"**{recipe}**, цукор"), s), "ALG-SPEC-MISSING")
+    assert same[category].status == "pass"
+
+
+def test_gluten_is_not_the_cereal_name():
+    # RR1 #6 / SPEC §2: "глютен" alone neither passes ALG-EMPH nor declares wheat.
+    s = ProductSpec(ingredients=[{"name": "борошно пшеничне", "allergens": ["cereals"]}])
+    findings = check_allergens(extraction("борошно, цукор, **глютен**"), s)
+    assert by_rule(findings, "ALG-EMPH")["cereals"].status == "needs_review"
+    assert by_rule(findings, "ALG-SPEC-MISSING")["cereals"].status == "needs_review"
+    named = check_allergens(extraction("борошно **пшеничне**, цукор, сіль, **глютен**"), s)
+    assert by_rule(named, "ALG-EMPH")["cereals"].status == "pass"
+    assert by_rule(named, "ALG-SPEC-MISSING")["cereals"].status == "pass"
+
+
+def test_may_contain_cut_off_is_needs_review():
+    # RR1 #9a: "Може містити сліди […]" may hide the recipe's allergen.
+    findings = check_allergens(
+        extraction("рисові пластівці, цукор. Може містити сліди [...]"), spec()
+    )
+    assert by_rule(findings, "ALG-MAY-CONTAIN")[None].status == "needs_review"
+
+
+def test_subtype_ignores_sweet_words_in_the_recipe():
+    s = ProductSpec(
+        ingredients=[
+            {"name": "солод ячмінний", "allergens": ["cereals"]},
+            {"name": "перець солодкий"},
+        ]
+    )
+    f = by_rule(check_allergens(extraction("**солод** ячмінний, цукор"), s), "ALG-SPEC-MISSING")
+    assert f["cereals"].status == "pass"
+    # "солодкий" (sweet) is not malt: wheat in the recipe is still compared
+    s = ProductSpec(ingredients=[{"name": "борошно пшеничне солодке", "allergens": ["cereals"]}])
+    f = by_rule(check_allergens(extraction("**ячмінь**, цукор"), s), "ALG-SPEC-MISSING")
+    assert "пшениця" in f["cereals"].message
