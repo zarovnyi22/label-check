@@ -1,0 +1,37 @@
+{
+  "product_name": "Йогурт з чорницею",
+  "form": "solid",
+  "ingredients": [
+    {
+      "name": "сулугуні",
+      "allergens": [
+        "milk"
+      ]
+    },
+    {
+      "name": "цукор",
+      "allergens": []
+    },
+    {
+      "name": "наповнювач полуничний",
+      "allergens": []
+    },
+    {
+      "name": "насіння гірчиці",
+      "allergens": [
+        "mustard"
+      ]
+    },
+    {
+      "name": "стабілізатор пектин",
+      "allergens": []
+    },
+    {
+      "name": "барвник кармін",
+      "allergens": []
+    }
+  ],
+  "may_contain": [
+    "eggs"
+  ]
+}

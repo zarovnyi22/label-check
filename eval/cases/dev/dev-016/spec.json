@@ -1,0 +1,68 @@
+{
+  "product_name": "Печиво «Ранкове»",
+  "form": "solid",
+  "ingredients": [
+    {
+      "name": "борошно пшеничне",
+      "allergens": [
+        "cereals"
+      ]
+    },
+    {
+      "name": "цукор",
+      "allergens": []
+    },
+    {
+      "name": "яйця курячі",
+      "allergens": [
+        "eggs"
+      ]
+    },
+    {
+      "name": "олія соняшникова",
+      "allergens": []
+    },
+    {
+      "name": "рікота",
+      "allergens": [
+        "milk"
+      ]
+    },
+    {
+      "name": "тофу",
+      "allergens": [
+        "soybeans"
+      ]
+    },
+    {
+      "name": "крохмаль кукурудзяний",
+      "allergens": []
+    },
+    {
+      "name": "розпушувач гідрокарбонат натрію",
+      "allergens": []
+    },
+    {
+      "name": "сіль",
+      "allergens": []
+    },
+    {
+      "name": "ароматизатор ванілін",
+      "allergens": []
+    }
+  ],
+  "may_contain": [
+    "nuts",
+    "sesame"
+  ],
+  "nutrition_per_100": {
+    "energy_kcal": 467,
+    "fat": 18,
+    "saturates": 8,
+    "carbs": 68,
+    "sugars": 24,
+    "fibre": 2.5,
+    "protein": 7,
+    "salt": 0.6
+  }
+}

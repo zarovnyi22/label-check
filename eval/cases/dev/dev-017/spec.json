@@ -1,0 +1,74 @@
+{
+  "product_name": "Печиво здобне",
+  "form": "solid",
+  "ingredients": [
+    {
+      "name": "вівсяні пластівці",
+      "allergens": [
+        "cereals"
+      ]
+    },
+    {
+      "name": "цукор",
+      "allergens": []
+    },
+    {
+      "name": "яйця курячі",
+      "allergens": [
+        "eggs"
+      ]
+    },
+    {
+      "name": "кислота молочна",
+      "allergens": []
+    },
+    {
+      "name": "рікота",
+      "allergens": [
+        "milk"
+      ]
+    },
+    {
+      "name": "крохмаль кукурудзяний",
+      "allergens": []
+    },
+    {
+      "name": "олія соняшникова",
+      "allergens": []
+    },
+    {
+      "name": "розпушувач гідрокарбонат натрію",
+      "allergens": []
+    },
+    {
+      "name": "сіль",
+      "allergens": []
+    },
+    {
+      "name": "ароматизатор ванілін",
+      "allergens": []
+    },
+    {
+      "name": "ароматизатор ідентичний натуральному",
+      "allergens": []
+    },
+    {
+      "name": "барвник бета-каротин",
+      "allergens": []
+    },
+    {
+      "name": "вода питна",
+      "allergens": []
+    }
+  ],
+  "nutrition_per_100": {
+    "energy_kcal": 467,
+    "fat": 18,
+    "saturates": 8,
+    "carbs": 68,
+    "sugars": 24,
+    "fibre": 2.5,
+    "protein": 7,
+    "salt": 0.6
+  }
+}

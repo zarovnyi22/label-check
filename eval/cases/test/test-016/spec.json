@@ -1,0 +1,51 @@
+{
+  "product_name": "Ікра мойви",
+  "form": "solid",
+  "ingredients": [
+    {
+      "name": "корінь селери",
+      "allergens": [
+        "celery"
+      ]
+    },
+    {
+      "name": "тунець",
+      "allergens": [
+        "fish"
+      ]
+    },
+    {
+      "name": "барвник сульфітно-аміачна карамель",
+      "allergens": []
+    },
+    {
+      "name": "насіння гірчиці",
+      "allergens": [
+        "mustard"
+      ]
+    },
+    {
+      "name": "цибуля ріпчаста",
+      "allergens": []
+    },
+    {
+      "name": "олія соняшникова",
+      "allergens": []
+    },
+    {
+      "name": "сіль",
+      "allergens": []
+    },
+    {
+      "name": "перець чорний мелений",
+      "allergens": []
+    },
+    {
+      "name": "консервант бензоат натрію",
+      "allergens": []
+    }
+  ],
+  "may_contain": [
+    "eggs"
+  ]
+}

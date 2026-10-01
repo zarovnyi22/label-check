@@ -1,0 +1,71 @@
+{
+  "violations": [],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+      "text": "борошно **житнє** обдирне, цукор, **фундук** смажений, родзинки, насіння соняшнику, емульгатор лецитин соняшниковий, сіль, антиоксидант токофероли.",
+      "photo_index": 1
+    },
+    "may_contain_text": {
+      "text": "Може містити сліди селери, сої.",
+      "photo_index": 1
+    },
+    "nutrition": {
+      "per": "100g",
+      "portion_text": null,
+      "energy": "1657 кДж / 396 ккал",
+      "fat": "12 г",
+      "saturates": "2,5 г",
+      "carbs": "60 г",
+      "sugars": "22 г",
+      "fibre": "6 г",
+      "protein": "9 г",
+      "salt": "0,2 г",
+      "photo_index": 1
+    },
+    "other_text": [
+      {
+        "text": "Батончик горіховий",
+        "photo_index": 0
+      },
+      {
+        "text": "Джерело клітковини",
+        "photo_index": 0
+      },
+      {
+        "text": "Маса нетто 40 г",
+        "photo_index": 0
+      },
+      {
+        "text": "Зберігати в сухому місці при температурі не вище +25 °C.",
+        "photo_index": 1
+      },
+      {
+        "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+        "photo_index": 1
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": true,
+    "quality": "blur",
+    "template": "bar",
+    "scenario": "clean_fibre",
+    "off_dictionary": [],
+    "emphasis": "bold"
+  }
+}

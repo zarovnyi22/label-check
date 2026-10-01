@@ -1,0 +1,73 @@
+{
+  "violations": [],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+      "text": "КУС-КУС, вода питна, борошно ПШЕНИЧНЕ, дріжджі хлібопекарські, насіння КУНЖУТУ, сіль, олія соняшникова, поліпшувач кислота аскорбінова.",
+      "photo_index": 1
+    },
+    "may_contain_text": {
+      "text": "Може містити сліди арахісу.",
+      "photo_index": 1
+    },
+    "nutrition": {
+      "per": "100g",
+      "portion_text": null,
+      "energy": "1088 кДж / 260 ккал",
+      "fat": "2,5 г",
+      "saturates": "0,4 г",
+      "carbs": "48 г",
+      "sugars": "<0,5 г",
+      "fibre": "6 г",
+      "protein": "8,5 г",
+      "salt": "1,1 г",
+      "photo_index": 1
+    },
+    "other_text": [
+      {
+        "text": "Батон нарізний",
+        "photo_index": 0
+      },
+      {
+        "text": "Sugar free",
+        "photo_index": 0
+      },
+      {
+        "text": "Маса нетто 500 г",
+        "photo_index": 0
+      },
+      {
+        "text": "Зберігати в сухому місці при температурі не вище +25 °C.",
+        "photo_index": 1
+      },
+      {
+        "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+        "photo_index": 1
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": true,
+    "quality": "blur",
+    "template": "bread",
+    "scenario": "clean_sugar_free_lt",
+    "off_dictionary": [
+      "кус-кус"
+    ],
+    "emphasis": "caps"
+  }
+}

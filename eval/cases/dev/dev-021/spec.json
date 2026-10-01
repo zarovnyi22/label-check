@@ -1,0 +1,52 @@
+{
+  "product_name": "Майонез «Столичний»",
+  "form": "solid",
+  "ingredients": [
+    {
+      "name": "яйця курячі",
+      "allergens": [
+        "eggs"
+      ]
+    },
+    {
+      "name": "олія соняшникова",
+      "allergens": []
+    },
+    {
+      "name": "гірчиця столова",
+      "allergens": [
+        "mustard"
+      ]
+    },
+    {
+      "name": "вода питна",
+      "allergens": []
+    },
+    {
+      "name": "оцет спиртовий",
+      "allergens": []
+    },
+    {
+      "name": "сіль",
+      "allergens": []
+    },
+    {
+      "name": "регулятор кислотності кислота лимонна",
+      "allergens": []
+    },
+    {
+      "name": "консервант сорбат калію",
+      "allergens": []
+    }
+  ],
+  "nutrition_per_100": {
+    "energy_kcal": 308,
+    "fat": 30,
+    "saturates": 3,
+    "carbs": 8,
+    "sugars": 0.2,
+    "fibre": 0.5,
+    "protein": 1.2,
+    "salt": 1.5
+  }
+}

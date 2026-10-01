@@ -1,0 +1,76 @@
+{
+  "violations": [
+    {
+      "rule_id": "protein_source",
+      "target": "protein_source"
+    }
+  ],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+      "text": "**меланж яєчний**, олія соняшникова, **гірчичний** порошок, вода питна, мускатний горіх, цукор, оцет спиртовий, сіль, регулятор кислотності кислота лимонна, консервант сорбат калію.",
+      "photo_index": 1
+    },
+    "may_contain_text": {
+      "text": "Може містити сліди молока, арахісу.",
+      "photo_index": 1
+    },
+    "nutrition": {
+      "per": "100g",
+      "portion_text": null,
+      "energy": "1289 кДж / 308 ккал",
+      "fat": "30 г",
+      "saturates": "3 г",
+      "carbs": "8 г",
+      "sugars": "5 г",
+      "fibre": "0,5 г",
+      "protein": "1,2 г",
+      "salt": "1,5 г",
+      "photo_index": 1
+    },
+    "other_text": [
+      {
+        "text": "Майонез «Столичний»",
+        "photo_index": 0
+      },
+      {
+        "text": "Джерело білка",
+        "photo_index": 0
+      },
+      {
+        "text": "Маса нетто 250 г",
+        "photo_index": 0
+      },
+      {
+        "text": "Зберігати при температурі від +2 до +6 °C.",
+        "photo_index": 1
+      },
+      {
+        "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+        "photo_index": 1
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": true,
+    "quality": "jpeg40",
+    "template": "sauce",
+    "scenario": "protein_source",
+    "off_dictionary": [],
+    "emphasis": "bold"
+  }
+}

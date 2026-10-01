@@ -1,0 +1,75 @@
+{
+  "violations": [
+    {
+      "rule_id": "LABEL-TRUNCATED",
+      "target": "ingredients"
+    }
+  ],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "cropped",
+        "note": null
+      },
+      {
+        "index": 2,
+        "side": "side",
+        "quality": "ok",
+        "note": null
+      }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+      "text": "борошно ЖИТНЄ обдирне, цукор, ЯЄЧНИЙ порошок, олія соняшникова, ВЕРШКИ 10 %, крохмаль кукурудзяний, розпушувач гідрокарбонат натрію, сіль, ароматизатор ванілін, ароматизатор ідентичний […]",
+      "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": {
+      "per": "100g",
+      "portion_text": null,
+      "energy": "1954 кДж / 467 ккал",
+      "fat": "18 г",
+      "saturates": "8 г",
+      "carbs": "68 г",
+      "sugars": "24 г",
+      "fibre": "2,5 г",
+      "protein": "7 г",
+      "salt": "0,6 г",
+      "photo_index": 2
+    },
+    "other_text": [
+      {
+        "text": "Печиво здобне",
+        "photo_index": 0
+      },
+      {
+        "text": "Маса нетто 200 г",
+        "photo_index": 0
+      },
+      {
+        "text": "Зберігати в сухому місці при температурі не вище +25 °C.",
+        "photo_index": 2
+      },
+      {
+        "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+        "photo_index": 2
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": true,
+    "quality": "cropped",
+    "template": "cookies",
+    "scenario": "LABEL-TRUNCATED",
+    "off_dictionary": [],
+    "emphasis": "caps"
+  }
+}

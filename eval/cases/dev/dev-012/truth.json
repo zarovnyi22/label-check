@@ -1,0 +1,73 @@
+{
+  "violations": [
+    {
+      "rule_id": "no_added_sugar",
+      "target": "no_added_sugar"
+    }
+  ],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+      "text": "пюре яблучне, сироп глюкозний, вода питна, кислота лимонна, кислота аскорбінова.",
+      "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": {
+      "per": "100ml",
+      "portion_text": null,
+      "energy": "184 кДж / 44 ккал",
+      "fat": "0 г",
+      "saturates": "0 г",
+      "carbs": "10,5 г",
+      "sugars": "9,8 г",
+      "fibre": "0,2 г",
+      "protein": "0,3 г",
+      "salt": "0,01 г",
+      "photo_index": 1
+    },
+    "other_text": [
+      {
+        "text": "Нектар грушевий",
+        "photo_index": 0
+      },
+      {
+        "text": "Без доданого цукру",
+        "photo_index": 0
+      },
+      {
+        "text": "Об'єм 1 л",
+        "photo_index": 0
+      },
+      {
+        "text": "Зберігати в сухому місці при температурі не вище +25 °C.",
+        "photo_index": 1
+      },
+      {
+        "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+        "photo_index": 1
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": true,
+    "quality": "jpeg40",
+    "template": "juice",
+    "scenario": "no_added_sugar",
+    "off_dictionary": [],
+    "emphasis": "bold"
+  }
+}

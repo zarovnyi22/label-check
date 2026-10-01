@@ -43,6 +43,9 @@ jobs:
           enable-cache: true
       - name: Install dependencies
         run: uv sync --frozen
+      # DejaVu renders the synthetic labels (tests/test_generate.py), as in the dev image.
+      - name: Fonts
+        run: sudo apt-get install -y --no-install-recommends fonts-dejavu-core
       - name: Ruff
         run: |
           uv run ruff check .

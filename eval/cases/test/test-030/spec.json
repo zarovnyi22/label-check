@@ -1,0 +1,48 @@
+{
+  "product_name": "Хліб зерновий",
+  "form": "solid",
+  "ingredients": [
+    {
+      "name": "спельтове борошно",
+      "allergens": [
+        "cereals"
+      ]
+    },
+    {
+      "name": "цукор",
+      "allergens": []
+    },
+    {
+      "name": "житні висівки",
+      "allergens": [
+        "cereals"
+      ]
+    },
+    {
+      "name": "вода питна",
+      "allergens": []
+    },
+    {
+      "name": "тахіні",
+      "allergens": [
+        "sesame"
+      ]
+    },
+    {
+      "name": "дріжджі хлібопекарські",
+      "allergens": []
+    },
+    {
+      "name": "сіль",
+      "allergens": []
+    },
+    {
+      "name": "олія соняшникова",
+      "allergens": []
+    },
+    {
+      "name": "поліпшувач кислота аскорбінова",
+      "allergens": []
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 # Everything runs in Docker: the host needs only docker compose (no Python, no uv).
-.PHONY: up down logs health test lint fmt spike
+.PHONY: up down logs health test lint fmt spike generate
 
 up:      ## build and start db + api in the background
 	docker compose up --build -d
@@ -24,3 +24,6 @@ fmt:     ## apply ruff formatting and safe fixes
 
 spike:   ## probe the vision model on 1-3 photos (LIVE LLM: 1 call), make spike FILES="a.jpg b.jpg"
 	docker compose run --rm --build tools python -u scripts/spike_vision.py $(FILES)
+
+generate: ## synthetic eval cases (deterministic by seed) -> eval/cases/{dev,test}
+	docker compose run --rm --build test python -m eval.generate

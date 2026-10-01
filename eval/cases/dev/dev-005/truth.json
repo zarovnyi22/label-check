@@ -1,0 +1,79 @@
+{
+  "violations": [
+    {
+      "rule_id": "sugar_free",
+      "target": "sugar_free"
+    }
+  ],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+      "text": "**кус-кус**, олія соняшникова, **яйця** курячі, цукор, **рікота**, крохмаль кукурудзяний, розпушувач гідрокарбонат натрію, сіль, ароматизатор ванілін.",
+      "photo_index": 1
+    },
+    "may_contain_text": {
+      "text": "Може містити сліди арахісу.",
+      "photo_index": 1
+    },
+    "nutrition": {
+      "per": "100g",
+      "portion_text": null,
+      "energy": "1954 кДж / 467 ккал",
+      "fat": "18 г",
+      "saturates": "8 г",
+      "carbs": "68 г",
+      "sugars": "24 г",
+      "fibre": "2,5 г",
+      "protein": "7 г",
+      "salt": "0,6 г",
+      "photo_index": 1
+    },
+    "other_text": [
+      {
+        "text": "Печиво «Ранкове»",
+        "photo_index": 0
+      },
+      {
+        "text": "Sugar free",
+        "photo_index": 0
+      },
+      {
+        "text": "Маса нетто 200 г",
+        "photo_index": 0
+      },
+      {
+        "text": "Зберігати в сухому місці при температурі не вище +25 °C.",
+        "photo_index": 1
+      },
+      {
+        "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+        "photo_index": 1
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": true,
+    "quality": "clean",
+    "template": "cookies",
+    "scenario": "sugar_free",
+    "off_dictionary": [
+      "кус-кус",
+      "рікота"
+    ],
+    "emphasis": "bold"
+  }
+}

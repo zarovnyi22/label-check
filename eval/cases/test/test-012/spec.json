@@ -1,0 +1,55 @@
+{
+  "product_name": "Батончик мюслі",
+  "form": "solid",
+  "ingredients": [
+    {
+      "name": "пшеничне борошно вищого ґатунку",
+      "allergens": [
+        "cereals"
+      ]
+    },
+    {
+      "name": "сироп агави",
+      "allergens": []
+    },
+    {
+      "name": "пекан",
+      "allergens": [
+        "nuts"
+      ]
+    },
+    {
+      "name": "насіння соняшнику",
+      "allergens": []
+    },
+    {
+      "name": "родзинки",
+      "allergens": []
+    },
+    {
+      "name": "емульгатор лецитин соняшниковий",
+      "allergens": []
+    },
+    {
+      "name": "сіль",
+      "allergens": []
+    },
+    {
+      "name": "антиоксидант токофероли",
+      "allergens": []
+    }
+  ],
+  "may_contain": [
+    "soybeans"
+  ],
+  "nutrition_per_100": {
+    "energy_kcal": 396,
+    "fat": 12,
+    "saturates": 2.5,
+    "carbs": 60,
+    "sugars": 22,
+    "fibre": 6,
+    "protein": 9,
+    "salt": 0.2
+  }
+}

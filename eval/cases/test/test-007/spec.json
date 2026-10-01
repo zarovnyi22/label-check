@@ -1,0 +1,46 @@
+{
+  "product_name": "Соус з гірчицею",
+  "form": "solid",
+  "ingredients": [
+    {
+      "name": "яєчний білок сухий",
+      "allergens": [
+        "eggs"
+      ]
+    },
+    {
+      "name": "олія соняшникова",
+      "allergens": []
+    },
+    {
+      "name": "насіння гірчиці",
+      "allergens": [
+        "mustard"
+      ]
+    },
+    {
+      "name": "вода питна",
+      "allergens": []
+    },
+    {
+      "name": "цукор",
+      "allergens": []
+    },
+    {
+      "name": "оцет спиртовий",
+      "allergens": []
+    },
+    {
+      "name": "сіль",
+      "allergens": []
+    },
+    {
+      "name": "регулятор кислотності кислота лимонна",
+      "allergens": []
+    },
+    {
+      "name": "консервант сорбат калію",
+      "allergens": []
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "product_name": "Ікра мойви",
+  "form": "solid",
+  "ingredients": [
+    {
+      "name": "тунець",
+      "allergens": [
+        "fish"
+      ]
+    },
+    {
+      "name": "цибуля ріпчаста",
+      "allergens": []
+    },
+    {
+      "name": "насіння гірчиці",
+      "allergens": [
+        "mustard"
+      ]
+    },
+    {
+      "name": "олія соняшникова",
+      "allergens": []
+    },
+    {
+      "name": "сіль",
+      "allergens": []
+    },
+    {
+      "name": "перець чорний мелений",
+      "allergens": []
+    },
+    {
+      "name": "консервант бензоат натрію",
+      "allergens": []
+    }
+  ],
+  "may_contain": [
+    "milk",
+    "sesame"
+  ],
+  "nutrition_per_100": {
+    "energy_kcal": 266,
+    "fat": 22,
+    "saturates": 4,
+    "carbs": 3,
+    "sugars": 0.2,
+    "fibre": 0,
+    "protein": 14,
+    "salt": 1.8
+  }
+}

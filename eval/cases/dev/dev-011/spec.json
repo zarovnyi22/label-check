@@ -1,0 +1,45 @@
+{
+  "product_name": "Батончик злаковий",
+  "form": "solid",
+  "ingredients": [
+    {
+      "name": "борошно житнє обдирне",
+      "allergens": [
+        "cereals"
+      ]
+    },
+    {
+      "name": "насіння соняшнику",
+      "allergens": []
+    },
+    {
+      "name": "горіхи волоські",
+      "allergens": [
+        "nuts"
+      ]
+    },
+    {
+      "name": "інвертний сироп",
+      "allergens": []
+    },
+    {
+      "name": "родзинки",
+      "allergens": []
+    },
+    {
+      "name": "емульгатор лецитин соняшниковий",
+      "allergens": []
+    },
+    {
+      "name": "сіль",
+      "allergens": []
+    },
+    {
+      "name": "антиоксидант токофероли",
+      "allergens": []
+    }
+  ],
+  "may_contain": [
+    "celery"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "violations": [
+    {
+      "rule_id": "fat_low",
+      "target": "fat_low"
+    }
+  ],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+      "text": "СУЛУГУНІ, закваска бактеріальна, вітамін D3.",
+      "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": {
+      "per": "100ml",
+      "portion_text": null,
+      "energy": "209 кДж / 50 ккал",
+      "fat": "2,5 г",
+      "saturates": "1,6 г",
+      "carbs": "4 г",
+      "sugars": "4 г",
+      "fibre": "0 г",
+      "protein": "3 г",
+      "salt": "0,1 г",
+      "photo_index": 1
+    },
+    "other_text": [
+      {
+        "text": "Кефір 1 %",
+        "photo_index": 0
+      },
+      {
+        "text": "Low fat",
+        "photo_index": 0
+      },
+      {
+        "text": "Об'єм 900 мл",
+        "photo_index": 0
+      },
+      {
+        "text": "Зберігати при температурі від +2 до +6 °C.",
+        "photo_index": 1
+      },
+      {
+        "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+        "photo_index": 1
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": true,
+    "quality": "blur",
+    "template": "kefir",
+    "scenario": "fat_low",
+    "off_dictionary": [
+      "сулугуні"
+    ],
+    "emphasis": "caps"
+  }
+}

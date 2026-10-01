@@ -1,0 +1,69 @@
+{
+  "violations": [
+    {
+      "rule_id": "ALG-EMPH",
+      "target": "fish"
+    }
+  ],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+      "text": "скумбрія копчена, олія соняшникова, **гірчичний** порошок, цибуля ріпчаста, сіль, перець чорний мелений, консервант бензоат натрію.",
+      "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": {
+      "per": "100g",
+      "portion_text": null,
+      "energy": "1113 кДж / 266 ккал",
+      "fat": "22 г",
+      "saturates": "4 г",
+      "carbs": "3 г",
+      "sugars": "1 г",
+      "fibre": "0 г",
+      "protein": "14 г",
+      "salt": "1,8 г",
+      "photo_index": 1
+    },
+    "other_text": [
+      {
+        "text": "Паштет з оселедця",
+        "photo_index": 0
+      },
+      {
+        "text": "Маса нетто 150 г",
+        "photo_index": 0
+      },
+      {
+        "text": "Зберігати при температурі від +2 до +6 °C.",
+        "photo_index": 1
+      },
+      {
+        "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+        "photo_index": 1
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": true,
+    "quality": "blur",
+    "template": "spread",
+    "scenario": "ALG-EMPH",
+    "off_dictionary": [],
+    "emphasis": "bold"
+  }
+}

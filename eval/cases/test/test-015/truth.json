@@ -1,0 +1,74 @@
+{
+  "violations": [
+    {
+      "rule_id": "ALG-SPEC-MISSING",
+      "target": "mustard"
+    }
+  ],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+      "text": "**сулугуні**, цукор, наповнювач полуничний, стабілізатор пектин, барвник кармін.",
+      "photo_index": 1
+    },
+    "may_contain_text": {
+      "text": "Може містити: яйця.",
+      "photo_index": 1
+    },
+    "nutrition": {
+      "per": "100g",
+      "portion_text": null,
+      "energy": "385 кДж / 92 ккал",
+      "fat": "3,2 г",
+      "saturates": "2,1 г",
+      "carbs": "12,5 г",
+      "sugars": "11,8 г",
+      "fibre": "0 г",
+      "protein": "3,4 г",
+      "salt": "0,12 г",
+      "photo_index": 1
+    },
+    "other_text": [
+      {
+        "text": "Йогурт з чорницею",
+        "photo_index": 0
+      },
+      {
+        "text": "Маса нетто 300 г",
+        "photo_index": 0
+      },
+      {
+        "text": "Зберігати при температурі від +2 до +6 °C.",
+        "photo_index": 1
+      },
+      {
+        "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+        "photo_index": 1
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": true,
+    "quality": "rotate",
+    "template": "yogurt",
+    "scenario": "ALG-SPEC-MISSING",
+    "off_dictionary": [
+      "сулугуні"
+    ],
+    "emphasis": "bold"
+  }
+}

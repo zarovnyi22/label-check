@@ -1,0 +1,34 @@
+{
+  "product_name": "Ряжанка 2,5 %",
+  "form": "liquid",
+  "ingredients": [
+    {
+      "name": "сироватка молочна суха",
+      "allergens": [
+        "milk"
+      ]
+    },
+    {
+      "name": "закваска бактеріальна",
+      "allergens": []
+    },
+    {
+      "name": "мускатний горіх",
+      "allergens": []
+    },
+    {
+      "name": "вітамін d3",
+      "allergens": []
+    }
+  ],
+  "nutrition_per_100": {
+    "energy_kcal": 50,
+    "fat": 2.5,
+    "saturates": 1.6,
+    "carbs": 4,
+    "sugars": 4,
+    "fibre": 0,
+    "protein": 3,
+    "salt": 0.1
+  }
+}

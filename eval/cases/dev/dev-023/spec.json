@@ -1,0 +1,52 @@
+{
+  "product_name": "Паста рибна",
+  "form": "solid",
+  "ingredients": [
+    {
+      "name": "скумбрія копчена",
+      "allergens": [
+        "fish"
+      ]
+    },
+    {
+      "name": "олія соняшникова",
+      "allergens": []
+    },
+    {
+      "name": "гірчичний порошок",
+      "allergens": [
+        "mustard"
+      ]
+    },
+    {
+      "name": "цибуля ріпчаста",
+      "allergens": []
+    },
+    {
+      "name": "сіль",
+      "allergens": []
+    },
+    {
+      "name": "перець чорний мелений",
+      "allergens": []
+    },
+    {
+      "name": "консервант бензоат натрію",
+      "allergens": []
+    }
+  ],
+  "may_contain": [
+    "celery",
+    "soybeans"
+  ],
+  "nutrition_per_100": {
+    "energy_kcal": 266,
+    "fat": 22,
+    "saturates": 4,
+    "carbs": 3,
+    "sugars": 1,
+    "fibre": 0,
+    "protein": 14,
+    "salt": 1.8
+  }
+}

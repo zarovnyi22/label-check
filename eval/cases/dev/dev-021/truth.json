@@ -1,0 +1,68 @@
+{
+  "violations": [],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+      "text": "**яйця** курячі, олія соняшникова, **гірчиця** столова, вода питна, оцет спиртовий, сіль, регулятор кислотності кислота лимонна, консервант сорбат калію.",
+      "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": {
+      "per": "100g",
+      "portion_text": null,
+      "energy": "1289 кДж / 308 ккал",
+      "fat": "30 г",
+      "saturates": "3 г",
+      "carbs": "8 г",
+      "sugars": "<0,5 г",
+      "fibre": "0,5 г",
+      "protein": "1,2 г",
+      "salt": "1,5 г",
+      "photo_index": 1
+    },
+    "other_text": [
+      {
+        "text": "Майонез «Столичний»",
+        "photo_index": 0
+      },
+      {
+        "text": "Sugar free",
+        "photo_index": 0
+      },
+      {
+        "text": "Маса нетто 250 г",
+        "photo_index": 0
+      },
+      {
+        "text": "Зберігати при температурі від +2 до +6 °C.",
+        "photo_index": 1
+      },
+      {
+        "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+        "photo_index": 1
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": true,
+    "quality": "rotate",
+    "template": "sauce",
+    "scenario": "clean_sugar_free_lt",
+    "off_dictionary": [],
+    "emphasis": "bold"
+  }
+}

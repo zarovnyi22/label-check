@@ -1,0 +1,38 @@
+{
+  "product_name": "Паштет з оселедця",
+  "form": "solid",
+  "ingredients": [
+    {
+      "name": "скумбрія копчена",
+      "allergens": [
+        "fish"
+      ]
+    },
+    {
+      "name": "олія соняшникова",
+      "allergens": []
+    },
+    {
+      "name": "гірчичний порошок",
+      "allergens": [
+        "mustard"
+      ]
+    },
+    {
+      "name": "цибуля ріпчаста",
+      "allergens": []
+    },
+    {
+      "name": "сіль",
+      "allergens": []
+    },
+    {
+      "name": "перець чорний мелений",
+      "allergens": []
+    },
+    {
+      "name": "консервант бензоат натрію",
+      "allergens": []
+    }
+  ]
+}

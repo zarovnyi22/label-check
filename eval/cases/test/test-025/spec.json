@@ -1,0 +1,58 @@
+{
+  "product_name": "Багет французький",
+  "form": "solid",
+  "ingredients": [
+    {
+      "name": "спельтове борошно",
+      "allergens": [
+        "cereals"
+      ]
+    },
+    {
+      "name": "цукор",
+      "allergens": []
+    },
+    {
+      "name": "житні висівки",
+      "allergens": [
+        "cereals"
+      ]
+    },
+    {
+      "name": "вода питна",
+      "allergens": []
+    },
+    {
+      "name": "тахіні",
+      "allergens": [
+        "sesame"
+      ]
+    },
+    {
+      "name": "дріжджі хлібопекарські",
+      "allergens": []
+    },
+    {
+      "name": "сіль",
+      "allergens": []
+    },
+    {
+      "name": "олія соняшникова",
+      "allergens": []
+    },
+    {
+      "name": "поліпшувач кислота аскорбінова",
+      "allergens": []
+    }
+  ],
+  "nutrition_per_100": {
+    "energy_kcal": 260,
+    "fat": 2.5,
+    "saturates": 0.4,
+    "carbs": 48,
+    "sugars": 3,
+    "fibre": 6,
+    "protein": 8.5,
+    "salt": 1.1
+  }
+}

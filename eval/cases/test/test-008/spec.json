@@ -1,0 +1,32 @@
+{
+  "product_name": "Нектар персиковий",
+  "form": "liquid",
+  "ingredients": [
+    {
+      "name": "вода питна",
+      "allergens": []
+    },
+    {
+      "name": "пюре яблучне",
+      "allergens": []
+    },
+    {
+      "name": "кислота лимонна",
+      "allergens": []
+    },
+    {
+      "name": "кислота аскорбінова",
+      "allergens": []
+    }
+  ],
+  "nutrition_per_100": {
+    "energy_kcal": 44,
+    "fat": 0,
+    "saturates": 0,
+    "carbs": 10.5,
+    "sugars": 9.8,
+    "fibre": 0.2,
+    "protein": 0.3,
+    "salt": 0.01
+  }
+}

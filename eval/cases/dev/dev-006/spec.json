@@ -1,0 +1,42 @@
+{
+  "product_name": "Йогурт полуничний",
+  "form": "solid",
+  "ingredients": [
+    {
+      "name": "вершки 10 %",
+      "allergens": [
+        "milk"
+      ]
+    },
+    {
+      "name": "цукор",
+      "allergens": []
+    },
+    {
+      "name": "наповнювач полуничний",
+      "allergens": []
+    },
+    {
+      "name": "стабілізатор пектин",
+      "allergens": []
+    },
+    {
+      "name": "барвник кармін",
+      "allergens": []
+    }
+  ],
+  "may_contain": [
+    "eggs",
+    "soybeans"
+  ],
+  "nutrition_per_100": {
+    "energy_kcal": 92,
+    "fat": 3.2,
+    "saturates": 2.1,
+    "carbs": 12.5,
+    "sugars": 11.8,
+    "fibre": 0,
+    "protein": 3.4,
+    "salt": 0.12
+  }
+}
