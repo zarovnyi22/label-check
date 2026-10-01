@@ -196,6 +196,14 @@ async def test_other_4xx_is_not_retried_and_hides_the_key(pauses):
     assert pauses == []
 
 
+@pytest.mark.parametrize("offset", [285, 290, 295])
+async def test_key_across_the_excerpt_boundary_is_hidden(pauses, offset):
+    # RR2 #2: masking after the 300-char cut leaked the key's head.
+    script = Script(httpx.Response(403, text="x" * offset + KEY + "y" * 50))
+    err = await extract_error(gemini(script))
+    assert KEY[:4] not in err.message
+
+
 async def test_missing_key_is_not_configured_without_a_request():
     script = Script()
     err = await extract_error(gemini(script, key=""))

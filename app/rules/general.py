@@ -121,6 +121,19 @@ def check_truncated(extraction: LabelExtraction, ing: Ingredients) -> list[Findi
 def check_front(extraction: LabelExtraction) -> list[Finding]:
     """SIDE-FRONT-MISSING: claims are usually on the front; without it they are not checked."""
     if any(photo.side == "front" for photo in extraction.photos or []):
+        # The front always has at least the product name: no text outside the ingredients and
+        # the table means the model lost it (a dropped or renamed key), not that there are no
+        # claims (RR2 #1).
+        if not any(_readable(item.text) for item in extraction.other_text or []):
+            return [
+                finding(
+                    "SIDE-FRONT-MISSING",
+                    None,
+                    "not_checked",
+                    "Текст упаковки поза складом і таблицею не розпізнано — твердження "
+                    "не перевірено.",
+                )
+            ]
         return [finding("SIDE-FRONT-MISSING", None, "pass", "Є фото лицьового боку.")]
     return [
         finding(

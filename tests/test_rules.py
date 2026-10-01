@@ -41,7 +41,10 @@ def label(
             "emphasis_resolvable": True,
             "ingredients_marked": {"text": ingredients, "photo_index": 1} if ingredients else None,
             "nutrition": nutrition,
-            "other_text": [{"text": c, "photo_index": 0} for c in claims or []],
+            # The front always carries the product name (SIDE-FRONT-MISSING needs some text).
+            "other_text": [
+                {"text": c, "photo_index": 0} for c in ["Вівсяні батончики", *(claims or [])]
+            ],
         }
     )
 
@@ -577,6 +580,25 @@ def test_side_front_missing():
     findings, verdict = run_rules(label(["без цукру"], sides=("back",), sugars="0 г"), None)
     assert rule(findings, "SIDE-FRONT-MISSING").status == "not_checked"
     assert rule(findings, "sugar_free", "sugar_free").status == "pass"  # still checked
+
+
+@pytest.mark.parametrize(
+    "other_text",
+    [
+        {},  # key dropped
+        {"other_text": None},
+        {"otherText": [{"text": "Без цукру", "photo_index": 0}]},  # renamed key is dropped
+        {"other_text": []},
+        {"other_text": [{"text": "[…]", "photo_index": 0}]},
+    ],
+)
+def test_lost_other_text_is_never_pass(other_text):
+    # RR2 #1: "Без цукру" with 3,1 g sugars lost from the answer must not turn fail into pass.
+    data = label(["Без цукру"], sugars="3,1 г").model_dump(exclude={"other_text"})
+    findings, verdict = run_rules(LabelExtraction.model_validate(data | other_text), recipe())
+    f = rule(findings, "SIDE-FRONT-MISSING")
+    assert f.status == "not_checked" and "не розпізнано" in f.message
+    assert verdict != "pass"
 
 
 @pytest.mark.parametrize(

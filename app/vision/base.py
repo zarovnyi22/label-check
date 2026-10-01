@@ -166,8 +166,8 @@ def _json_or_none(resp: httpx.Response) -> dict | None:
 
 def _excerpt(text: str, api_key: str) -> str:
     """A short piece of a provider's error body, never with the key in it."""
-    text = text[:300]
-    return text.replace(api_key, "***") if api_key else text
+    # Mask before cutting: a key across the 300-char boundary would leak its head (RR2 #2).
+    return (text.replace(api_key, "***") if api_key else text)[:300]
 
 
 _THINK_RE = re.compile(r"<think>.*?</think>", re.S)

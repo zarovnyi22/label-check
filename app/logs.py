@@ -49,5 +49,5 @@ def setup_logging(level: str = "INFO") -> None:
         logging.getLogger(name).propagate = True
     # The request middleware logs every request as JSON with its id: no plain-text duplicate.
     logging.getLogger("uvicorn.access").disabled = True
-    # httpx logs every outgoing URL at INFO, and a Gemini URL may carry the key in its query.
+    # httpx logs every outgoing URL at INFO: quiet it (the keys go in headers, not URLs).
     logging.getLogger("httpx").setLevel(logging.WARNING)
