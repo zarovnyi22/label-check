@@ -5,8 +5,10 @@ The code finds the claims, not the model. Comparative, health and unregulated wo
 CLAIM-UNVERIFIABLE (needs_review): no automatic verdict.
 
 Thresholds: Reg. 1924/2006 annex, which Order 1145 reproduces; the sugar thresholds were
-confirmed against Ukrainian sources, the full order text was not reachable (TODO in NOTES:
-check "не більше" vs "менше" wording and the rest of the list).
+confirmed against Ukrainian sources. Decisions (B2c, docs/NOTES.md): "без цукру" is
+"not more than" 0.5 g; lactose is an added sugar, maltodextrin is disputed (needs_review);
+satfat_low counts saturates only (no trans fats in the table), so a margin < 0.1 g to the
+limit is needs_review.
 """
 
 import re
@@ -131,18 +133,19 @@ UNVERIFIABLE_UK = {
 NATURAL_SUGARS_RE = re.compile(
     r"(?<!\w)(?:містить природн\w* цукр\w*|contains naturally occurring sugars?)", re.I
 )
-# Mono-/disaccharides and foods used for sweetening (TODO: check the list against the
-# order's wording; maltodextrin and lactose are counted as added sugars here).
+# Mono-/disaccharides and foods used for sweetening; lactose counts as an added sugar.
 ADDED_SUGAR_RE = re.compile(
     r"(?<!\w)(?:"
     rf"цукор|цукр(?:у|ом|і|и|ів)?{_END}|цукров\w*|мед(?:у|ом)?{_END}|сироп\w*|паток\w*|"
-    r"декстроз\w*|глюкоз\w*|фруктоз\w*|сахароз\w*|мальтоз\w*|лактоз\w*|мальтодекстрин\w*|"
+    r"декстроз\w*|глюкоз\w*|фруктоз\w*|сахароз\w*|мальтоз\w*|лактоз\w*|"
     r"інвертн\w*|концентрован\w* (?:\w+ )?сок\w*|сік\w* концентрован\w*|"
     rf"sugars?{_END}|honey|syrup\w*|dextrose|glucose|fructose|sucrose|maltose|lactose|"
-    r"maltodextrin|juice concentrate"
+    r"juice concentrate"
     r")",
     re.I,
 )
+# Not a mono-/disaccharide, but sweetens and is argued about: never a silent pass.
+DISPUTED_SUGAR_RE = re.compile(r"(?<!\w)(?:мальтодекстрин\w*|maltodextrin\w*)", re.I)
 
 
 def _compile(patterns: list[str]) -> re.Pattern[str]:
@@ -204,6 +207,10 @@ MAX_LIMITS: dict[str, tuple[str, float, float]] = {
 }
 SATFAT_LIMITS = (1.5, 0.75)  # g, solid / liquid
 SATFAT_MAX_ENERGY_PCT = 10.0
+# The law limits saturates + trans fats; the table has no trans fats, so a pass needs
+# this much room under the limit (g), otherwise needs_review.
+SATFAT_MARGIN = 0.1
+SATFAT_BASIS = "лише насичені жири: транс-жирів у таблиці немає, а поріг закону — на їх суму"
 PROTEIN_MIN_ENERGY_PCT = {"protein_source": 12.0, "protein_high": 20.0}
 FIBRE_MIN = {"fibre_source": (3.0, 1.5), "fibre_high": (6.0, 3.0)}  # g/100 g, g/100 kcal
 SUGARS_FREE_LIMIT = 0.5  # sugars this low need no "містить природні цукри"
@@ -358,15 +365,29 @@ def _check_satfat(title: str, facts: NutritionFacts, form: str) -> _Result:
     lo, hi = bounds
     pct_lo, pct_hi = lo * 9 * 100 / facts.kcal, hi * 9 * 100 / facts.kcal
     sat = facts.amounts["saturates"]
-    values = {"saturates": sat.value, "kcal": facts.kcal, "energy_pct": round(pct_hi, 1)}
+    values = {
+        "saturates": sat.value,
+        "kcal": facts.kcal,
+        "energy_pct": round(pct_hi, 1),
+        "margin_g": round(limit - hi, 3),
+        "basis": SATFAT_BASIS,
+    }
     head = (
         f"Твердження «{title}»: насичені жири {_shown(sat)} г ({fmt(round(pct_hi, 1))} % енергії), "
         f"поріг ≤ {fmt(limit)} г і ≤ {fmt(SATFAT_MAX_ENERGY_PCT)} % енергії"
     )
-    if hi <= limit and at_least(SATFAT_MAX_ENERGY_PCT, pct_hi):
-        return _Result("pass", f"{head} — виконано.", values, limit)
     if lo > limit or not at_least(SATFAT_MAX_ENERGY_PCT, pct_lo):
         return _Result("violation", f"{head} — не виконано.", values, limit)
+    if hi <= limit and at_least(SATFAT_MAX_ENERGY_PCT, pct_hi):
+        if at_least(limit - hi, SATFAT_MARGIN):
+            return _Result("pass", f"{head} — виконано.", values, limit)
+        return _Result(
+            "needs_review",
+            f"{head} — запас до порогу менше {fmt(SATFAT_MARGIN)} г, а поріг закону — на суму "
+            "насичених і транс-жирів, яких у таблиці немає; перевірте за рецептурою.",
+            values,
+            limit,
+        )
     return _Result("needs_review", f"{head} — точне значення невідоме.", values, limit)
 
 
@@ -386,6 +407,23 @@ def _check_no_added_sugar(
             f"{'; '.join(added)}.",
             {"ingredients": "; ".join(added)},
         )
+    result = _no_added_sugar_rest(title, facts, ing, extraction)
+    disputed = [m.text for m in ing.mentions if DISPUTED_SUGAR_RE.search(m.text)]
+    if disputed and result.status != "violation":
+        rest = "" if result.status == "pass" else f" Крім того: {result.message}"
+        return _Result(
+            "needs_review",
+            f"Твердження «{title}»: у складі спірний підсолоджувальний інгредієнт "
+            f"({'; '.join(disputed)}) — оцініть вручну.{rest}",
+            {"ingredients": "; ".join(disputed)},
+        )
+    return result
+
+
+def _no_added_sugar_rest(
+    title: str, facts: NutritionFacts | None, ing: Ingredients, extraction: LabelExtraction
+) -> _Result:
+    """After the definite added sugars: truncation and the natural sugars statement."""
     if ing.truncated:
         return _Result(
             "needs_review",

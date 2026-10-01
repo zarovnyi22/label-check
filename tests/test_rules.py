@@ -244,10 +244,13 @@ def test_fibre(fibre, energy, text, status):
 @pytest.mark.parametrize(
     ("saturates", "energy", "per", "status"),
     [
-        ("1,5 г", "395 ккал", "100g", "pass"),  # 13.5 kcal = 3.4 %
+        ("1,4 г", "395 ккал", "100g", "pass"),  # 12.6 kcal = 3.2 %, margin 0.1 g
+        ("1,5 г", "395 ккал", "100g", "needs_review"),  # at the limit: trans fats unknown
+        ("1,45 г", "395 ккал", "100g", "needs_review"),
         ("1,6 г", "395 ккал", "100g", "violation"),
-        ("1,5 г", "100 ккал", "100g", "violation"),  # 13.5 % of energy
-        ("0,75 г", "200 ккал", "100ml", "pass"),
+        ("1,4 г", "100 ккал", "100g", "violation"),  # 12.6 % of energy
+        ("0,65 г", "200 ккал", "100ml", "pass"),  # 0.75 - 0.65: float error must not matter
+        ("0,75 г", "200 ккал", "100ml", "needs_review"),
         ("0,8 г", "200 ккал", "100ml", "violation"),
     ],
 )
@@ -256,6 +259,23 @@ def test_satfat_low(saturates, energy, per, status):
         claim("низький вміст насичених жирів", saturates=saturates, energy=energy, per=per).status
         == status
     )
+
+
+def test_satfat_low_near_the_limit_explains_the_basis():
+    f = claim("низький вміст насичених жирів", saturates="1,45 г")
+    assert f.evidence.values["margin_g"] == 0.05
+    assert "транс-жир" in f.evidence.values["basis"]
+    assert "запас до порогу менше 0,1 г" in f.message
+    assert (
+        "транс-жир"
+        in claim("низький вміст насичених жирів", saturates="1 г").evidence.values["basis"]
+    )
+
+
+def test_sugar_free_at_exactly_half_a_gram_passes():
+    # Reg. 1924/2006: "not more than 0.5 g" -> 0,5 is a pass, "<0,5" too.
+    assert claim("без цукру", sugars="0,5 г").status == "pass"
+    assert claim("без цукру", sugars="0,51 г").status == "violation"
 
 
 def test_claim_without_table_or_per_portion_needs_review():
@@ -283,7 +303,13 @@ def test_no_added_sugar_with_honey_is_violation():
 
 @pytest.mark.parametrize(
     "ingredients",
-    ["сироп глюкозний, какао", "пластівці, декстроза", "пластівці, цукор тростинний"],
+    [
+        "сироп глюкозний, какао",
+        "пластівці, декстроза",
+        "пластівці, цукор тростинний",
+        "пластівці, лактоза",  # lactose = added sugar
+        "flakes, lactose",
+    ],
 )
 def test_no_added_sugar_with_sugars_in_list(ingredients):
     findings, _ = run_rules(label(["без доданого цукру"], ingredients=ingredients), None)
@@ -299,6 +325,23 @@ def test_no_added_sugar_needs_the_natural_sugars_statement():
     assert rule(with_it, "no_added_sugar", "no_added_sugar").status == "pass"
     # The statement itself is not an "unregulated" claim.
     assert not [f for f in with_it if f.rule_id == "CLAIM-UNVERIFIABLE"]
+
+
+@pytest.mark.parametrize("ingredients", ["пластівці, мальтодекстрин", "flakes, maltodextrin"])
+def test_no_added_sugar_with_maltodextrin_needs_review(ingredients):
+    # Sugars 3,1 g without "містить природні цукри" is a violation; it wins over "disputed".
+    findings, _ = run_rules(label(["без доданого цукру"], ingredients=ingredients), None)
+    assert rule(findings, "no_added_sugar", "no_added_sugar").status == "violation"
+    findings, _ = run_rules(
+        label(["без доданого цукру"], ingredients=ingredients, sugars="0,2 г"), None
+    )
+    f = rule(findings, "no_added_sugar", "no_added_sugar")
+    assert f.status == "needs_review"
+    assert "спірний підсолоджувальний інгредієнт" in f.message
+    findings, _ = run_rules(
+        label(["без доданого цукру", "Містить природні цукри"], ingredients=ingredients), None
+    )
+    assert rule(findings, "no_added_sugar", "no_added_sugar").status == "needs_review"
 
 
 def test_no_added_sugar_truncated_list_needs_review():
