@@ -1,0 +1,96 @@
+{
+ "case": "r11",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "ffafecffbcc0b3a644adacf5a6bcf3953612f3a44c013704365f6f9e320bccd0",
+  "30c8e621dc2815d278f23da5f48c5c29e63d8fd806333c4e6c237dd2d87b12fe",
+  "9f8a374f8ea43258f6808d5c28592f7337261439bb942c696e3792ff901c528b"
+ ],
+ "usage": {
+  "input_tokens": 4298,
+  "output_tokens": 599,
+  "reasoning_tokens": 0,
+  "total_tokens": 4897
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "side",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 2,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": false,
+  "ingredients_marked": {
+   "text": "Carbonated Water, Sugar, Colour (Caramel E150d), Acid (Phosphoric Acid), Natural Flavourings, Caffeine Flavouring.",
+   "photo_index": 1
+  },
+  "may_contain_text": null,
+  "nutrition": {
+   "per": "100ml",
+   "portion_text": null,
+   "energy": "180kJ / 42kcal",
+   "fat": "0g",
+   "saturates": "0g",
+   "carbs": "10.6g",
+   "sugars": "10.6g",
+   "fibre": null,
+   "protein": "0g",
+   "salt": "0g",
+   "photo_index": 2
+  },
+  "other_text": [
+   {
+    "text": "ORİJİNAL TAT",
+    "photo_index": 0
+   },
+   {
+    "text": "Coca-Cola",
+    "photo_index": 0
+   },
+   {
+    "text": "Sparkling Soft Drink with Plant Extracts",
+    "photo_index": 1
+   },
+   {
+    "text": "Best before: See base of can.",
+    "photo_index": 1
+   },
+   {
+    "text": "Store cool and dry.",
+    "photo_index": 1
+   },
+   {
+    "text": "Coke R ORIGINAL TASTE",
+    "photo_index": 2
+   },
+   {
+    "text": "330mle",
+    "photo_index": 2
+   },
+   {
+    "text": "NUTRITION INFORMATION TYPICAL VALUES",
+    "photo_index": 2
+   },
+   {
+    "text": "*Reference intake of an average adult (8400kJ/2000kcal)",
+    "photo_index": 2
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"side\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 2,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": false,\n  \"ingredients_marked\": {\n    \"text\": \"Carbonated Water, Sugar, Colour (Caramel E150d), Acid (Phosphoric Acid), Natural Flavourings, Caffeine Flavouring.\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": null,\n  \"nutrition\": {\n    \"per\": \"100ml\",\n    \"portion_text\": null,\n    \"energy\": \"180kJ / 42kcal\",\n    \"fat\": \"0g\",\n    \"saturates\": \"0g\",\n    \"carbs\": \"10.6g\",\n    \"sugars\": \"10.6g\",\n    \"fibre\": null,\n    \"protein\": \"0g\",\n    \"salt\": \"0g\",\n    \"photo_index\": 2\n  },\n  \"other_text\": [\n    {\n      \"text\": \"ORİJİNAL TAT\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Coca-Cola\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Sparkling Soft Drink with Plant Extracts\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Best before: See base of can.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Store cool and dry.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Coke R ORIGINAL TASTE\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"330mle\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"NUTRITION INFORMATION TYPICAL VALUES\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"*Reference intake of an average adult (8400kJ/2000kcal)\",\n      \"photo_index\": 2\n    }\n  ]\n}"
+}

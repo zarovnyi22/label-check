@@ -1,0 +1,136 @@
+{
+ "case": "r17",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "7d55c9a1a8379c038e8d5fc2ef75c217c4152ceb3d4e4ced59b1d87f0527d7d4",
+  "b843cc700589e2b4bfaaf98b7bb8bf60eecee0f4616047318f6f28262441775e",
+  "f5d1aa585d89eb9043ab04983d11ee49c3d6f245e8474d334979d882e07186df"
+ ],
+ "usage": {
+  "input_tokens": 4277,
+  "output_tokens": 1268,
+  "reasoning_tokens": 0,
+  "total_tokens": 5545
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 2,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "ВОДА, СИРОП ГЛЮКОЗНО-ФРУКТОЗНИЙ З ЦУКРОМ БІЛИМ (G**) АБО ЦУКОР БІЛИЙ, СІК ЯБЛУЧНИЙ КОНЦЕНТРОВАНИЙ (ВМІСТ СОКУ В ГОТОВОМУ НАПОЇ 10 %), РЕГУЛЯТОР КИСЛОТНОСТІ КИСЛОТА ЛИМОННА, НАТУРАЛЬНА АРОМАТИЧНА РЕЧОВИНА «АРОМА» ЯБЛУЧНА НАТУРАЛЬНА, НАСТОЯНКА ЕХІНАЦЕЇ ПУРПУРОВОЇ, КОНСЕРВАНТ БЕНЗОАТ НАТРІЮ, АНТИОКСИДАНТ КИСЛОТА АСКОРБІНОВА",
+   "photo_index": 1
+  },
+  "may_contain_text": null,
+  "nutrition": {
+   "per": "100g",
+   "portion_text": null,
+   "energy": "155 кДж (kJ) (37 ккал (kcal))",
+   "fat": "0 г (g)",
+   "saturates": "0 г (g)",
+   "carbs": "9,6 г (g)",
+   "sugars": "9,6 г (g)",
+   "fibre": null,
+   "protein": "0 г (g)",
+   "salt": "<0,1 г (g)",
+   "photo_index": 2
+  },
+  "other_text": [
+   {
+    "text": "Живчик",
+    "photo_index": 0
+   },
+   {
+    "text": "З СОКОМ ЯБЛУКА",
+    "photo_index": 0
+   },
+   {
+    "text": "100% УКРАЇНСЬКЕ",
+    "photo_index": 0
+   },
+   {
+    "text": "ОБОЛОНЬ",
+    "photo_index": 0
+   },
+   {
+    "text": "МІСТИТЬ СІК ТА ЕХІНАЦЕЮ ВІТАМІНИ ТА МІКРОЕЛЕМЕНТИ",
+    "photo_index": 0
+   },
+   {
+    "text": "НАПІЙ БЕЗАЛКОГОЛЬНИЙ СОКОВИЙ СИЛЬНОГАЗОВАНИЙ",
+    "photo_index": 0
+   },
+   {
+    "text": "[…]НЕ ДОПУСКАЄТЬСЯ ОСАД НАТУРАЛЬНОЇ СИРОВИНИ.",
+    "photo_index": 1
+   },
+   {
+    "text": "- НАЯВНІСТЬ ЛІТЕРИ (G) В КОДУВАННІ СВІДЧИТЬ ПРО […]",
+    "photo_index": 1
+   },
+   {
+    "text": "ПОЖИВНА ЦІННІСТЬ НА 100 г (g) НАПОЮ",
+    "photo_index": 2
+   },
+   {
+    "text": "ЕНЕРГЕТИЧНА ЦІННІСТЬ",
+    "photo_index": 2
+   },
+   {
+    "text": "ЖИРИ",
+    "photo_index": 2
+   },
+   {
+    "text": "З НИХ НАСИЧЕНІ",
+    "photo_index": 2
+   },
+   {
+    "text": "ВУГЛЕВОДИ",
+    "photo_index": 2
+   },
+   {
+    "text": "З НИХ ЦУКРИ",
+    "photo_index": 2
+   },
+   {
+    "text": "БІЛКИ",
+    "photo_index": 2
+   },
+   {
+    "text": "СІЛЬ",
+    "photo_index": 2
+   },
+   {
+    "text": "ГАРЯЧА ЛІНІЯ (ТЕЛЕФОН ВИРОБНИКІВ): 0 800 507 300.",
+    "photo_index": 2
+   },
+   {
+    "text": "УСІ ДЗВІНКИ ЗІ СТАЦІОНАРНИХ ТЕЛЕФОНІВ В МЕЖАХ УКРАЇНИ БЕЗКОШТОВНІ. ПРОДУКТ СЕРТИФІКОВАНИЙ.",
+    "photo_index": 2
+   },
+   {
+    "text": "[…]ВИГОТОВЛЕНО ЗГІДНО […] ДСТУ 4069",
+    "photo_index": 2
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 2,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"ВОДА, СИРОП ГЛЮКОЗНО-ФРУКТОЗНИЙ З ЦУКРОМ БІЛИМ (G**) АБО ЦУКОР БІЛИЙ, СІК ЯБЛУЧНИЙ КОНЦЕНТРОВАНИЙ (ВМІСТ СОКУ В ГОТОВОМУ НАПОЇ 10 %), РЕГУЛЯТОР КИСЛОТНОСТІ КИСЛОТА ЛИМОННА, НАТУРАЛЬНА АРОМАТИЧНА РЕЧОВИНА «АРОМА» ЯБЛУЧНА НАТУРАЛЬНА, НАСТОЯНКА ЕХІНАЦЕЇ ПУРПУРОВОЇ, КОНСЕРВАНТ БЕНЗОАТ НАТРІЮ, АНТИОКСИДАНТ КИСЛОТА АСКОРБІНОВА\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": null,\n  \"nutrition\": {\n    \"per\": \"100g\",\n    \"portion_text\": null,\n    \"energy\": \"155 кДж (kJ) (37 ккал (kcal))\",\n    \"fat\": \"0 г (g)\",\n    \"saturates\": \"0 г (g)\",\n    \"carbs\": \"9,6 г (g)\",\n    \"sugars\": \"9,6 г (g)\",\n    \"fibre\": null,\n    \"protein\": \"0 г (g)\",\n    \"salt\": \"<0,1 г (g)\",\n    \"photo_index\": 2\n  },\n  \"other_text\": [\n    {\n      \"text\": \"Живчик\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"З СОКОМ ЯБЛУКА\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"100% УКРАЇНСЬКЕ\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"ОБОЛОНЬ\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"МІСТИТЬ СІК ТА ЕХІНАЦЕЮ ВІТАМІНИ ТА МІКРОЕЛЕМЕНТИ\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"НАПІЙ БЕЗАЛКОГОЛЬНИЙ СОКОВИЙ СИЛЬНОГАЗОВАНИЙ\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"[…]НЕ ДОПУСКАЄТЬСЯ ОСАД НАТУРАЛЬНОЇ СИРОВИНИ.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"- НАЯВНІСТЬ ЛІТЕРИ (G) В КОДУВАННІ СВІДЧИТЬ ПРО […]\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"ПОЖИВНА ЦІННІСТЬ НА 100 г (g) НАПОЮ\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"ЕНЕРГЕТИЧНА ЦІННІСТЬ\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"ЖИРИ\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"З НИХ НАСИЧЕНІ\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"ВУГЛЕВОДИ\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"З НИХ ЦУКРИ\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"БІЛКИ\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"СІЛЬ\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"ГАРЯЧА ЛІНІЯ (ТЕЛЕФОН ВИРОБНИКІВ): 0 800 507 300.\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"УСІ ДЗВІНКИ ЗІ СТАЦІОНАРНИХ ТЕЛЕФОНІВ В МЕЖАХ УКРАЇНИ БЕЗКОШТОВНІ. ПРОДУКТ СЕРТИФІКОВАНИЙ.\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"[…]ВИГОТОВЛЕНО ЗГІДНО […] ДСТУ 4069\",\n      \"photo_index\": 2\n    }\n  ]\n}"
+}

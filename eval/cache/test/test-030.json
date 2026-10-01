@@ -1,0 +1,69 @@
+{
+ "case": "test-030",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "f0567bac2a258687a262af13f783c631ebbbf5e3c24c67e279cf1fe2ca11e08c",
+  "1253c18d4f08f9bcf1d0a2f857fc1f5cd8df0e52995b2cd340883c9ca36e335d"
+ ],
+ "usage": {
+  "input_tokens": 3219,
+  "output_tokens": 480,
+  "reasoning_tokens": 0,
+  "total_tokens": 3699
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": false,
+  "ingredients_marked": {
+   "text": "СПЕЛЬТОВЕ борошно, цукор, ЖИТНІ висівки, вода питна, ТАХІНІ, дріжджі хлібопекарські, сіль, олія соняшникова, поліпшувач кислота аскорбінова.",
+   "photo_index": 1
+  },
+  "may_contain_text": null,
+  "nutrition": {
+   "per": "100g",
+   "portion_text": null,
+   "energy": "1088 кДж / 260 ккал",
+   "fat": "2,5 г",
+   "saturates": "0,4 г",
+   "carbs": "48 г",
+   "sugars": "3 г",
+   "fibre": "6 г",
+   "protein": "8,5 г",
+   "salt": "1,1 г",
+   "photo_index": 1
+  },
+  "other_text": [
+   {
+    "text": "Хліб зерновий",
+    "photo_index": 0
+   },
+   {
+    "text": "Маса нетто 500 г",
+    "photo_index": 0
+   },
+   {
+    "text": "Зберігати в сухому місці при температурі не вище +25 °C.",
+    "photo_index": 1
+   },
+   {
+    "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+    "photo_index": 1
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": false,\n  \"ingredients_marked\": {\n    \"text\": \"СПЕЛЬТОВЕ борошно, цукор, ЖИТНІ висівки, вода питна, ТАХІНІ, дріжджі хлібопекарські, сіль, олія соняшникова, поліпшувач кислота аскорбінова.\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": null,\n  \"nutrition\": {\n    \"per\": \"100g\",\n    \"portion_text\": null,\n    \"energy\": \"1088 кДж / 260 ккал\",\n    \"fat\": \"2,5 г\",\n    \"saturates\": \"0,4 г\",\n    \"carbs\": \"48 г\",\n    \"sugars\": \"3 г\",\n    \"fibre\": \"6 г\",\n    \"protein\": \"8,5 г\",\n    \"salt\": \"1,1 г\",\n    \"photo_index\": 1\n  },\n  \"other_text\": [\n    {\n      \"text\": \"Хліб зерновий\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Маса нетто 500 г\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Зберігати в сухому місці при температурі не вище +25 °C.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Виробник: ТОВ «Тестовий завод», Україна, м. Київ.\",\n      \"photo_index\": 1\n    }\n  ]\n}"
+}

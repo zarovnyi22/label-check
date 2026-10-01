@@ -1,0 +1,107 @@
+{
+ "case": "r01",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "08e508a8f17f041f7a01d2351dd04c03e255e8508ba435d1a16aa97a7ebb34a9",
+  "ef2c70e87244292e4920a6dd6f0a1858e5f26af2785ca9975e595d6e9624098f",
+  "d8c51990ac5d8a57401982f7ce5fca3d630f6f935a07be74d78cb7e7a9cec282"
+ ],
+ "usage": {
+  "input_tokens": 4289,
+  "output_tokens": 895,
+  "reasoning_tokens": 0,
+  "total_tokens": 5184
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 2,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": false,
+  "ingredients_marked": {
+   "text": "цукор, патока, вода питна, концентровані фруктові соки: яблучний, апельсиновий, лимонний (*4% фруктових концентрованих соків = 25% фруктових соків), желюючий агент пектин, регулятори кислотності (лимонна кислота, тринатрію цитрат), ароматизатори, барвники (антоціан, екстракт паприки, куркумін)",
+   "photo_index": 1
+  },
+  "may_contain_text": {
+   "text": "Може містити глютен (пшеничний), молокопродукти, соєвий лецитин, яєчні продукти, фундук, мигдаль, арахіс, кунжут.",
+   "photo_index": 1
+  },
+  "nutrition": {
+   "per": "100g",
+   "portion_text": null,
+   "energy": "1380 kJ / 330 kcal",
+   "fat": "0 g",
+   "saturates": "0 g",
+   "carbs": "80 g",
+   "sugars": "58.8 g",
+   "fibre": null,
+   "protein": "0.1 g",
+   "salt": "0.49 g",
+   "photo_index": 2
+  },
+  "other_text": [
+   {
+    "text": "ROSHEN",
+    "photo_index": 0
+   },
+   {
+    "text": "BONNY FRUIT",
+    "photo_index": 0
+   },
+   {
+    "text": "25% juice",
+    "photo_index": 0
+   },
+   {
+    "text": "MIX citrus",
+    "photo_index": 0
+   },
+   {
+    "text": "200 r/g",
+    "photo_index": 0
+   },
+   {
+    "text": "NET WT 7.05 OZ",
+    "photo_index": 0
+   },
+   {
+    "text": "with citrus flavours",
+    "photo_index": 0
+   },
+   {
+    "text": "(UA) ЦУКЕРКИ ЖЕЛЕЙНІ \"BONNY FRUIT\" ЦИТРУСОВИЙ МІКС (НЕГЛАЗУРОВАНІ). Мікс желейних цукерок з цитрусовими смаками («лимон-лайм», «апельсин», «апельсин-грейпфрут»)",
+    "photo_index": 1
+   },
+   {
+    "text": "Зберігати за температури (18±3)°С і відносній вологості повітря не вище 75%. (v261024C)",
+    "photo_index": 1
+   },
+   {
+    "text": "Valori nutrizionali medi per 100g:",
+    "photo_index": 2
+   },
+   {
+    "text": "Výživové údaje na 100g:",
+    "photo_index": 2
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 2,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": false,\n  \"ingredients_marked\": {\n    \"text\": \"цукор, патока, вода питна, концентровані фруктові соки: яблучний, апельсиновий, лимонний (*4% фруктових концентрованих соків = 25% фруктових соків), желюючий агент пектин, регулятори кислотності (лимонна кислота, тринатрію цитрат), ароматизатори, барвники (антоціан, екстракт паприки, куркумін)\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": {\n    \"text\": \"Може містити глютен (пшеничний), молокопродукти, соєвий лецитин, яєчні продукти, фундук, мигдаль, арахіс, кунжут.\",\n    \"photo_index\": 1\n  },\n  \"nutrition\": {\n    \"per\": \"100g\",\n    \"portion_text\": null,\n    \"energy\": \"1380 kJ / 330 kcal\",\n    \"fat\": \"0 g\",\n    \"saturates\": \"0 g\",\n    \"carbs\": \"80 g\",\n    \"sugars\": \"58.8 g\",\n    \"fibre\": null,\n    \"protein\": \"0.1 g\",\n    \"salt\": \"0.49 g\",\n    \"photo_index\": 2\n  },\n  \"other_text\": [\n    {\n      \"text\": \"ROSHEN\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"BONNY FRUIT\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"25% juice\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"MIX citrus\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"200 r/g\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"NET WT 7.05 OZ\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"with citrus flavours\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"(UA) ЦУКЕРКИ ЖЕЛЕЙНІ \\\"BONNY FRUIT\\\" ЦИТРУСОВИЙ МІКС (НЕГЛАЗУРОВАНІ). Мікс желейних цукерок з цитрусовими смаками («лимон-лайм», «апельсин», «апельсин-грейпфрут»)\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Зберігати за температури (18±3)°С і відносній вологості повітря не вище 75%. (v261024C)\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Valori nutrizionali medi per 100g:\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Výživové údaje na 100g:\",\n      \"photo_index\": 2\n    }\n  ]\n}"
+}

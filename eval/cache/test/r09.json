@@ -1,0 +1,153 @@
+{
+ "case": "r09",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "2a58bf2ef865d84d2be8a0ffc554c991dac90277e0bb984042b815e8834f64b4",
+  "6440b59430e66766f738431c2a52c3071508ca304664ec374495a9f58bb15b38",
+  "64db881afd701092efc8eb279a411bc70c242db9625e9c353600bda3ad5e0a90"
+ ],
+ "usage": {
+  "input_tokens": 4327,
+  "output_tokens": 1215,
+  "reasoning_tokens": 0,
+  "total_tokens": 5542
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 2,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": null,
+  "ingredients_marked": null,
+  "may_contain_text": null,
+  "nutrition": null,
+  "other_text": [
+   {
+    "text": "1890",
+    "photo_index": 0
+   },
+   {
+    "text": "BORJOMI",
+    "photo_index": 0
+   },
+   {
+    "text": "GEORGIAN MINERAL WATER",
+    "photo_index": 0
+   },
+   {
+    "text": "ბორჯომი",
+    "photo_index": 0
+   },
+   {
+    "text": "BOTTLED IN GEORGIA",
+    "photo_index": 0
+   },
+   {
+    "text": "МІНЕРАЛІЗАЦІЯ: 5,0 - 7,5 г/л",
+    "photo_index": 1
+   },
+   {
+    "text": "ХІМІЧНИЙ СКЛАД (МГ/Л)",
+    "photo_index": 1
+   },
+   {
+    "text": "Ca2+ 20-150",
+    "photo_index": 1
+   },
+   {
+    "text": "Mg2+ 20-150",
+    "photo_index": 1
+   },
+   {
+    "text": "Na+ 1000-2000",
+    "photo_index": 1
+   },
+   {
+    "text": "HCO3- 3500-5000",
+    "photo_index": 1
+   },
+   {
+    "text": "F <10",
+    "photo_index": 1
+   },
+   {
+    "text": "МІСТИТЬ 1.5 МГ/Л-БІЛЬШ ФТОРИДІВ ТА НЕ СТЬ РЕКОМЕНДОВАНИЙ ДЛЯ ТРИВАЛОГО СПОЖИВАННЯ ДІТЯМ ДО 7 РОКІВ ВІКУ.",
+    "photo_index": 1
+   },
+   {
+    "text": "ВІДПОВІДАЄ ССТ 50 : 2010",
+    "photo_index": 1
+   },
+   {
+    "text": "ЗБЕРІГАННЯ ТЕМПЕРАТУРА: (+3°C)-(+30°C)",
+    "photo_index": 1
+   },
+   {
+    "text": "ПРИДАТНІСТЬ: ОБУЄТЬ ЕТИКЕТЦІ",
+    "photo_index": 1
+   },
+   {
+    "text": "МІНЕРАЛІЗАЦІЯ: 5,0 - 7,5 г/л",
+    "photo_index": 2
+   },
+   {
+    "text": "ХІМІЧНИЙ СКЛАД (МГ/Л)",
+    "photo_index": 2
+   },
+   {
+    "text": "Ca2+ 20-150",
+    "photo_index": 2
+   },
+   {
+    "text": "Mg2+ 20-150",
+    "photo_index": 2
+   },
+   {
+    "text": "Na+ 1000-2000",
+    "photo_index": 2
+   },
+   {
+    "text": "HCO3- 3500-5000",
+    "photo_index": 2
+   },
+   {
+    "text": "F <10",
+    "photo_index": 2
+   },
+   {
+    "text": "МІСТИТЬ 1.5 МГ/Л-БІЛЬШ ФТОРИДІВ ТА НЕ СТЬ РЕКОМЕНДОВАНИЙ ДЛЯ ТРИВАЛОГО СПОЖИВАННЯ ДІТЯМ ДО 7 РОКІВ ВІКУ.",
+    "photo_index": 2
+   },
+   {
+    "text": "ВІДПОВІДАЄ ССТ 50 : 2010",
+    "photo_index": 2
+   },
+   {
+    "text": "ЗБЕРІГАННЯ ТЕМПЕРАТУРА: (+3°C)-(+30°C)",
+    "photo_index": 2
+   },
+   {
+    "text": "ПРИДАТНІСТЬ: ОБУЄТЬ ЕТИКЕТЦІ",
+    "photo_index": 2
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 2,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": null,\n  \"ingredients_marked\": null,\n  \"may_contain_text\": null,\n  \"nutrition\": null,\n  \"other_text\": [\n    {\n      \"text\": \"1890\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"BORJOMI\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"GEORGIAN MINERAL WATER\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"ბორჯომი\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"BOTTLED IN GEORGIA\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"МІНЕРАЛІЗАЦІЯ: 5,0 - 7,5 г/л\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"ХІМІЧНИЙ СКЛАД (МГ/Л)\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Ca2+ 20-150\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Mg2+ 20-150\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Na+ 1000-2000\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"HCO3- 3500-5000\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"F <10\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"МІСТИТЬ 1.5 МГ/Л-БІЛЬШ ФТОРИДІВ ТА НЕ СТЬ РЕКОМЕНДОВАНИЙ ДЛЯ ТРИВАЛОГО СПОЖИВАННЯ ДІТЯМ ДО 7 РОКІВ ВІКУ.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"ВІДПОВІДАЄ ССТ 50 : 2010\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"ЗБЕРІГАННЯ ТЕМПЕРАТУРА: (+3°C)-(+30°C)\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"ПРИДАТНІСТЬ: ОБУЄТЬ ЕТИКЕТЦІ\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"МІНЕРАЛІЗАЦІЯ: 5,0 - 7,5 г/л\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"ХІМІЧНИЙ СКЛАД (МГ/Л)\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Ca2+ 20-150\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Mg2+ 20-150\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Na+ 1000-2000\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"HCO3- 3500-5000\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"F <10\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"МІСТИТЬ 1.5 МГ/Л-БІЛЬШ ФТОРИДІВ ТА НЕ СТЬ РЕКОМЕНДОВАНИЙ ДЛЯ ТРИВАЛОГО СПОЖИВАННЯ ДІТЯМ ДО 7 РОКІВ ВІКУ.\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"ВІДПОВІДАЄ ССТ 50 : 2010\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"ЗБЕРІГАННЯ ТЕМПЕРАТУРА: (+3°C)-(+30°C)\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"ПРИДАТНІСТЬ: ОБУЄТЬ ЕТИКЕТЦІ\",\n      \"photo_index\": 2\n    }\n  ]\n}"
+}

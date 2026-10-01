@@ -1,0 +1,128 @@
+{
+ "case": "r08",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "a549844c06f1ebb490f763306ce7900ff3b8d335e425e0950a42d8e61fe4805d",
+  "ae7362f4f8ba9b7a2d082c426ae4969e52339307b0b4c3251d0c633972b8ee1e",
+  "674d5789f38579adf4b10a37640b11127e45e39343f84a436bd4afba6dc9da83"
+ ],
+ "usage": {
+  "input_tokens": 4276,
+  "output_tokens": 929,
+  "reasoning_tokens": 0,
+  "total_tokens": 5205
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 2,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": false,
+  "ingredients_marked": {
+   "text": "eau pétillante; colorant: E150d; acidifiants: E338, E331; édulcorants: aspartame, acesulfame-K; arômes naturels (extraits végétaux), dont caféine.",
+   "photo_index": 1
+  },
+  "may_contain_text": null,
+  "nutrition": {
+   "per": "100ml",
+   "portion_text": null,
+   "energy": "1.4kJ / 0.3kcal",
+   "fat": "0g",
+   "saturates": "0g",
+   "carbs": "0g",
+   "sugars": "0g",
+   "fibre": null,
+   "protein": "0g",
+   "salt": "0.02g",
+   "photo_index": 2
+  },
+  "other_text": [
+   {
+    "text": "zero SUGAR",
+    "photo_index": 0
+   },
+   {
+    "text": "Coca-Cola",
+    "photo_index": 0
+   },
+   {
+    "text": "NEW IMPROVED TASTE",
+    "photo_index": 0
+   },
+   {
+    "text": "[…]waarond[…]",
+    "photo_index": 1
+   },
+   {
+    "text": "Boisson rafraîchissante aux extraits végétaux, avec édulcorants.",
+    "photo_index": 1
+   },
+   {
+    "text": "Contient une source de phénylalanine.",
+    "photo_index": 1
+   },
+   {
+    "text": "Ten minste houdbaar tot: zie hals/dop. À consommer de préférence avant le: voir goulot/bouchon",
+    "photo_index": 1
+   },
+   {
+    "text": "VOEDINGSWAARDE/DECLARATION NUTRITIONNELLE",
+    "photo_index": 2
+   },
+   {
+    "text": "PER/POUR: 100ml",
+    "photo_index": 2
+   },
+   {
+    "text": "Energie: 1.4kJ / 0.3kcal",
+    "photo_index": 2
+   },
+   {
+    "text": "Vetten/Matières grasses: 0g",
+    "photo_index": 2
+   },
+   {
+    "text": "waarvan verzadigde vetzuren/dont acides gras saturés: 0g",
+    "photo_index": 2
+   },
+   {
+    "text": "Koolhydraten/Glucides: 0g",
+    "photo_index": 2
+   },
+   {
+    "text": "waarvan suikers/dont sucres: 0g",
+    "photo_index": 2
+   },
+   {
+    "text": "Eiwitten/Protéines: 0g",
+    "photo_index": 2
+   },
+   {
+    "text": "Zout/Sel: 0.02g",
+    "photo_index": 2
+   },
+   {
+    "text": "*Referentie-inname van een gemiddelde volwassene / […]",
+    "photo_index": 2
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 2,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": false,\n  \"ingredients_marked\": {\n    \"text\": \"eau pétillante; colorant: E150d; acidifiants: E338, E331; édulcorants: aspartame, acesulfame-K; arômes naturels (extraits végétaux), dont caféine.\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": null,\n  \"nutrition\": {\n    \"per\": \"100ml\",\n    \"portion_text\": null,\n    \"energy\": \"1.4kJ / 0.3kcal\",\n    \"fat\": \"0g\",\n    \"saturates\": \"0g\",\n    \"carbs\": \"0g\",\n    \"sugars\": \"0g\",\n    \"fibre\": null,\n    \"protein\": \"0g\",\n    \"salt\": \"0.02g\",\n    \"photo_index\": 2\n  },\n  \"other_text\": [\n    {\n      \"text\": \"zero SUGAR\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Coca-Cola\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"NEW IMPROVED TASTE\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"[…]waarond[…]\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Boisson rafraîchissante aux extraits végétaux, avec édulcorants.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Contient une source de phénylalanine.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Ten minste houdbaar tot: zie hals/dop. À consommer de préférence avant le: voir goulot/bouchon\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"VOEDINGSWAARDE/DECLARATION NUTRITIONNELLE\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"PER/POUR: 100ml\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Energie: 1.4kJ / 0.3kcal\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Vetten/Matières grasses: 0g\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"waarvan verzadigde vetzuren/dont acides gras saturés: 0g\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Koolhydraten/Glucides: 0g\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"waarvan suikers/dont sucres: 0g\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Eiwitten/Protéines: 0g\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Zout/Sel: 0.02g\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"*Referentie-inname van een gemiddelde volwassene / […]\",\n      \"photo_index\": 2\n    }\n  ]\n}"
+}

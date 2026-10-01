@@ -1,0 +1,77 @@
+{
+ "case": "test-021",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "ad37535aa1b7f4b356cf02fc92be5851736893a80a2a3bf3222e15031e6e06bf",
+  "55c8122c45e48a7833e5d6b877966dd117d25f7639d908f224ac7ca0e4fe01aa"
+ ],
+ "usage": {
+  "input_tokens": 3203,
+  "output_tokens": 531,
+  "reasoning_tokens": 0,
+  "total_tokens": 3734
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "**яєчний жовток**, олія соняшникова, насіння **гірчиці**, оцет спиртовий, вода питна, сіль, регулятор кислотності кислота лимонна, консервант сорбат калію.",
+   "photo_index": 1
+  },
+  "may_contain_text": null,
+  "nutrition": {
+   "per": "100g",
+   "portion_text": null,
+   "energy": "1289 кДж / 308 ккал",
+   "fat": "30 г",
+   "saturates": "3 г",
+   "carbs": "8 г",
+   "sugars": "<0,5 г",
+   "fibre": "0,5 г",
+   "protein": "1,2 г",
+   "salt": "1,5 г",
+   "photo_index": 1
+  },
+  "other_text": [
+   {
+    "text": "Соус з гірчицею",
+    "photo_index": 0
+   },
+   {
+    "text": "Без вмісту цукру",
+    "photo_index": 0
+   },
+   {
+    "text": "Маса нетто 250 г",
+    "photo_index": 0
+   },
+   {
+    "text": "Поживна цінність на 100 г",
+    "photo_index": 1
+   },
+   {
+    "text": "Зберігати при температурі від +2 до +6 °С.",
+    "photo_index": 1
+   },
+   {
+    "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+    "photo_index": 1
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"**яєчний жовток**, олія соняшникова, насіння **гірчиці**, оцет спиртовий, вода питна, сіль, регулятор кислотності кислота лимонна, консервант сорбат калію.\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": null,\n  \"nutrition\": {\n    \"per\": \"100g\",\n    \"portion_text\": null,\n    \"energy\": \"1289 кДж / 308 ккал\",\n    \"fat\": \"30 г\",\n    \"saturates\": \"3 г\",\n    \"carbs\": \"8 г\",\n    \"sugars\": \"<0,5 г\",\n    \"fibre\": \"0,5 г\",\n    \"protein\": \"1,2 г\",\n    \"salt\": \"1,5 г\",\n    \"photo_index\": 1\n  },\n  \"other_text\": [\n    {\n      \"text\": \"Соус з гірчицею\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Без вмісту цукру\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Маса нетто 250 г\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Поживна цінність на 100 г\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Зберігати при температурі від +2 до +6 °С.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Виробник: ТОВ «Тестовий завод», Україна, м. Київ.\",\n      \"photo_index\": 1\n    }\n  ]\n}"
+}

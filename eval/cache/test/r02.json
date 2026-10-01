@@ -1,0 +1,135 @@
+{
+ "case": "r02",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "b472c497c9ab2b924c3aafd4b47e5fe2eabe77a598f4818c0d05067d47fa93b5",
+  "6712fbf8ae01c95d50eccc3307172effa4732c44c77ef2345c2a405b3d574f18",
+  "1cc0eccf020ce6e32fc0b642ab32a616adaf7ce0d75cdf16a2f944e13f665ed3"
+ ],
+ "usage": {
+  "input_tokens": 4257,
+  "output_tokens": 1828,
+  "reasoning_tokens": 0,
+  "total_tokens": 6085
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 2,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "олія соняшникова рафінована дезодорована, вода питна, цукор, емульгатор (модифікований крохмаль кукурудзяний), сіль кухонна, **яєчний порошок**, регулятор кислотності (кислота лимонна), стабілізатор (камідь гуарова), регулятор кислотності (кислота оцтова), консервант (сорбат калію), ароматизатор гірчиці, натуральний ароматизатор чорного перцю, натуральний барвник (бета-каротин).",
+   "photo_index": 2
+  },
+  "may_contain_text": {
+   "text": "Може містити сліди гірчиці, **глютену та молочних продуктів**.",
+   "photo_index": 2
+  },
+  "nutrition": {
+   "per": "100g",
+   "portion_text": null,
+   "energy": "2535 кДж(kJ) / 616 ккал(kcal)",
+   "fat": "67 г(g)",
+   "saturates": "9,5 г(g)",
+   "carbs": "3,2 г(g)",
+   "sugars": "2 г(g)",
+   "fibre": null,
+   "protein": "0,1 г(g)",
+   "salt": "0,96 г(g)",
+   "photo_index": 2
+  },
+  "other_text": [
+   {
+    "text": "№1 ВИБІР РОКУ 2021",
+    "photo_index": 0
+   },
+   {
+    "text": "КОРОЛІВСЬКИЙ СМАК",
+    "photo_index": 0
+   },
+   {
+    "text": "Королівський Майонез 67%",
+    "photo_index": 0
+   },
+   {
+    "text": "UKRAINE",
+    "photo_index": 0
+   },
+   {
+    "text": "Приклад сервіровки / Example of serving / Exemplu de servire",
+    "photo_index": 0
+   },
+   {
+    "text": "нетто: 500 г(g)",
+    "photo_index": 0
+   },
+   {
+    "text": "допустиме від'ємне відхилення 3%",
+    "photo_index": 0
+   },
+   {
+    "text": "СМАКУЙ ПО-КОРОЛІВСЬКИ!",
+    "photo_index": 0
+   },
+   {
+    "text": "МАЙОНЕЗ 67% «КОРОЛІВСЬКИЙ»",
+    "photo_index": 2
+   },
+   {
+    "text": "Поживна цінність на 100 г(g) продукту: енергетична цінність – 2535 кДж(kJ) / 616 ккал(kcal); жири – 67 г(g), з них насичені – 9,5 г(g); вуглеводи – 3,2 г(g), з них цукри – 2 г(g); білки – 0,1 г(g); сіль – 0,96 г(g).",
+    "photo_index": 2
+   },
+   {
+    "text": "Виробник, місцезнаходження виробника: ПП «Віктор і К», вул. Висоцького, 2, смт Власівка, м. Світловодськ, Кіровоградська обл., 27552, Україна, тел.: +38 (05236) 5-28-12. Країна походження: Україна. www.kingsmak.com.ua",
+    "photo_index": 2
+   },
+   {
+    "text": "MAYONNAISE 67% «ROYAL»",
+    "photo_index": 2
+   },
+   {
+    "text": "Ingredients: refined deodorized sunflower oil, water, sugar, emulsifier (modified corn starch), salt, powdered eggs, acidity regulator (citric acid), stabilizer (guar gum), acidity regulator (acetic acid), preservative (potassium sorbate), mustard flavour, natural black pepper flavour, natural colourant (beta-carotene). May contain traces of mustard, gluten and dairy products. Minimum shelf life at the temperature from 0°C to +25°C - 120 days. Date of minimum shelf life (Best before) is the lot number (L) and is indicated on the side seam of the packet. The shelf life of mayonnaise after opening the packaging is 14 days at the temperature from 0°C to +11°C inclusive, within the total minimum shelf life. Store at the temperature from 0°C to +25°C and relative humidity not exceeding 75%. Mayonnaise should not be stored together with products that have a pungent specific odour or in direct sunlight.",
+    "photo_index": 2
+   },
+   {
+    "text": "Net weight: 500 g permissible negative deviation 3%.",
+    "photo_index": 2
+   },
+   {
+    "text": "Nutritional value per 100 g of product: energy value – 2535 kJ / 616 kcal; fats – 67 g, of which saturated fat – 9,5 g; carbohydrates – 3,2 g, of which sugar – 2 g; protein – 0,1 g; salt – 0,96 g.",
+    "photo_index": 2
+   },
+   {
+    "text": "Manufacturer, manufacturer's location: PE «Viktor and K», 2 Vysotskoho Str., Vlasivka settlement, Svitlovodsk Town, Kirovograd Region, 27552, Ukraine, tel.: +38 (05236) 5-28-12. Country of origin: Ukraine. www.kingsmak.com.ua",
+    "photo_index": 2
+   },
+   {
+    "text": "MAIONEZĂ «KOROLEVSCHII», CONȚINUT DE GRĂSIME 67%",
+    "photo_index": 2
+   },
+   {
+    "text": "Ingrediente: ulei de floarea soarelui rafinat deodori zat, apă potabilă, zahăr, emulsifiant (amidon modificat din porumb), sare alimentară, praf de ou, corectori de aciditate (acid citric, acid acetic), stabilizator (gumă de guar), conservant (sorbat de potasiu), aromă de muștar, aromă naturală de piper negru, colorant natural (β-caroten). Poate conține urme de muștar, gluten și produse lactate. Termenul minim de valabilitate la o temperatură cuprinsă între 0°C și plus 25°C - 120 zile. Data finalizării termenului minim de valabilitate (A se consuma de preferință înainte de:) coincide cu numărul lotului (L) și este indicată pe cusătura laterală [...]",
+    "photo_index": 2
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 2,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"олія соняшникова рафінована дезодорована, вода питна, цукор, емульгатор (модифікований крохмаль кукурудзяний), сіль кухонна, **яєчний порошок**, регулятор кислотності (кислота лимонна), стабілізатор (камідь гуарова), регулятор кислотності (кислота оцтова), консервант (сорбат калію), ароматизатор гірчиці, натуральний ароматизатор чорного перцю, натуральний барвник (бета-каротин).\",\n    \"photo_index\": 2\n  },\n  \"may_contain_text\": {\n    \"text\": \"Може містити сліди гірчиці, **глютену та молочних продуктів**.\",\n    \"photo_index\": 2\n  },\n  \"nutrition\": {\n    \"per\": \"100g\",\n    \"portion_text\": null,\n    \"energy\": \"2535 кДж(kJ) / 616 ккал(kcal)\",\n    \"fat\": \"67 г(g)\",\n    \"saturates\": \"9,5 г(g)\",\n    \"carbs\": \"3,2 г(g)\",\n    \"sugars\": \"2 г(g)\",\n    \"fibre\": null,\n    \"protein\": \"0,1 г(g)\",\n    \"salt\": \"0,96 г(g)\",\n    \"photo_index\": 2\n  },\n  \"other_text\": [\n    {\n      \"text\": \"№1 ВИБІР РОКУ 2021\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"КОРОЛІВСЬКИЙ СМАК\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Королівський Майонез 67%\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"UKRAINE\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Приклад сервіровки / Example of serving / Exemplu de servire\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"нетто: 500 г(g)\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"допустиме від'ємне відхилення 3%\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"СМАКУЙ ПО-КОРОЛІВСЬКИ!\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"МАЙОНЕЗ 67% «КОРОЛІВСЬКИЙ»\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Поживна цінність на 100 г(g) продукту: енергетична цінність – 2535 кДж(kJ) / 616 ккал(kcal); жири – 67 г(g), з них насичені – 9,5 г(g); вуглеводи – 3,2 г(g), з них цукри – 2 г(g); білки – 0,1 г(g); сіль – 0,96 г(g).\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Виробник, місцезнаходження виробника: ПП «Віктор і К», вул. Висоцького, 2, смт Власівка, м. Світловодськ, Кіровоградська обл., 27552, Україна, тел.: +38 (05236) 5-28-12. Країна походження: Україна. www.kingsmak.com.ua\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"MAYONNAISE 67% «ROYAL»\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Ingredients: refined deodorized sunflower oil, water, sugar, emulsifier (modified corn starch), salt, powdered eggs, acidity regulator (citric acid), stabilizer (guar gum), acidity regulator (acetic acid), preservative (potassium sorbate), mustard flavour, natural black pepper flavour, natural colourant (beta-carotene). May contain traces of mustard, gluten and dairy products. Minimum shelf life at the temperature from 0°C to +25°C - 120 days. Date of minimum shelf life (Best before) is the lot number (L) and is indicated on the side seam of the packet. The shelf life of mayonnaise after opening the packaging is 14 days at the temperature from 0°C to +11°C inclusive, within the total minimum shelf life. Store at the temperature from 0°C to +25°C and relative humidity not exceeding 75%. Mayonnaise should not be stored together with products that have a pungent specific odour or in direct sunlight.\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Net weight: 500 g permissible negative deviation 3%.\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Nutritional value per 100 g of product: energy value – 2535 kJ / 616 kcal; fats – 67 g, of which saturated fat – 9,5 g; carbohydrates – 3,2 g, of which sugar – 2 g; protein – 0,1 g; salt – 0,96 g.\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Manufacturer, manufacturer's location: PE «Viktor and K», 2 Vysotskoho Str., Vlasivka settlement, Svitlovodsk Town, Kirovograd Region, 27552, Ukraine, tel.: +38 (05236) 5-28-12. Country of origin: Ukraine. www.kingsmak.com.ua\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"MAIONEZĂ «KOROLEVSCHII», CONȚINUT DE GRĂSIME 67%\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Ingrediente: ulei de floarea soarelui rafinat deodori zat, apă potabilă, zahăr, emulsifiant (amidon modificat din porumb), sare alimentară, praf de ou, corectori de aciditate (acid citric, acid acetic), stabilizator (gumă de guar), conservant (sorbat de potasiu), aromă de muștar, aromă naturală de piper negru, colorant natural (β-caroten). Poate conține urme de muștar, gluten și produse lactate. Termenul minim de valabilitate la o temperatură cuprinsă între 0°C și plus 25°C - 120 zile. Data finalizării termenului minim de valabilitate (A se consuma de preferință înainte de:) coincide cu numărul lotului (L) și este indicată pe cusătura laterală [...]\",\n      \"photo_index\": 2\n    }\n  ]\n}"
+}

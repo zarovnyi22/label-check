@@ -1,0 +1,107 @@
+{
+ "case": "r05",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "19b5ad74d853cfa1453efcfb9360127443c3749468517436de031c2ff67b26c9",
+  "d953edf6a5b6db84207b27891ec75b603cbced58799a268da5f57034c02a7416",
+  "18510c9659783b10beee8b46f8dc9cc8dc3c3a9c77972d8c9ba81e2ca52911ae"
+ ],
+ "usage": {
+  "input_tokens": 4280,
+  "output_tokens": 915,
+  "reasoning_tokens": 0,
+  "total_tokens": 5195
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 2,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "цукор, какао терте, глюкозно-фруктозний сироп, патока, какао-масло, олія ши, бренді, какао-порошок зі зниженим вмістом жиру, емульгатори [лецитини (містить **сою**), E476], ароматизатори.",
+   "photo_index": 1
+  },
+  "may_contain_text": {
+   "text": "**Може містити фундук, мигдаль, арахіс, кунжут, молокопродукти, яєчні продукти, глютен (пшеничний).**",
+   "photo_index": 1
+  },
+  "nutrition": {
+   "per": "100g",
+   "portion_text": null,
+   "energy": "1910 кДж/kJ (456 ккал/kcal)",
+   "fat": "19,3 г/g",
+   "saturates": "11,2 г/g",
+   "carbs": "63,6 г/g",
+   "sugars": "58,6 г/g",
+   "fibre": null,
+   "protein": "3,3 г/g",
+   "salt": "0,01 г/g",
+   "photo_index": 1
+  },
+  "other_text": [
+   {
+    "text": "РОSHEN",
+    "photo_index": 0
+   },
+   {
+    "text": "DARK CHOCOLATE",
+    "photo_index": 0
+   },
+   {
+    "text": "WITH COCOA FONDANT",
+    "photo_index": 0
+   },
+   {
+    "text": "(UA) ШОКОЛАДНИЙ БАТОН З НАЧИНКОЮ \"РОШЕН\".",
+    "photo_index": 1
+   },
+   {
+    "text": "Шоколад: мінімальний вміст какао-продуктів - 48%.МІСТИТЬ РОСЛИННІ ЖИРИ У ДОПОВНЕННІ ДО КАКАО-МАСЛА.",
+    "photo_index": 1
+   },
+   {
+    "text": "Начинка помадна - 43% (какао-продуктів - 3%).",
+    "photo_index": 1
+   },
+   {
+    "text": "Поживна цінність на 100 г/g продукту:",
+    "photo_index": 1
+   },
+   {
+    "text": "Зберігати за температури (18±3)°С і відносної вологості повітря не вище 75%.",
+    "photo_index": 1
+   },
+   {
+    "text": "(V241224В)",
+    "photo_index": 1
+   },
+   {
+    "text": "Чорний шоколад з помадною начинкою з какао.",
+    "photo_index": 1
+   },
+   {
+    "text": "(KZ) \"РОШЕН\" ТОЛТЫРМАСЫ БАР ШОКОЛАД БАТОНЫ.",
+    "photo_index": 1
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 2,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"цукор, какао терте, глюкозно-фруктозний сироп, патока, какао-масло, олія ши, бренді, какао-порошок зі зниженим вмістом жиру, емульгатори [лецитини (містить **сою**), E476], ароматизатори.\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": {\n    \"text\": \"**Може містити фундук, мигдаль, арахіс, кунжут, молокопродукти, яєчні продукти, глютен (пшеничний).**\",\n    \"photo_index\": 1\n  },\n  \"nutrition\": {\n    \"per\": \"100g\",\n    \"portion_text\": null,\n    \"energy\": \"1910 кДж/kJ (456 ккал/kcal)\",\n    \"fat\": \"19,3 г/g\",\n    \"saturates\": \"11,2 г/g\",\n    \"carbs\": \"63,6 г/g\",\n    \"sugars\": \"58,6 г/g\",\n    \"fibre\": null,\n    \"protein\": \"3,3 г/g\",\n    \"salt\": \"0,01 г/g\",\n    \"photo_index\": 1\n  },\n  \"other_text\": [\n    {\n      \"text\": \"РОSHEN\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"DARK CHOCOLATE\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"WITH COCOA FONDANT\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"(UA) ШОКОЛАДНИЙ БАТОН З НАЧИНКОЮ \\\"РОШЕН\\\".\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Шоколад: мінімальний вміст какао-продуктів - 48%.МІСТИТЬ РОСЛИННІ ЖИРИ У ДОПОВНЕННІ ДО КАКАО-МАСЛА.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Начинка помадна - 43% (какао-продуктів - 3%).\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Поживна цінність на 100 г/g продукту:\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Зберігати за температури (18±3)°С і відносної вологості повітря не вище 75%.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"(V241224В)\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Чорний шоколад з помадною начинкою з какао.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"(KZ) \\\"РОШЕН\\\" ТОЛТЫРМАСЫ БАР ШОКОЛАД БАТОНЫ.\",\n      \"photo_index\": 1\n    }\n  ]\n}"
+}

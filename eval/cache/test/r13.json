@@ -1,0 +1,100 @@
+{
+ "case": "r13",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "261e5d996f22729e0010525e825280085489796f637cef27d2806e3e19cf70d6",
+  "fe8bb434527358f871a801fe0da45e38aaab8cd35c3cc3d636d809c81d994abe",
+  "426739be626c1ee264e20c83c65b17eb66f332c2ab2a98e3f20d0781617275f1"
+ ],
+ "usage": {
+  "input_tokens": 4279,
+  "output_tokens": 678,
+  "reasoning_tokens": 0,
+  "total_tokens": 4957
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 2,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "**молоко** коров'яче нормалізоване, закваска для йогурту (Streptococcus thermophilus, Lactobacillus delbrueckii підвид bulgaricus).",
+   "photo_index": 1
+  },
+  "may_contain_text": null,
+  "nutrition": {
+   "per": "100g",
+   "portion_text": null,
+   "energy": "207/49",
+   "fat": "1,6",
+   "saturates": "1,0",
+   "carbs": "4,7",
+   "sugars": "4,7",
+   "fibre": null,
+   "protein": "4,0",
+   "salt": "0,1",
+   "photo_index": 2
+  },
+  "other_text": [
+   {
+    "text": "МОЛОКІЯ",
+    "photo_index": 0
+   },
+   {
+    "text": "ЙОГУРТ БІЛИЙ ГУСТИЙ",
+    "photo_index": 0
+   },
+   {
+    "text": "1,6%",
+    "photo_index": 0
+   },
+   {
+    "text": "сила жити",
+    "photo_index": 0
+   },
+   {
+    "text": "300g(г)",
+    "photo_index": 0
+   },
+   {
+    "text": "БЕЗ ДОДАВАННЯ ЦУКРУ",
+    "photo_index": 0
+   },
+   {
+    "text": "ЙОГУРТ \"БІЛИЙ\" 1,6 % ЖИРУ, ГУСТИЙ",
+    "photo_index": 1
+   },
+   {
+    "text": "ТУ У 15.5-25422297-004:2011.",
+    "photo_index": 1
+   },
+   {
+    "text": "Поживна цінність на 100 g (г) продукту.",
+    "photo_index": 2
+   },
+   {
+    "text": "* Наявність[...]рмістом [...] не",
+    "photo_index": 2
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 2,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"**молоко** коров'яче нормалізоване, закваска для йогурту (Streptococcus thermophilus, Lactobacillus delbrueckii підвид bulgaricus).\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": null,\n  \"nutrition\": {\n    \"per\": \"100g\",\n    \"portion_text\": null,\n    \"energy\": \"207/49\",\n    \"fat\": \"1,6\",\n    \"saturates\": \"1,0\",\n    \"carbs\": \"4,7\",\n    \"sugars\": \"4,7\",\n    \"fibre\": null,\n    \"protein\": \"4,0\",\n    \"salt\": \"0,1\",\n    \"photo_index\": 2\n  },\n  \"other_text\": [\n    {\n      \"text\": \"МОЛОКІЯ\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"ЙОГУРТ БІЛИЙ ГУСТИЙ\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"1,6%\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"сила жити\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"300g(г)\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"БЕЗ ДОДАВАННЯ ЦУКРУ\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"ЙОГУРТ \\\"БІЛИЙ\\\" 1,6 % ЖИРУ, ГУСТИЙ\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"ТУ У 15.5-25422297-004:2011.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Поживна цінність на 100 g (г) продукту.\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"* Наявність[...]рмістом [...] не\",\n      \"photo_index\": 2\n    }\n  ]\n}"
+}

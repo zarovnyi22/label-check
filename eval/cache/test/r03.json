@@ -1,0 +1,179 @@
+{
+ "case": "r03",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "1fae5dfd58a8e475b81733479654e3e1e24454fa394f740b2a15b55f696a652e",
+  "d0408c4492e4777067a0f636733c871d41d2d03c9ce0d7224cb9d9054d20e81a",
+  "997427845fb35e764470b02ce3491522a7851cd1a6ee188f51679c1af7ff3cb5"
+ ],
+ "usage": {
+  "input_tokens": 4327,
+  "output_tokens": 1602,
+  "reasoning_tokens": 0,
+  "total_tokens": 5929
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 2,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "борошно **пшенич**-\n**не**, цукор, жир рослинний (негідрогенізована пальмова олія), емульгатор **соєвий** лецитин, розпушувачі (гідрокарбонат натрію, гідрокарбонат амонію), сіль, ароматизатори, регулятор кислотності кислота молочна, **молоко** **сухе** **знежирене**, ядра бобів **арахісу** терті, ядра горіхів **фундука** терті, ядра **мигдалю** терті, меланж яєчний.",
+   "photo_index": 1
+  },
+  "may_contain_text": {
+   "text": "Може\n**містити** **кунжут**.",
+   "photo_index": 1
+  },
+  "nutrition": {
+   "per": "portion",
+   "portion_text": "3 pieces (33 g / غ 3 قطع)",
+   "energy": "150",
+   "fat": "6g / غ 6",
+   "saturates": "2.5g / غ 2.5",
+   "carbs": "23g / غ 23",
+   "sugars": "7g / غ 7",
+   "fibre": "<1g / غ 1>",
+   "protein": "2g / غ 2",
+   "salt": null,
+   "photo_index": 2
+  },
+  "other_text": [
+   {
+    "text": "185 г/g",
+    "photo_index": 0
+   },
+   {
+    "text": "До кави",
+    "photo_index": 0
+   },
+   {
+    "text": "З ароматом\nпряженого молока",
+    "photo_index": 0
+   },
+   {
+    "text": "20 БІЛЬШЕ\nРОКІВ\nНЕЗМІННОЇ\nЯКОСТІ!",
+    "photo_index": 0
+   },
+   {
+    "text": "(UA) ПЕЧИВО ЦУКРОВЕ \"ДО КАВИ\" З АРОМАТОМ ПРЯЖЕНОГО МОЛОКА.",
+    "photo_index": 1
+   },
+   {
+    "text": "Зберігати за температури (18±5)°C і відносній вологості повітря не вище 75%. (v190924E)",
+    "photo_index": 1
+   },
+   {
+    "text": "(BG) БИСКВИТИ \"КЪМ КАФЕ\" С МЛЕЧЕН АРОМАТ.",
+    "photo_index": 1
+   },
+   {
+    "text": "ТУ У 15.8-00382099.001-2003",
+    "photo_index": 2
+   },
+   {
+    "text": "Nutrition\nFacts",
+    "photo_index": 2
+   },
+   {
+    "text": "القيمة\nالغذائية",
+    "photo_index": 2
+   },
+   {
+    "text": "5.5 servings per container\n5.5 حصة بالعلبة",
+    "photo_index": 2
+   },
+   {
+    "text": "Serving size 3 pieces\n(33 g / غ 3 قطع) حجم الحصة",
+    "photo_index": 2
+   },
+   {
+    "text": "Calories per serving 150\nالطاقة (سعرة حرارية) القيمة بالحصة:",
+    "photo_index": 2
+   },
+   {
+    "text": "Amount Per Serving/ القيمة بالحصة * %DV* / % القيمة اليومية",
+    "photo_index": 2
+   },
+   {
+    "text": "Total Fat 6g / غ 6 مجموع الدهون",
+    "photo_index": 2
+   },
+   {
+    "text": "Saturated Fat 2.5g / غ 2.5 دهون مشبعة:",
+    "photo_index": 2
+   },
+   {
+    "text": "Trans Fat 0g / غ 0 الدهون المتحولة:",
+    "photo_index": 2
+   },
+   {
+    "text": "Cholesterol 0mg / ملغ كوليسترول:",
+    "photo_index": 2
+   },
+   {
+    "text": "Sodium 100mg / ملغ صوديوم:",
+    "photo_index": 2
+   },
+   {
+    "text": "Vitamin D 0mcg / ميكروغرام \"فيتامين \"د",
+    "photo_index": 2
+   },
+   {
+    "text": "Iron 0mg / ملغ حديد:",
+    "photo_index": 2
+   },
+   {
+    "text": "Amount Per Serving/ القيمة بالحصة * %DV* / % القيمة اليومية",
+    "photo_index": 2
+   },
+   {
+    "text": "Total Carb. 23g / غ 23 مجموع الكربوهيدرات",
+    "photo_index": 2
+   },
+   {
+    "text": "Dietary Fiber <1g / غ 1> الألياف الغذائية:",
+    "photo_index": 2
+   },
+   {
+    "text": "Total Sugars 7g / غ 7 مجموع السكر",
+    "photo_index": 2
+   },
+   {
+    "text": "Incl. 6g Added Sugars منهم 6غ سكر مضاف",
+    "photo_index": 2
+   },
+   {
+    "text": "Protein 2g / غ 2 بروتين:",
+    "photo_index": 2
+   },
+   {
+    "text": "Calcium 6mg / ملغ كالسيوم:",
+    "photo_index": 2
+   },
+   {
+    "text": "Potassium 40mg / ملغ بوتاسيوم:",
+    "photo_index": 2
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 2,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"борошно **пшенич**-\\n**не**, цукор, жир рослинний (негідрогенізована пальмова олія), емульгатор **соєвий** лецитин, розпушувачі (гідрокарбонат натрію, гідрокарбонат амонію), сіль, ароматизатори, регулятор кислотності кислота молочна, **молоко** **сухе** **знежирене**, ядра бобів **арахісу** терті, ядра горіхів **фундука** терті, ядра **мигдалю** терті, меланж яєчний.\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": {\n    \"text\": \"Може\\n**містити** **кунжут**.\",\n    \"photo_index\": 1\n  },\n  \"nutrition\": {\n    \"per\": \"portion\",\n    \"portion_text\": \"3 pieces (33 g / غ 3 قطع)\",\n    \"energy\": \"150\",\n    \"fat\": \"6g / غ 6\",\n    \"saturates\": \"2.5g / غ 2.5\",\n    \"carbs\": \"23g / غ 23\",\n    \"sugars\": \"7g / غ 7\",\n    \"fibre\": \"<1g / غ 1>\",\n    \"protein\": \"2g / غ 2\",\n    \"salt\": null,\n    \"photo_index\": 2\n  },\n  \"other_text\": [\n    {\n      \"text\": \"185 г/g\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"До кави\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"З ароматом\\nпряженого молока\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"20 БІЛЬШЕ\\nРОКІВ\\nНЕЗМІННОЇ\\nЯКОСТІ!\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"(UA) ПЕЧИВО ЦУКРОВЕ \\\"ДО КАВИ\\\" З АРОМАТОМ ПРЯЖЕНОГО МОЛОКА.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Зберігати за температури (18±5)°C і відносній вологості повітря не вище 75%. (v190924E)\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"(BG) БИСКВИТИ \\\"КЪМ КАФЕ\\\" С МЛЕЧЕН АРОМАТ.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"ТУ У 15.8-00382099.001-2003\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Nutrition\\nFacts\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"القيمة\\nالغذائية\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"5.5 servings per container\\n5.5 حصة بالعلبة\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Serving size 3 pieces\\n(33 g / غ 3 قطع) حجم الحصة\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Calories per serving 150\\nالطاقة (سعرة حرارية) القيمة بالحصة:\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Amount Per Serving/ القيمة بالحصة * %DV* / % القيمة اليومية\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Total Fat 6g / غ 6 مجموع الدهون\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Saturated Fat 2.5g / غ 2.5 دهون مشبعة:\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Trans Fat 0g / غ 0 الدهون المتحولة:\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Cholesterol 0mg / ملغ كوليسترول:\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Sodium 100mg / ملغ صوديوم:\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Vitamin D 0mcg / ميكروغرام \\\"فيتامين \\\"د\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Iron 0mg / ملغ حديد:\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Amount Per Serving/ القيمة بالحصة * %DV* / % القيمة اليومية\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Total Carb. 23g / غ 23 مجموع الكربوهيدرات\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Dietary Fiber <1g / غ 1> الألياف الغذائية:\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Total Sugars 7g / غ 7 مجموع السكر\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Incl. 6g Added Sugars منهم 6غ سكر مضاف\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Protein 2g / غ 2 بروتين:\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Calcium 6mg / ملغ كالسيوم:\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Potassium 40mg / ملغ بوتاسيوم:\",\n      \"photo_index\": 2\n    }\n  ]\n}"
+}

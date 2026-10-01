@@ -1,0 +1,72 @@
+{
+ "case": "r14",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "2d7f339e7e97550ab48d59be3d94f2f88a3cfe8d590b0951c14092e57c89c400",
+  "f8803f98f5d153496001ef4c8ad2606f14c335115b9bdeaf54c7ccb5ac4aa050",
+  "27e3325ab1dbe7b8ac8b92ea4750bbd0aaa282faa521983e3ff6f50c81950159"
+ ],
+ "usage": {
+  "input_tokens": 4253,
+  "output_tokens": 644,
+  "reasoning_tokens": 0,
+  "total_tokens": 4897
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 2,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "**СИР** КИСЛОМОЛОЧНИЙ, **МАСЛО** ВЕРШКОВЕ, ВОДА ПИТНА, СУХЕ ЗНЕЖИРЕНЕ **МОЛОКО**, СІЛЬ КУХОННА, ЕМУЛЬГАТОР ПОЛІФОСФАТ НАТРІЮ, СТАБІЛІЗАТОР (КАРРАГІНАН, ЦЕЛЮЛОЗНА КАМІДЬ, ХЛОРИД НАТРІЮ), КОНСЕРВАНТ СОРБІНОВА КИСЛОТА",
+   "photo_index": 1
+  },
+  "may_contain_text": null,
+  "nutrition": {
+   "per": "100g",
+   "portion_text": null,
+   "energy": "1048 кДж (kJ) (253 ккал (kcal))",
+   "fat": "22,5 г (g)",
+   "saturates": "15,5 г (g)",
+   "carbs": "3,9 г (g)",
+   "sugars": "3,9 г (g)",
+   "fibre": null,
+   "protein": "8,8 г (g)",
+   "salt": "0,73 г (g)",
+   "photo_index": 2
+  },
+  "other_text": [
+   {
+    "text": "Біло®",
+    "photo_index": 0
+   },
+   {
+    "text": "FILLADEL ORIGINAL",
+    "photo_index": 0
+   },
+   {
+    "text": "УМОВИ ЗБЕРІГАННЯ: ЗА ТЕМПЕРАТУРИ ВІД 0°С ДО 4°С ПРИ ВІДНОСНІЙ ВОЛОГОСТІ ПОВІТРЯ НЕ БІЛЬШЕ 85%. ДАТА «ВЖИТИ ДО» ТА НОМЕР ПАРТІЇ ВКАЗАНІ НА БОКОВІЙ ЧАСТИНІ УПАКОВКИ.",
+    "photo_index": 2
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 2,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"**СИР** КИСЛОМОЛОЧНИЙ, **МАСЛО** ВЕРШКОВЕ, ВОДА ПИТНА, СУХЕ ЗНЕЖИРЕНЕ **МОЛОКО**, СІЛЬ КУХОННА, ЕМУЛЬГАТОР ПОЛІФОСФАТ НАТРІЮ, СТАБІЛІЗАТОР (КАРРАГІНАН, ЦЕЛЮЛОЗНА КАМІДЬ, ХЛОРИД НАТРІЮ), КОНСЕРВАНТ СОРБІНОВА КИСЛОТА\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": null,\n  \"nutrition\": {\n    \"per\": \"100g\",\n    \"portion_text\": null,\n    \"energy\": \"1048 кДж (kJ) (253 ккал (kcal))\",\n    \"fat\": \"22,5 г (g)\",\n    \"saturates\": \"15,5 г (g)\",\n    \"carbs\": \"3,9 г (g)\",\n    \"sugars\": \"3,9 г (g)\",\n    \"fibre\": null,\n    \"protein\": \"8,8 г (g)\",\n    \"salt\": \"0,73 г (g)\",\n    \"photo_index\": 2\n  },\n  \"other_text\": [\n    {\n      \"text\": \"Біло®\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"FILLADEL ORIGINAL\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"УМОВИ ЗБЕРІГАННЯ: ЗА ТЕМПЕРАТУРИ ВІД 0°С ДО 4°С ПРИ ВІДНОСНІЙ ВОЛОГОСТІ ПОВІТРЯ НЕ БІЛЬШЕ 85%. ДАТА «ВЖИТИ ДО» ТА НОМЕР ПАРТІЇ ВКАЗАНІ НА БОКОВІЙ ЧАСТИНІ УПАКОВКИ.\",\n      \"photo_index\": 2\n    }\n  ]\n}"
+}

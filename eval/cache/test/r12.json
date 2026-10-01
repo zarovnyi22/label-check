@@ -1,0 +1,91 @@
+{
+ "case": "r12",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "eee0fe0b2fb2938bf281d6369dfd5064eb93abec2e848e57b0f04654120789cd",
+  "5e8218ce940f5a2c24e682ddcfe9ffdf61e38ef273dbcc3ab4497edff1fd4a3e",
+  "a3257616fdc60739bd621163cf1b83c423e5f6991c17e81ccb36e6fa1e93e67c"
+ ],
+ "usage": {
+  "input_tokens": 4307,
+  "output_tokens": 873,
+  "reasoning_tokens": 0,
+  "total_tokens": 5180
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 2,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "farine de **blé**, huile de palme, sirop de glucose, poudres à lever (carbonates d'ammonium, carbonates de sodium), sel 1,5%, épices (paprika 0,8%, poivre), exhauster de goût (glutamate de sodium), poudre d'oignon, protéine végétale hydrolysée, poudre d'ail, arômes, agent de traitement de la farine (disulfite de sodium), extrait de levure, arôme de fumée.",
+   "photo_index": 1
+  },
+  "may_contain_text": {
+   "text": "Ce produit peut contenir des traces d'œuf, de soja et de lait.",
+   "photo_index": 1
+  },
+  "nutrition": {
+   "per": "100g",
+   "portion_text": "30g",
+   "energy": "2071kJ / 494kcal",
+   "fat": "23g",
+   "saturates": "10g",
+   "carbs": "63g",
+   "sugars": "4,3g",
+   "fibre": "2,5g",
+   "protein": "8,0g",
+   "salt": "2,0g",
+   "photo_index": 2
+  },
+  "other_text": [
+   {
+    "text": "TUC",
+    "photo_index": 0
+   },
+   {
+    "text": "PAPRIKA",
+    "photo_index": 0
+   },
+   {
+    "text": "FR: Crackers au goût de paprika 100g e",
+    "photo_index": 1
+   },
+   {
+    "text": "À consommer de préférence avant : voir date d'emballage.",
+    "photo_index": 1
+   },
+   {
+    "text": "Conserver dans un endroit frais et sec.",
+    "photo_index": 1
+   },
+   {
+    "text": "Valeur nutritionnelle par 100g/ 30g (% AR* / 30g) – Énergie 2071kJ/ 621kJ (7%)/ 494kcal/ 148kcal (7%) – Matières grasses 23g/ 6,8g (10%) – dont acides gras saturés 10g/ 3,1g (16%) – Glucides 63g/ 19g (7%) – dont sucres 4,3g/ 1,3g (1%) – Fibres alimentaires 2,5g/ 0,7g (-) – Protéines 8,0g/ 2,4g (5%)– Sel 2,0g/ 0,61g (10%).",
+    "photo_index": 2
+   },
+   {
+    "text": "*Apport de référence pour un adulte-type (8400kJ / 2000kcal). 30g ≈ 8 crackers. Cet emballage contient environ 3x30g.",
+    "photo_index": 2
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 2,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"farine de **blé**, huile de palme, sirop de glucose, poudres à lever (carbonates d'ammonium, carbonates de sodium), sel 1,5%, épices (paprika 0,8%, poivre), exhauster de goût (glutamate de sodium), poudre d'oignon, protéine végétale hydrolysée, poudre d'ail, arômes, agent de traitement de la farine (disulfite de sodium), extrait de levure, arôme de fumée.\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": {\n    \"text\": \"Ce produit peut contenir des traces d'œuf, de soja et de lait.\",\n    \"photo_index\": 1\n  },\n  \"nutrition\": {\n    \"per\": \"100g\",\n    \"portion_text\": \"30g\",\n    \"energy\": \"2071kJ / 494kcal\",\n    \"fat\": \"23g\",\n    \"saturates\": \"10g\",\n    \"carbs\": \"63g\",\n    \"sugars\": \"4,3g\",\n    \"fibre\": \"2,5g\",\n    \"protein\": \"8,0g\",\n    \"salt\": \"2,0g\",\n    \"photo_index\": 2\n  },\n  \"other_text\": [\n    {\n      \"text\": \"TUC\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"PAPRIKA\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"FR: Crackers au goût de paprika 100g e\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"À consommer de préférence avant : voir date d'emballage.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Conserver dans un endroit frais et sec.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Valeur nutritionnelle par 100g/ 30g (% AR* / 30g) – Énergie 2071kJ/ 621kJ (7%)/ 494kcal/ 148kcal (7%) – Matières grasses 23g/ 6,8g (10%) – dont acides gras saturés 10g/ 3,1g (16%) – Glucides 63g/ 19g (7%) – dont sucres 4,3g/ 1,3g (1%) – Fibres alimentaires 2,5g/ 0,7g (-) – Protéines 8,0g/ 2,4g (5%)– Sel 2,0g/ 0,61g (10%).\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"*Apport de référence pour un adulte-type (8400kJ / 2000kcal). 30g ≈ 8 crackers. Cet emballage contient environ 3x30g.\",\n      \"photo_index\": 2\n    }\n  ]\n}"
+}

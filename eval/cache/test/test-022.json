@@ -1,0 +1,77 @@
+{
+ "case": "test-022",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "932acb13a3f47934b9d3ed0c98233d5bad3ae3729c2541861e604106d9c55112",
+  "50c7fa3ab27d4ab4c98f1294c549e73e53668677e6795c560fd2918752f5d35c"
+ ],
+ "usage": {
+  "input_tokens": 3211,
+  "output_tokens": 492,
+  "reasoning_tokens": 0,
+  "total_tokens": 3703
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "**ВЕРШКИ** питні, закваска бактеріальна, вітамін D3.",
+   "photo_index": 1
+  },
+  "may_contain_text": null,
+  "nutrition": {
+   "per": "100ml",
+   "portion_text": null,
+   "energy": "209 кДж / 50 ккал",
+   "fat": "2,5 г",
+   "saturates": "1,6 г",
+   "carbs": "4 г",
+   "sugars": "4 г",
+   "fibre": "0 г",
+   "protein": "3 г",
+   "salt": "0,1 г",
+   "photo_index": 1
+  },
+  "other_text": [
+   {
+    "text": "Кефір 1 %",
+    "photo_index": 0
+   },
+   {
+    "text": "Джерело протеїну",
+    "photo_index": 0
+   },
+   {
+    "text": "Об'єм 900 мл",
+    "photo_index": 0
+   },
+   {
+    "text": "Поживна цінність на 100 мл",
+    "photo_index": 1
+   },
+   {
+    "text": "Зберігати при температурі від +2 до +6 °C.",
+    "photo_index": 1
+   },
+   {
+    "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+    "photo_index": 1
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"**ВЕРШКИ** питні, закваска бактеріальна, вітамін D3.\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": null,\n  \"nutrition\": {\n    \"per\": \"100ml\",\n    \"portion_text\": null,\n    \"energy\": \"209 кДж / 50 ккал\",\n    \"fat\": \"2,5 г\",\n    \"saturates\": \"1,6 г\",\n    \"carbs\": \"4 г\",\n    \"sugars\": \"4 г\",\n    \"fibre\": \"0 г\",\n    \"protein\": \"3 г\",\n    \"salt\": \"0,1 г\",\n    \"photo_index\": 1\n  },\n  \"other_text\": [\n    {\n      \"text\": \"Кефір 1 %\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Джерело протеїну\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Об'єм 900 мл\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Поживна цінність на 100 мл\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Зберігати при температурі від +2 до +6 °C.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Виробник: ТОВ «Тестовий завод», Україна, м. Київ.\",\n      \"photo_index\": 1\n    }\n  ]\n}"
+}

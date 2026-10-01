@@ -1,0 +1,109 @@
+{
+ "case": "test-011",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "76856bf4362bfc4a10649a556bc7dcc2e3f1b7cbc5157c9ca8a6cf1fe08dec39",
+  "c0ea1e94784b5443883a5bd7489b751d76dc0953a948793566c6a01ed6580597"
+ ],
+ "usage": {
+  "input_tokens": 3198,
+  "output_tokens": 734,
+  "reasoning_tokens": 0,
+  "total_tokens": 3932
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "**полба**, фруктоза, **фісташки** очищені, родзинки, насіння соняшнику, емульгатор лецитин соняшниковий, сіль, антиоксидант токофероли.",
+   "photo_index": 1
+  },
+  "may_contain_text": null,
+  "nutrition": {
+   "per": "100g",
+   "portion_text": null,
+   "energy": "1657 кДж / 396 ккал",
+   "fat": "12 г",
+   "saturates": "2,5 г",
+   "carbs": "60 г",
+   "sugars": "22 г",
+   "fibre": "6 г",
+   "protein": "9 г",
+   "salt": "0,2 г",
+   "photo_index": 1
+  },
+  "other_text": [
+   {
+    "text": "Батончик з насінням",
+    "photo_index": 0
+   },
+   {
+    "text": "No added sugar",
+    "photo_index": 0
+   },
+   {
+    "text": "Маса нетто 40 г",
+    "photo_index": 0
+   },
+   {
+    "text": "Поживна цінність на 100 г",
+    "photo_index": 1
+   },
+   {
+    "text": "Енергетична цінність",
+    "photo_index": 1
+   },
+   {
+    "text": "Жири",
+    "photo_index": 1
+   },
+   {
+    "text": "з них насичені жири",
+    "photo_index": 1
+   },
+   {
+    "text": "Вуглеводи",
+    "photo_index": 1
+   },
+   {
+    "text": "з них цукри",
+    "photo_index": 1
+   },
+   {
+    "text": "Харчові волокна",
+    "photo_index": 1
+   },
+   {
+    "text": "Білки",
+    "photo_index": 1
+   },
+   {
+    "text": "Сіль",
+    "photo_index": 1
+   },
+   {
+    "text": "Зберігати в сухому місці при температурі не вище +25 °С.",
+    "photo_index": 1
+   },
+   {
+    "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+    "photo_index": 1
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"**полба**, фруктоза, **фісташки** очищені, родзинки, насіння соняшнику, емульгатор лецитин соняшниковий, сіль, антиоксидант токофероли.\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": null,\n  \"nutrition\": {\n    \"per\": \"100g\",\n    \"portion_text\": null,\n    \"energy\": \"1657 кДж / 396 ккал\",\n    \"fat\": \"12 г\",\n    \"saturates\": \"2,5 г\",\n    \"carbs\": \"60 г\",\n    \"sugars\": \"22 г\",\n    \"fibre\": \"6 г\",\n    \"protein\": \"9 г\",\n    \"salt\": \"0,2 г\",\n    \"photo_index\": 1\n  },\n  \"other_text\": [\n    {\n      \"text\": \"Батончик з насінням\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"No added sugar\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Маса нетто 40 г\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Поживна цінність на 100 г\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Енергетична цінність\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Жири\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"з них насичені жири\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Вуглеводи\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"з них цукри\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Харчові волокна\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Білки\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Сіль\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Зберігати в сухому місці при температурі не вище +25 °С.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Виробник: ТОВ «Тестовий завод», Україна, м. Київ.\",\n      \"photo_index\": 1\n    }\n  ]\n}"
+}

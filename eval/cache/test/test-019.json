@@ -1,0 +1,77 @@
+{
+ "case": "test-019",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "af56708a932d6abfd1014f4733ed6b4c2615928b12a06fd550b4df515a90646d",
+  "cbb2169817bc6ce51b0daa6d4b862870d1a5134c6fd01b60d06638be8c461bbc"
+ ],
+ "usage": {
+  "input_tokens": 3219,
+  "output_tokens": 533,
+  "reasoning_tokens": 0,
+  "total_tokens": 3752
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "**ТУНЕЦЬ**, цибуля ріпчаста, насіння **ГІРЧИЦІ**, горіх мускатний мелений, олія соняшникова, сіль, перець чорний мелений, консервант бензоат натрію.",
+   "photo_index": 1
+  },
+  "may_contain_text": null,
+  "nutrition": {
+   "per": "100g",
+   "portion_text": null,
+   "energy": "1113 кДж / 266 ккал",
+   "fat": "22 г",
+   "saturates": "4 г",
+   "carbs": "3 г",
+   "sugars": "<0,5 г",
+   "fibre": "0 г",
+   "protein": "14 г",
+   "salt": "1,8 г",
+   "photo_index": 1
+  },
+  "other_text": [
+   {
+    "text": "Паштет з тунця",
+    "photo_index": 0
+   },
+   {
+    "text": "Без вмісту цукру",
+    "photo_index": 0
+   },
+   {
+    "text": "Маса нетто 150 г",
+    "photo_index": 0
+   },
+   {
+    "text": "Поживна цінність на 100 г",
+    "photo_index": 1
+   },
+   {
+    "text": "Зберігати при температурі від +2 до +6 °С.",
+    "photo_index": 1
+   },
+   {
+    "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+    "photo_index": 1
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"**ТУНЕЦЬ**, цибуля ріпчаста, насіння **ГІРЧИЦІ**, горіх мускатний мелений, олія соняшникова, сіль, перець чорний мелений, консервант бензоат натрію.\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": null,\n  \"nutrition\": {\n    \"per\": \"100g\",\n    \"portion_text\": null,\n    \"energy\": \"1113 кДж / 266 ккал\",\n    \"fat\": \"22 г\",\n    \"saturates\": \"4 г\",\n    \"carbs\": \"3 г\",\n    \"sugars\": \"<0,5 г\",\n    \"fibre\": \"0 г\",\n    \"protein\": \"14 г\",\n    \"salt\": \"1,8 г\",\n    \"photo_index\": 1\n  },\n  \"other_text\": [\n    {\n      \"text\": \"Паштет з тунця\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Без вмісту цукру\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Маса нетто 150 г\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Поживна цінність на 100 г\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Зберігати при температурі від +2 до +6 °С.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Виробник: ТОВ «Тестовий завод», Україна, м. Київ.\",\n      \"photo_index\": 1\n    }\n  ]\n}"
+}

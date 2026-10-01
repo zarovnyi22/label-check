@@ -1,0 +1,72 @@
+{
+ "case": "test-014",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "262bda2342ad0818e2551057bf51c64905774ea41c9225bc5402fd11f527fa62",
+  "5f39a9919c5df1a88bef78a123a8e9694103a89c307cefb0bacca69aa37ad998"
+ ],
+ "usage": {
+  "input_tokens": 3194,
+  "output_tokens": 506,
+  "reasoning_tokens": 0,
+  "total_tokens": 3700
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "**ПШЕНИЧНЕ** борошно вищого ґатунку, насіння соняшнику, **КЕШ'Ю**, цукор, родзинки, емульгатор лецитин соняшниковий, сіль, антиоксидант токофероли.",
+   "photo_index": 1
+  },
+  "may_contain_text": {
+   "text": "Може містити: кунжут.",
+   "photo_index": 1
+  },
+  "nutrition": {
+   "per": "100g",
+   "portion_text": null,
+   "energy": "1075 кДж / 257 ккал",
+   "fat": "12 г",
+   "saturates": "2,5 г",
+   "carbs": "60 г",
+   "sugars": "22 г",
+   "fibre": "6 г",
+   "protein": "9 г",
+   "salt": "0,2 г",
+   "photo_index": 1
+  },
+  "other_text": [
+   {
+    "text": "Батончик мюслі",
+    "photo_index": 0
+   },
+   {
+    "text": "Маса нетто 40 г",
+    "photo_index": 0
+   },
+   {
+    "text": "Зберігати в сухому місці при температурі не вище +25 °С.",
+    "photo_index": 1
+   },
+   {
+    "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+    "photo_index": 1
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"**ПШЕНИЧНЕ** борошно вищого ґатунку, насіння соняшнику, **КЕШ'Ю**, цукор, родзинки, емульгатор лецитин соняшниковий, сіль, антиоксидант токофероли.\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": {\n    \"text\": \"Може містити: кунжут.\",\n    \"photo_index\": 1\n  },\n  \"nutrition\": {\n    \"per\": \"100g\",\n    \"portion_text\": null,\n    \"energy\": \"1075 кДж / 257 ккал\",\n    \"fat\": \"12 г\",\n    \"saturates\": \"2,5 г\",\n    \"carbs\": \"60 г\",\n    \"sugars\": \"22 г\",\n    \"fibre\": \"6 г\",\n    \"protein\": \"9 г\",\n    \"salt\": \"0,2 г\",\n    \"photo_index\": 1\n  },\n  \"other_text\": [\n    {\n      \"text\": \"Батончик мюслі\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Маса нетто 40 г\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Зберігати в сухому місці при температурі не вище +25 °С.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Виробник: ТОВ «Тестовий завод», Україна, м. Київ.\",\n      \"photo_index\": 1\n    }\n  ]\n}"
+}

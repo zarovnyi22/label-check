@@ -1,0 +1,108 @@
+{
+ "case": "test-003",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "1f397919585678309199ec6181032ebaedd79de34fe84620f8bc6ba90a7f0a4b",
+  "ecfd5b78102a1e1b303ba89d03fbfbc6d8f02b346909ce23deacc1c88b907278"
+ ],
+ "usage": {
+  "input_tokens": 3206,
+  "output_tokens": 748,
+  "reasoning_tokens": 0,
+  "total_tokens": 3954
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "полба, цукор, **яєчний жовток**, олія соняшникова, **сулугуні**, крохмаль кукурудзяний, розпушувач гідрокарбонат натрію, сіль, ароматизатор ванілін.",
+   "photo_index": 1
+  },
+  "may_contain_text": {
+   "text": "Може містити: арахіс, соя.",
+   "photo_index": 1
+  },
+  "nutrition": {
+   "per": "100g",
+   "portion_text": null,
+   "energy": "1954 кДж / 467 ккал",
+   "fat": "18 г",
+   "saturates": "8 г",
+   "carbs": "68 г",
+   "sugars": "24 г",
+   "fibre": "2,5 г",
+   "protein": "7 г",
+   "salt": "0,6 г",
+   "photo_index": 1
+  },
+  "other_text": [
+   {
+    "text": "Крекер «Вечірній»",
+    "photo_index": 0
+   },
+   {
+    "text": "Маса нетто 200 г",
+    "photo_index": 0
+   },
+   {
+    "text": "Поживна цінність на 100 г",
+    "photo_index": 1
+   },
+   {
+    "text": "Енергетична цінність",
+    "photo_index": 1
+   },
+   {
+    "text": "Жири",
+    "photo_index": 1
+   },
+   {
+    "text": "з них насичені жири",
+    "photo_index": 1
+   },
+   {
+    "text": "Вуглеводи",
+    "photo_index": 1
+   },
+   {
+    "text": "з них цукри",
+    "photo_index": 1
+   },
+   {
+    "text": "Харчові волокна",
+    "photo_index": 1
+   },
+   {
+    "text": "Білки",
+    "photo_index": 1
+   },
+   {
+    "text": "Сіль",
+    "photo_index": 1
+   },
+   {
+    "text": "Зберігати в сухому місці при температурі не вище +25 °C.",
+    "photo_index": 1
+   },
+   {
+    "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+    "photo_index": 1
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"полба, цукор, **яєчний жовток**, олія соняшникова, **сулугуні**, крохмаль кукурудзяний, розпушувач гідрокарбонат натрію, сіль, ароматизатор ванілін.\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": {\n    \"text\": \"Може містити: арахіс, соя.\",\n    \"photo_index\": 1\n  },\n  \"nutrition\": {\n    \"per\": \"100g\",\n    \"portion_text\": null,\n    \"energy\": \"1954 кДж / 467 ккал\",\n    \"fat\": \"18 г\",\n    \"saturates\": \"8 г\",\n    \"carbs\": \"68 г\",\n    \"sugars\": \"24 г\",\n    \"fibre\": \"2,5 г\",\n    \"protein\": \"7 г\",\n    \"salt\": \"0,6 г\",\n    \"photo_index\": 1\n  },\n  \"other_text\": [\n    {\n      \"text\": \"Крекер «Вечірній»\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Маса нетто 200 г\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Поживна цінність на 100 г\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Енергетична цінність\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Жири\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"з них насичені жири\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Вуглеводи\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"з них цукри\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Харчові волокна\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Білки\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Сіль\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Зберігати в сухому місці при температурі не вище +25 °C.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Виробник: ТОВ «Тестовий завод», Україна, м. Київ.\",\n      \"photo_index\": 1\n    }\n  ]\n}"
+}
