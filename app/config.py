@@ -10,7 +10,7 @@ class Settings(BaseSettings):
 
     database_url: str = "postgresql://postgres:postgres@localhost:5433/label_check"
     vision_provider: Literal["gemini", "groq"] = "gemini"
-    # Empty = no fallback. The fallback itself (and its <= 3 photos limit) comes in B3a.
+    # Empty = no fallback. Groq as the fallback takes only requests of <= 3 photos.
     vision_fallback_provider: Literal["", "gemini", "groq"] = ""
     gemini_api_key: str = ""
     vision_model: str = "gemini-3.5-flash-lite"

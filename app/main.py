@@ -11,6 +11,7 @@ from app.db import apply_migrations, create_pool
 from app.errors import register_error_handlers
 from app.logs import request_id_var, setup_logging
 from app.routers import health, rules
+from app.vision.base import get_vision_client
 
 setup_logging(get_settings().log_level)
 logger = logging.getLogger("app.http")
@@ -20,9 +21,12 @@ REQUEST_ID = re.compile(r"[A-Za-z0-9._-]{1,64}")
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    app.state.pool = await create_pool(get_settings().database_url)
+    settings = get_settings()
+    app.state.pool = await create_pool(settings.database_url)
     await apply_migrations(app.state.pool)
+    app.state.vision = get_vision_client(settings)
     yield
+    await app.state.vision.aclose()
     await app.state.pool.close()
 
 

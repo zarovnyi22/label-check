@@ -141,6 +141,30 @@
   CLAIM-UNVERIFIABLE) не зроблено — кандидат на dev-тюнінг (B5b), якщо на dev знайдуться
   пропущені формулювання.
 
+## B3a — прийом фото і vision-клієнт
+
+- `prepare_image(raw, name) -> PreparedImage(data, mime, width, height, sha256)`
+  (`app/images.py`): тип за вмістом (JPEG/PNG/WebP), ≤ 10 МБ і ≤ 50 Мп (бомба
+  декомпресії), EXIF-поворот, ≤ 2048 px, **завжди JPEG q90**, прозоре — на білому.
+  `sha256` — від підготовлених байтів (те, що бачить модель і що піде в `check_images`):
+  зміна підготовки = новий ключ кешу. Помилки 422 `image_too_large` / `image_unsupported`.
+- `VisionClient.extract(images, prompt, *, schema=None) -> VisionResult(data, raw_text,
+  usage, model)`; `data` — JSON-об'єкт або `None` (не JSON): **валідація і повтор →
+  `vision_bad_output` — у B3b** (`extraction.py`). `parse_answer` знімає `<think>` і ```-огорожу.
+  `model` = `"gemini/<model>"` / `"groq/<model>"`. `schema` → Gemini `responseSchema`
+  (Groq ігнорує); чи передавати — вирішує B3b разом із промптом.
+- Повтори (`post_json`): 500/502/503/504 і таймаут/мережа, паузи 2/4/8 с + джиттер ≤ 1 с;
+  бюджет 60 с обмежує, **коли може початися** повтор (сама спроба — до
+  `VISION_TIMEOUT_SECONDS`), тож у найгіршому разі запит довший за 60 с. 400/401/429 — без
+  повторів. Ключ — лише в заголовку; уривок тіла помилки ≤ 300 символів з ключем → `***`.
+- Fallback: на `vision_unavailable`/`vision_timeout`/`vision_rate_limited` основного → запасний,
+  лише якщо фото ≤ `fallback.max_images` (Groq 3), інакше `vision_rate_limited`; після
+  fallback основний пропускається 60 с; запасний у паузі отримав 429 → одна спроба основного.
+- Groq як **основний** з 4 фото → 422 `too_many_images` (нового коду немає в CLAUDE.md;
+  нестандартна конфігурація, за замовчуванням основний — Gemini).
+- Клієнт створюється в lifespan (`app.state.vision`), `/health` показує його провайдерів.
+  `FakeVision(answers)` — відповіді dict/str/`VisionError`, `calls` для перевірок.
+
 ## B3b — живі перевірки
 
 ## Відкриті питання
