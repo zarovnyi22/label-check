@@ -5,6 +5,7 @@
       "target": "fat_low"
     }
   ],
+  "expected_flags": [],
   "extraction": {
     "photos": [
       {
@@ -67,7 +68,7 @@
     "quality": "blur",
     "template": "kefir",
     "scenario": "fat_low",
-    "off_dictionary": [
+    "oov": [
       "сулугуні"
     ],
     "emphasis": "caps"

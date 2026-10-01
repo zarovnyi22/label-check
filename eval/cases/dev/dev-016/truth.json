@@ -5,6 +5,7 @@
       "target": "soybeans"
     }
   ],
+  "expected_flags": [],
   "extraction": {
     "photos": [
       {
@@ -66,7 +67,7 @@
     "quality": "jpeg40",
     "template": "cookies",
     "scenario": "ALG-SPEC-MISSING",
-    "off_dictionary": [
+    "oov": [
       "рікота"
     ],
     "emphasis": "bold"

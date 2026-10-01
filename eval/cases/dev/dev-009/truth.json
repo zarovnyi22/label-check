@@ -5,6 +5,7 @@
       "target": "fat_low"
     }
   ],
+  "expected_flags": [],
   "extraction": {
     "photos": [
       {
@@ -70,7 +71,7 @@
     "quality": "clean",
     "template": "spread",
     "scenario": "fat_low",
-    "off_dictionary": [],
+    "oov": [],
     "emphasis": "bold"
   }
 }

@@ -5,6 +5,7 @@
       "target": "sugar_free"
     }
   ],
+  "expected_flags": [],
   "extraction": {
     "photos": [
       {
@@ -67,7 +68,7 @@
     "quality": "jpeg40",
     "template": "bread",
     "scenario": "sugar_free",
-    "off_dictionary": [],
+    "oov": [],
     "emphasis": "bold"
   }
 }

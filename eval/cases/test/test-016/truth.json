@@ -5,6 +5,7 @@
       "target": "celery"
     }
   ],
+  "expected_flags": [],
   "extraction": {
     "photos": [
       {
@@ -66,7 +67,7 @@
     "quality": "jpeg40",
     "template": "spread",
     "scenario": "ALG-SPEC-MISSING",
-    "off_dictionary": [],
+    "oov": [],
     "emphasis": "caps"
   }
 }

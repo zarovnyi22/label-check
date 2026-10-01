@@ -7,6 +7,7 @@ import pytest
 
 from app.schemas import LabelExtraction, ProductSpec
 from eval.generate import (
+    FLAG_SCENARIOS,
     ROOT,
     SCENARIOS,
     SPLITS,
@@ -25,7 +26,6 @@ VIOLATION_RULES = {
     "no_added_sugar",
     "NUT-ENERGY",
     "ALG-SPEC-MISSING",
-    "LABEL-TRUNCATED",
 }
 
 
@@ -52,8 +52,10 @@ def test_another_seed_other_cases(cases):
 def test_every_violation_type_is_in_both_splits(cases, split):
     found = {v["rule_id"] for c in cases[split] for v in c.violations}
     assert found == VIOLATION_RULES == set(VIOLATION_SCENARIOS)
+    flagged = {f["rule_id"] for c in cases[split] for f in c.expected_flags}
+    assert flagged == {"LABEL-TRUNCATED", "IMG-QUALITY"} and set(FLAG_SCENARIOS) <= flagged
     assert len(cases[split]) == sum(SCENARIOS.values())
-    clean = [c for c in cases[split] if not c.violations]
+    clean = [c for c in cases[split] if not c.violations and not c.expected_flags]
     assert len(clean) >= 10
     qualities = {c.quality for c in cases[split]}
     assert qualities == {"clean", "blur", "rotate", "jpeg40", "cropped"}
@@ -101,7 +103,12 @@ def test_cropped_case_marks_the_cut_and_keeps_the_allergens(cases):
         assert text.endswith(" […]") and case.full_ingredients.startswith(text[:-4])
         assert len(text) - 4 < len(case.full_ingredients) - 1  # something is really cut
         assert case.extraction["photos"][1]["quality"] == "cropped"
-        assert case.violations == [{"rule_id": "LABEL-TRUNCATED", "target": "ingredients"}]
+        # a photo problem, not a label violation: kept out of safe recall
+        assert case.violations == []
+        assert case.expected_flags == [
+            {"rule_id": "LABEL-TRUNCATED", "target": "ingredients"},
+            {"rule_id": "IMG-QUALITY", "target": "photo_1"},
+        ]
 
 
 def test_spec_missing_case_has_the_allergen_only_in_the_recipe(cases):

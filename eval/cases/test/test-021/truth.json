@@ -1,5 +1,6 @@
 {
   "violations": [],
+  "expected_flags": [],
   "extraction": {
     "photos": [
       {
@@ -62,7 +63,7 @@
     "quality": "rotate",
     "template": "sauce",
     "scenario": "clean_sugar_free_lt",
-    "off_dictionary": [
+    "oov": [
       "Без вмісту цукру"
     ],
     "emphasis": "bold"

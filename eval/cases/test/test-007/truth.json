@@ -5,6 +5,7 @@
       "target": "protein_source"
     }
   ],
+  "expected_flags": [],
   "extraction": {
     "photos": [
       {
@@ -67,7 +68,7 @@
     "quality": "rotate",
     "template": "sauce",
     "scenario": "protein_source",
-    "off_dictionary": [],
+    "oov": [],
     "emphasis": "bold"
   }
 }

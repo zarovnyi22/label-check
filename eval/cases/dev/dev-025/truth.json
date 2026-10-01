@@ -1,5 +1,6 @@
 {
   "violations": [],
+  "expected_flags": [],
   "extraction": {
     "photos": [
       {
@@ -65,7 +66,7 @@
     "quality": "rotate",
     "template": "bread",
     "scenario": "clean_fat_low",
-    "off_dictionary": [
+    "oov": [
       "кус-кус"
     ],
     "emphasis": "caps"

@@ -5,6 +5,7 @@
       "target": "no_added_sugar"
     }
   ],
+  "expected_flags": [],
   "extraction": {
     "photos": [
       {
@@ -70,7 +71,7 @@
     "quality": "rotate",
     "template": "bar",
     "scenario": "no_added_sugar",
-    "off_dictionary": [],
+    "oov": [],
     "emphasis": "bold"
   }
 }

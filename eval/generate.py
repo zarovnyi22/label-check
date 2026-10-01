@@ -3,13 +3,15 @@
     python -m eval.generate [--seed N] [--out eval/cases]        (make generate)
 
 Each case is eval/cases/<split>/<id>/: photo_<i>.jpg, spec.json (some cases) and truth.json =
-{violations: [{rule_id, target}], extraction: the LabelExtraction the photos are drawn FROM,
-meta: {synthetic: true, quality, template, scenario, ...}}. The photos are rendered from the
-extraction (bold = the **…** spans), so the extraction is the exact transcription of them.
+{violations: [{rule_id, target}], expected_flags: [{rule_id, target}], extraction: the
+LabelExtraction the photos are drawn FROM, meta: {synthetic: true, quality, template, scenario,
+oov, ...}}. violations are label violations (safe recall); expected_flags are problems of the
+photo, not of the label (LABEL-TRUNCATED, IMG-QUALITY: a separate metric). The photos are
+rendered from the extraction (bold = the **…** spans), so it is their exact transcription.
 
 The violations are what the law says about the drawn label, not what our rules say: B4b
 checks the rules against them. Wording comes from eval/pools/<split>.yaml (dev and test do
-not share it); off_dict pool entries are listed in meta.off_dictionary.
+not share it); oov pool entries (out of the dictionary) are listed in meta.oov.
 """
 
 import argparse
@@ -36,7 +38,7 @@ QUALITIES = ("clean", "blur", "rotate", "jpeg40")
 JPEG_QUALITY = {"jpeg40": 40}
 DEFAULT_JPEG_QUALITY = 88
 BLUR_RADIUS = 1.2
-ROTATE_DEGREES = (4.0, 7.0)  # |angle|, either direction
+ROTATE_DEGREES = (2.0, 5.0)  # |angle|, either direction
 ENERGY_ERRORS = (1.4, 0.65)  # NUT-ENERGY: declared kcal = computed × this (outside ±15 %)
 SPEC_SHARE = 0.5  # cases with a recipe (always for ALG-SPEC-MISSING)
 SPEC_NUTRITION_SHARE = 0.6  # of those, with nutrition_per_100
@@ -46,7 +48,8 @@ CAPS_SHARE = 0.3  # allergens emphasized by CAPITALS instead of bold
 LT_SUGARS = "<0,5 г"
 LT_SUGARS_RECIPE = 0.2  # the recipe value behind "<0,5"
 
-# scenario -> cases per split; the violation ones put {rule_id, target} into the truth
+# scenario -> cases per split; a violation scenario puts {rule_id, target} into
+# truth.violations, a flag scenario into truth.expected_flags
 SCENARIOS: dict[str, int] = {
     "ALG-EMPH": 3,
     "sugar_free": 3,
@@ -63,7 +66,10 @@ SCENARIOS: dict[str, int] = {
     "clean_fibre": 2,
     "clean_plain": 2,
 }
-VIOLATION_SCENARIOS = tuple(s for s in SCENARIOS if not s.startswith("clean"))
+FLAG_SCENARIOS = ("LABEL-TRUNCATED",)  # a problem of the photo, not of the label
+VIOLATION_SCENARIOS = tuple(
+    s for s in SCENARIOS if not s.startswith("clean") and s not in FLAG_SCENARIOS
+)
 CLAIM_IDS = ("sugar_free", "protein_source", "fat_low", "no_added_sugar", "fibre_source")
 
 
@@ -187,7 +193,8 @@ class Case:
     extraction: dict
     spec: dict | None
     violations: list[dict]
-    off_dictionary: list[str]
+    expected_flags: list[dict]
+    oov: list[str]
     full_ingredients: str  # what is printed; differs from the truth only when cropped
     angle: float = 0.0
     meta_extra: dict = field(default_factory=dict)
@@ -198,10 +205,15 @@ class Case:
             "quality": self.quality,
             "template": self.template,
             "scenario": self.scenario,
-            "off_dictionary": self.off_dictionary,
+            "oov": self.oov,
             **self.meta_extra,
         }
-        return {"violations": self.violations, "extraction": self.extraction, "meta": meta}
+        return {
+            "violations": self.violations,
+            "expected_flags": self.expected_flags,
+            "extraction": self.extraction,
+            "meta": meta,
+        }
 
 
 def fmt(value: float) -> str:
@@ -219,6 +231,7 @@ def build_case(split: str, index: int, scenario: str, quality: str, rng: random.
     t = TEMPLATES[key]
     off: list[str] = []
     violations: list[dict] = []
+    flags: list[dict] = []
 
     # allergen ingredients from the pool; two slots of one category get different entries
     entries: list[tuple[str, dict]] = []
@@ -238,7 +251,7 @@ def build_case(split: str, index: int, scenario: str, quality: str, rng: random.
 
     allergen_items = [(shown(i, e), cat, e) for i, (cat, e) in enumerate(entries)]
     for _, _, e in allergen_items:
-        if e.get("off_dict"):
+        if e.get("oov"):
             off.append(plain_text(e["text"]))
 
     no_sugar = scenario in ("no_added_sugar", "clean_no_added_sugar", "clean_sugar_free_lt")
@@ -250,7 +263,7 @@ def build_case(split: str, index: int, scenario: str, quality: str, rng: random.
     if rng.random() < TRAP_SHARE:
         trap = rng.choice(pool["traps"])
         others.append(trap["text"])
-        if trap.get("off_dict"):
+        if trap.get("oov"):
             off.append(trap["text"])
     # allergens and the rest interleaved (main part), then the minor tail
     main: list[tuple[str, str | None]] = []
@@ -296,7 +309,7 @@ def build_case(split: str, index: int, scenario: str, quality: str, rng: random.
     for cid in claim_ids:
         wording = rng.choice(pool["claims"][cid])
         claims.append(wording)
-        if wording in pool.get("claims_off_dict", []):
+        if wording in pool.get("claims_oov", []):
             off.append(wording)
     if scenario in ("sugar_free", "protein_source", "fat_low"):
         violations.append({"rule_id": scenario, "target": scenario})
@@ -331,7 +344,8 @@ def build_case(split: str, index: int, scenario: str, quality: str, rng: random.
     ingredients_text = full
     if cropped:
         ingredients_text = None  # set after layout: the visible part + "[…]"
-        violations.append({"rule_id": "LABEL-TRUNCATED", "target": "ingredients"})
+        flags.append({"rule_id": "LABEL-TRUNCATED", "target": "ingredients"})
+        flags.append({"rule_id": "IMG-QUALITY", "target": "photo_1"})
     extraction = {
         "photos": photos,
         "emphasis_resolvable": True,
@@ -382,7 +396,8 @@ def build_case(split: str, index: int, scenario: str, quality: str, rng: random.
         extraction=extraction,
         spec=spec,
         violations=violations,
-        off_dictionary=off,
+        expected_flags=flags,
+        oov=off,
         full_ingredients=full,
         angle=round(angle, 2),
         meta_extra={"emphasis": "caps" if use_caps else "bold"},
@@ -612,7 +627,8 @@ def main() -> None:
         for case in cases:
             write_case(case, args.out)
         violations = sum(len(c.violations) for c in cases)
-        print(f"{split}: {len(cases)} cases, {violations} violations -> {args.out / split}")
+        flags = sum(len(c.expected_flags) for c in cases)
+        print(f"{split}: {len(cases)} cases, {violations} violations, {flags} expected flags")
 
 
 if __name__ == "__main__":

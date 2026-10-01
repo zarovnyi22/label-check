@@ -1,8 +1,13 @@
 {
-  "violations": [
+  "violations": [],
+  "expected_flags": [
     {
       "rule_id": "LABEL-TRUNCATED",
       "target": "ingredients"
+    },
+    {
+      "rule_id": "IMG-QUALITY",
+      "target": "photo_1"
     }
   ],
   "extraction": {
@@ -69,7 +74,7 @@
     "quality": "cropped",
     "template": "bread",
     "scenario": "LABEL-TRUNCATED",
-    "off_dictionary": [],
+    "oov": [],
     "emphasis": "bold"
   }
 }

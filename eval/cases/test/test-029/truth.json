@@ -1,5 +1,6 @@
 {
   "violations": [],
+  "expected_flags": [],
   "extraction": {
     "photos": [
       {
@@ -58,7 +59,7 @@
     "quality": "rotate",
     "template": "juice",
     "scenario": "clean_plain",
-    "off_dictionary": [],
+    "oov": [],
     "emphasis": "bold"
   }
 }

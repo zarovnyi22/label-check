@@ -5,6 +5,7 @@
       "target": "cereals"
     }
   ],
+  "expected_flags": [],
   "extraction": {
     "photos": [
       {
@@ -66,7 +67,7 @@
     "quality": "rotate",
     "template": "cookies",
     "scenario": "ALG-EMPH",
-    "off_dictionary": [
+    "oov": [
       "полба",
       "сулугуні"
     ],

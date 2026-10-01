@@ -5,6 +5,7 @@
       "target": "sugar_free"
     }
   ],
+  "expected_flags": [],
   "extraction": {
     "photos": [
       {
@@ -70,7 +71,7 @@
     "quality": "clean",
     "template": "cookies",
     "scenario": "sugar_free",
-    "off_dictionary": [
+    "oov": [
       "кус-кус",
       "рікота"
     ],

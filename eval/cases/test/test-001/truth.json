@@ -5,6 +5,7 @@
       "target": "sesame"
     }
   ],
+  "expected_flags": [],
   "extraction": {
     "photos": [
       {
@@ -66,7 +67,7 @@
     "quality": "clean",
     "template": "bread",
     "scenario": "ALG-EMPH",
-    "off_dictionary": [
+    "oov": [
       "полба"
     ],
     "emphasis": "bold"

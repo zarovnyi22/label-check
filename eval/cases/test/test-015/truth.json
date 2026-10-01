@@ -5,6 +5,7 @@
       "target": "mustard"
     }
   ],
+  "expected_flags": [],
   "extraction": {
     "photos": [
       {
@@ -66,7 +67,7 @@
     "quality": "rotate",
     "template": "yogurt",
     "scenario": "ALG-SPEC-MISSING",
-    "off_dictionary": [
+    "oov": [
       "сулугуні"
     ],
     "emphasis": "bold"

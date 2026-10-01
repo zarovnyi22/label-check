@@ -5,6 +5,7 @@
       "target": "fish"
     }
   ],
+  "expected_flags": [],
   "extraction": {
     "photos": [
       {
@@ -66,7 +67,7 @@
     "quality": "rotate",
     "template": "yogurt",
     "scenario": "ALG-SPEC-MISSING",
-    "off_dictionary": [],
+    "oov": [],
     "emphasis": "caps"
   }
 }

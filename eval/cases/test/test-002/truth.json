@@ -5,6 +5,7 @@
       "target": "fish"
     }
   ],
+  "expected_flags": [],
   "extraction": {
     "photos": [
       {
@@ -66,7 +67,7 @@
     "quality": "blur",
     "template": "spread",
     "scenario": "ALG-EMPH",
-    "off_dictionary": [],
+    "oov": [],
     "emphasis": "bold"
   }
 }

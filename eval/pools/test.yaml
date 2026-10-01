@@ -8,15 +8,15 @@ allergens:
     - text: "**казеїнат** натрію"
     - text: "**вершки** питні"
     - text: "**фета**"
-      off_dict: true
+      oov: true
     - text: "**сулугуні**"
-      off_dict: true
+      oov: true
   cereals:
     - text: "**пшеничне** борошно вищого ґатунку"
     - text: "**житні** висівки"
     - text: "**спельтове** борошно"
     - text: "**полба**"
-      off_dict: true
+      oov: true
   eggs:
     - text: "**яєчний** білок сухий"
     - text: "**яєчний жовток**"
@@ -27,7 +27,7 @@ allergens:
   soybeans:
     - text: "**соєве** борошно"
     - text: "**едамаме**"
-      off_dict: true
+      oov: true
   sesame:
     - text: "**тахіні**"
     - text: "**сезам**"
@@ -46,7 +46,7 @@ traps:
   - text: "кокосові вершки"
   - text: "барвник сульфітно-аміачна карамель"
   - text: "тигровий горіх"
-    off_dict: true
+    oov: true
 
 sweeteners: ["патока", "фруктоза", "сироп агави", "концентрований виноградний сік"]
 
@@ -67,8 +67,8 @@ claims:
   fat_low: ["Low fat", "З низьким вмістом жиру"]
   no_added_sugar: ["Без додавання цукру", "No added sugar"]
   fibre_source: ["Source of fibre", "Джерело харчових волокон"]
-# Формулювання тверджень поза регулярками на момент B4a (див. off_dict у dev.yaml).
-claims_off_dict: ["Без вмісту цукру"]
+# Формулювання тверджень поза регулярками на момент B4a (див. oov у dev.yaml).
+claims_oov: ["Без вмісту цукру"]
 
 natural_sugars: "Contains naturally occurring sugars."
 

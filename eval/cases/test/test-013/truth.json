@@ -5,6 +5,7 @@
       "target": "energy"
     }
   ],
+  "expected_flags": [],
   "extraction": {
     "photos": [
       {
@@ -66,7 +67,7 @@
     "quality": "clean",
     "template": "bread",
     "scenario": "NUT-ENERGY",
-    "off_dictionary": [],
+    "oov": [],
     "emphasis": "bold"
   }
 }
