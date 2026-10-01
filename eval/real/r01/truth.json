@@ -1,0 +1,115 @@
+{
+  "violations": [],
+  "expected_flags": [],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 2,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+      "text": "цукор, патока, вода питна, концентровані фруктові соки: яблучний, апельсиновий, лимонний (*4% фруктових концентрованих соків = 25% фруктових соків), желюючий агент пектин, регулятори кислотності (лимонна кислота, тринатрію цитрат), ароматизатори, барвники (антоціан, екстракт паприки, куркумін).",
+      "photo_index": 1
+    },
+    "may_contain_text": {
+      "text": "Може містити глютен (пшеничний), молокопродукти, соєвий лецитин, яєчні продукти, фундук, мигдаль, арахіс, кунжут.",
+      "photo_index": 1
+    },
+    "nutrition": {
+      "per": "100g",
+      "portion_text": null,
+      "energy": "1380 kJ/ 330 kcal",
+      "fat": "0 g",
+      "saturates": "0 g",
+      "carbs": "80 g",
+      "sugars": "58.8 g",
+      "fibre": null,
+      "protein": "0.1 g",
+      "salt": "0.49 g",
+      "photo_index": 2
+    },
+    "other_text": [
+      {
+        "text": "ROSHEN",
+        "photo_index": 0
+      },
+      {
+        "text": "BONNY FRUIT",
+        "photo_index": 0
+      },
+      {
+        "text": "25% juice",
+        "photo_index": 0
+      },
+      {
+        "text": "MIX citrus",
+        "photo_index": 0
+      },
+      {
+        "text": "200 г/g",
+        "photo_index": 0
+      },
+      {
+        "text": "NET WT 7.05 OZ",
+        "photo_index": 0
+      },
+      {
+        "text": "with citrus flavours",
+        "photo_index": 0
+      },
+      {
+        "text": "(UA) ЦУКЕРКИ ЖЕЛЕЙНІ \"BONNY FRUIT\" ЦИТРУСОВИЙ МІКС (НЕГЛАЗУРОВАНІ). Мікс желейних цукерок з цитрусовими смаками («лимон-лайм», «апельсин», «апельсин-грейпфрут»).",
+        "photo_index": 1
+      },
+      {
+        "text": "Зберігати за температури (18±3)°C і відносної вологості повітря не вище 75%. (v261024C)",
+        "photo_index": 1
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": false,
+    "source": "Open Food Facts 4823077624247 (Bonny fruit Mix citrus), CC BY-SA 3.0",
+    "quality": "clean",
+    "label_allergens": [],
+    "label_may_contain": [
+      "cereals",
+      "milk",
+      "soybeans",
+      "eggs",
+      "nuts",
+      "peanuts",
+      "sesame"
+    ],
+    "oov": [],
+    "notes": "Nutrition table photographed only in Italian/Czech (no Ukrainian table visible); values per 100 g with decimal points. Ingredient list contains no allergens. Bottom line of the back photo (next language) is cut, not part of the UA text.",
+    "semi_synthetic": "spec_variants: recipe + one allergen not on the label"
+  },
+  "spec_variants": [
+    {
+      "spec": "spec_1.json",
+      "violations": [
+        {
+          "rule_id": "ALG-SPEC-MISSING",
+          "target": "celery"
+        }
+      ]
+    }
+  ]
+}

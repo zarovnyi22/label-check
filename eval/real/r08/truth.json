@@ -1,0 +1,104 @@
+{
+  "violations": [],
+  "expected_flags": [],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "ok",
+        "note": "glare covers a few letters, words still recognisable"
+      },
+      {
+        "index": 2,
+        "side": "back",
+        "quality": "ok",
+        "note": "glare on the 250 ml column"
+      }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+      "text": "eau pétillante; colorant: E150d; acidifiants: E338, E331; édulcorants: aspartame, acésulfame-K; arômes naturels (extraits végétaux), dont caféine.",
+      "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": {
+      "per": "100ml",
+      "portion_text": null,
+      "energy": "1.4kJ 0.3kcal",
+      "fat": "0g",
+      "saturates": "0g",
+      "carbs": "0g",
+      "sugars": "0g",
+      "fibre": null,
+      "protein": "0g",
+      "salt": "0.02g",
+      "photo_index": 2
+    },
+    "other_text": [
+      {
+        "text": "zero SUGAR",
+        "photo_index": 0
+      },
+      {
+        "text": "Coca-Cola",
+        "photo_index": 0
+      },
+      {
+        "text": "NEW IMPROVED TASTE",
+        "photo_index": 0
+      },
+      {
+        "text": "[…] waaronder cafeïne. Bevat een bron van fenylalanine.",
+        "photo_index": 1
+      },
+      {
+        "text": "Boisson rafraîchissante aux extraits végétaux, avec édulcorants.",
+        "photo_index": 1
+      },
+      {
+        "text": "Contient une source de phénylalanine.",
+        "photo_index": 1
+      },
+      {
+        "text": "Ten minste houdbaar tot: zie hals/dop. À consommer de préférence avant le: voir goulot/bouchon.",
+        "photo_index": 1
+      },
+      {
+        "text": "VOEDINGSWAARDE/DECLARATION NUTRITIONNELLE",
+        "photo_index": 2
+      },
+      {
+        "text": "*Referentie-inname van een gemiddelde volwassene/[…]",
+        "photo_index": 2
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": false,
+    "source": "Open Food Facts 5449000080806 (Zero Sugar), CC BY-SA 3.0",
+    "quality": "glare",
+    "label_allergens": [],
+    "label_may_contain": [],
+    "oov": [],
+    "notes": "Belgian (NL/FR) bottle, no Ukrainian text. Glare hides single letters in 'eau' and 'acésulfame' (and 'rafraîchissante', 'source') - transcribed as read by a human; a strict model may put […] there (-> LABEL-TRUNCATED). The Dutch ingredient list is cut at the top of photo 1; the French one is complete. 'zero SUGAR' claim: sugars 0 g -> pass. NUT-KJ will flag needs_review: 0.3 kcal x 4.184 = 1.26 kJ vs 1.4 kJ printed (rounding of tiny values, not a label error). Decimal points, not commas.",
+    "semi_synthetic": "spec_variants: recipe + one allergen not on the label"
+  },
+  "spec_variants": [
+    {
+      "spec": "spec_1.json",
+      "violations": [
+        {
+          "rule_id": "ALG-SPEC-MISSING",
+          "target": "mustard"
+        }
+      ]
+    }
+  ]
+}

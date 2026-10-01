@@ -1,0 +1,36 @@
+{
+  "form": "liquid",
+  "ingredients": [
+    {
+      "name": "ядра волоського горіха",
+      "allergens": [
+        "nuts"
+      ]
+    },
+    {
+      "name": "Carbonated Water",
+      "allergens": []
+    },
+    {
+      "name": "Sugar",
+      "allergens": []
+    },
+    {
+      "name": "Colour",
+      "allergens": []
+    },
+    {
+      "name": "Acid",
+      "allergens": []
+    },
+    {
+      "name": "Natural Flavourings",
+      "allergens": []
+    },
+    {
+      "name": "Caffeine Flavouring",
+      "allergens": []
+    }
+  ],
+  "may_contain": []
+}

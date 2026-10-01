@@ -1,0 +1,44 @@
+{
+  "form": "liquid",
+  "ingredients": [
+    {
+      "name": "вода питна підготовлена",
+      "allergens": []
+    },
+    {
+      "name": "цукор",
+      "allergens": []
+    },
+    {
+      "name": "діоксид вуглецю",
+      "allergens": []
+    },
+    {
+      "name": "барвник",
+      "allergens": []
+    },
+    {
+      "name": "ароматизатори",
+      "allergens": []
+    },
+    {
+      "name": "кунжут білий",
+      "allergens": [
+        "sesame"
+      ]
+    },
+    {
+      "name": "регулятор кислотності",
+      "allergens": []
+    },
+    {
+      "name": "кофеїн",
+      "allergens": []
+    },
+    {
+      "name": "підсолоджувачі",
+      "allergens": []
+    }
+  ],
+  "may_contain": []
+}

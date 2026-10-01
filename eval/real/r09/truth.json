@@ -1,0 +1,130 @@
+{
+  "violations": [],
+  "expected_flags": [
+    {
+      "rule_id": "IMG-QUALITY",
+      "target": "photo_1"
+    },
+    {
+      "rule_id": "LABEL-MISSING",
+      "target": "ingredients"
+    },
+    {
+      "rule_id": "LABEL-MISSING",
+      "target": "nutrition"
+    }
+  ],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "blurry",
+        "note": "out of focus; same area as photo 2"
+      },
+      {
+        "index": 2,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      }
+    ],
+    "emphasis_resolvable": null,
+    "ingredients_marked": null,
+    "may_contain_text": null,
+    "nutrition": null,
+    "other_text": [
+      {
+        "text": "189[…]",
+        "photo_index": 0
+      },
+      {
+        "text": "BORJOMI",
+        "photo_index": 0
+      },
+      {
+        "text": "[…]GIAN MINERAL WATE[…]",
+        "photo_index": 0
+      },
+      {
+        "text": "ბორჯომი",
+        "photo_index": 0
+      },
+      {
+        "text": "BOTTLED IN GEORGIA",
+        "photo_index": 0
+      },
+      {
+        "text": "მინერალიზაცია: 5,0 - 7,5 გ/ლ",
+        "photo_index": 2
+      },
+      {
+        "text": "ქიმიური შემადგენლობა (მგ/ლ)",
+        "photo_index": 2
+      },
+      {
+        "text": "Ca2+ 20-150",
+        "photo_index": 2
+      },
+      {
+        "text": "Mg2+ 20-150",
+        "photo_index": 2
+      },
+      {
+        "text": "Na+ 1000-2000",
+        "photo_index": 2
+      },
+      {
+        "text": "HCO3- 3500-5000",
+        "photo_index": 2
+      },
+      {
+        "text": "F <10",
+        "photo_index": 2
+      },
+      {
+        "text": "„შეიცავს 1.5 მგ/ლ-ზე მეტ ფტორიდებს და არ არის რეკომენდებული მისი ხანგრძლივად მოხმარება 7 წლამდე ასაკის ბავშვებისათვის.",
+        "photo_index": 2
+      },
+      {
+        "text": "შეესაბამება სსტ 50 : 2010",
+        "photo_index": 2
+      },
+      {
+        "text": "შენახვის ტემპერატურა: (+3°C)-(+30°C)",
+        "photo_index": 2
+      },
+      {
+        "text": "[…]: იხილეთ ეტიკეტზე",
+        "photo_index": 2
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": false,
+    "source": "Open Food Facts 4860019001346 (BORJOMI), CC BY-SA 3.0",
+    "quality": "blur",
+    "label_allergens": [],
+    "label_may_contain": [],
+    "oov": [],
+    "notes": "Natural mineral water (Georgian label only): shows mineral composition, no ingredient list and no nutrition table. Legally natural mineral water is exempt from the nutrition declaration (Reg. 1169/2011 Annex V) and arguably from the ingredient list, but the service has no exemption logic, so LABEL-MISSING is the expected (and safe) output. Georgian transcription is approximate. Photo 1 is a blurry duplicate of photo 2.",
+    "semi_synthetic": "spec_variants: recipe + one allergen not on the label"
+  },
+  "spec_variants": [
+    {
+      "spec": "spec_1.json",
+      "violations": [
+        {
+          "rule_id": "ALG-SPEC-MISSING",
+          "target": "sesame"
+        }
+      ]
+    }
+  ]
+}

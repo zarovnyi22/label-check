@@ -1,0 +1,115 @@
+{
+  "violations": [
+    {
+      "rule_id": "ALG-EMPH",
+      "target": "cereals"
+    }
+  ],
+  "expected_flags": [
+    {
+      "rule_id": "IMG-QUALITY",
+      "target": "photo_2"
+    },
+    {
+      "rule_id": "LABEL-MISSING",
+      "target": "nutrition"
+    }
+  ],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": "slightly soft"
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 2,
+        "side": "back",
+        "quality": "blurry",
+        "note": "tiny low-resolution image of the nutrition table, values unreadable"
+      }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+      "text": "Pommes de terre déshydratées, huile végétale, graisse végétale, farine de riz, amidon de blé, émulsifiant: E471, maltodextrine, sel, amidon de riz modifié.",
+      "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": null,
+    "other_text": [
+      {
+        "text": "BUY 2 CANS & GET YOUR KARAOKE KIT!",
+        "photo_index": 0
+      },
+      {
+        "text": "Pringles",
+        "photo_index": 0
+      },
+      {
+        "text": "Original",
+        "photo_index": 0
+      },
+      {
+        "text": "[…] verpackt.",
+        "photo_index": 1
+      },
+      {
+        "text": "SNACK SALE",
+        "photo_index": 1
+      },
+      {
+        "text": "À consommer de préférence avant le: voir sur le fond. Conditionné sous atmosphère protectrice.",
+        "photo_index": 1
+      },
+      {
+        "text": "HARTIGE SNAC[…]",
+        "photo_index": 1
+      },
+      {
+        "text": "INGREDIËNTEN: Gedehydrateerde aardappelen, plantaardige[…]",
+        "photo_index": 1
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": false,
+    "source": "Open Food Facts 5053990101573 (Pringles originale 165g), CC BY-SA 3.0",
+    "quality": "blur",
+    "label_allergens": [
+      "cereals"
+    ],
+    "label_may_contain": [],
+    "oov": [
+      "blé"
+    ],
+    "notes": "French ingredient list (FR/CH/BE market, no Ukrainian): 'amidon de blé' (wheat starch) is printed in the same regular font as the rest -> ALG-EMPH cereals violation under Reg. 1169/2011 art. 21 (likely an old pre-2014 pack). 'blé' is out of the dictionary, so the code will probably not find it. Nutrition photo is a tiny blurry thumbnail -> table not readable. Front logo text reads 'oooOrig inal'.",
+    "semi_synthetic": "spec_variants: recipe + one allergen not on the label"
+  },
+  "spec_variants": [
+    {
+      "spec": "spec_1.json",
+      "violations": [
+        {
+          "rule_id": "ALG-SPEC-MISSING",
+          "target": "soybeans"
+        }
+      ]
+    },
+    {
+      "spec": "spec_2.json",
+      "violations": [
+        {
+          "rule_id": "ALG-SPEC-MISSING",
+          "target": "peanuts"
+        }
+      ]
+    }
+  ]
+}

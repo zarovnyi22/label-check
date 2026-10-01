@@ -1,0 +1,146 @@
+{
+  "violations": [],
+  "expected_flags": [],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "ok",
+        "note": "crop of the UA text, bottom line cut"
+      },
+      {
+        "index": 2,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+      "text": "олія соняшникова рафінована дезодорована, вода питна, цукор, емульгатор (модифікований крохмаль кукурудзяний), сіль кухонна, **яєчний порошок**, регулятор кислотності (кислота лимонна), стабілізатор (камідь гуарова), регулятор кислотності (кислота оцтова), консервант (сорбат калію), ароматизатор гірчиці, натуральний ароматизатор чорного перцю, натуральний барвник (бета-каротин).",
+      "photo_index": 1
+    },
+    "may_contain_text": {
+      "text": "Може містити сліди гірчиці, глютену та молочних продуктів.",
+      "photo_index": 1
+    },
+    "nutrition": {
+      "per": "100g",
+      "portion_text": null,
+      "energy": "2535 кДж(kJ) / 616 ккал(kcal)",
+      "fat": "67 г(g)",
+      "saturates": "9,5 г(g)",
+      "carbs": "3,2 г(g)",
+      "sugars": "2 г(g)",
+      "fibre": null,
+      "protein": "0,1 г(g)",
+      "salt": "0,96 г(g)",
+      "photo_index": 2
+    },
+    "other_text": [
+      {
+        "text": "КОРОЛІВСЬКИЙ СМАК",
+        "photo_index": 0
+      },
+      {
+        "text": "Королівський",
+        "photo_index": 0
+      },
+      {
+        "text": "Майонез 67%",
+        "photo_index": 0
+      },
+      {
+        "text": "№1 ВИБІР РОКУ 2021",
+        "photo_index": 0
+      },
+      {
+        "text": "UKRAINE",
+        "photo_index": 0
+      },
+      {
+        "text": "Приклад сервірування / Example of serving / Exemplu de servire",
+        "photo_index": 0
+      },
+      {
+        "text": "[…] нетто: 500 г(g) допустиме від'ємне відхилення 3%",
+        "photo_index": 0
+      },
+      {
+        "text": "СМАКУЙ ПО-КОРОЛІВСЬКИ!",
+        "photo_index": 0
+      },
+      {
+        "text": "(UA) МАЙОНЕЗ 67% «КОРОЛІВСЬКИЙ»",
+        "photo_index": 1
+      },
+      {
+        "text": "Мінімальний термін придатності за температури від 0°C до плюс 25°C – 120 діб(d). Дата завершення мінімального терміну придатності (Краще спожити до) є номером партії (L) та вказана на боковому шві пакета. Термін зберігання після розкриття споживчої тари майонезу становить за температури від 0°C до плюс 11°C включно 14 діб(d), в межах загального мінімального терміну придатності.",
+        "photo_index": 1
+      },
+      {
+        "text": "Зберігати за температури від 0°C до плюс 25°C і відносної вологості не більше ніж 75%. Заборонено зберігати майонез разом із продуктами, які мають різкий специфічний запах та на прямому сонячному світлі.",
+        "photo_index": 1
+      },
+      {
+        "text": "Виробник, місцезнаходження виробника: ПП «Віктор і К», вул. Висоцького, 2, смт Власівка, м. Світловодськ, Кіровоградська обл., 27552, Україна, тел.: +38 (05236) 5-28-12. Країна походження: Україна. www.kingsmak.com.ua",
+        "photo_index": 2
+      },
+      {
+        "text": "(EN) MAYONNAISE 67% «ROYAL»",
+        "photo_index": 2
+      },
+      {
+        "text": "Net weight: 500 g permissible negative deviation 3%.",
+        "photo_index": 2
+      },
+      {
+        "text": "MAIONEZĂ «KOROLEVSCHII», CONȚINUT DE GRĂSIME 67%",
+        "photo_index": 2
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": false,
+    "source": "Open Food Facts 4820241520930 (Майонез 67%), CC BY-SA 3.0",
+    "quality": "clean",
+    "label_allergens": [
+      "eggs"
+    ],
+    "label_may_contain": [
+      "mustard",
+      "cereals",
+      "milk"
+    ],
+    "oov": [],
+    "notes": "'ароматизатор гірчиці' (mustard flavouring) is not emphasized: if the flavouring is derived from mustard this would be an ALG-EMPH mustard violation, but a flavouring 'of mustard' may be synthetic -> not counted (code will likely give ALG-EMPH mustard needs_review). EN/RO duplicates of ingredients/storage on photo 2 are not transcribed in full.",
+    "semi_synthetic": "spec_variants: recipe + one allergen not on the label"
+  },
+  "spec_variants": [
+    {
+      "spec": "spec_1.json",
+      "violations": [
+        {
+          "rule_id": "ALG-SPEC-MISSING",
+          "target": "soybeans"
+        }
+      ]
+    },
+    {
+      "spec": "spec_2.json",
+      "violations": [
+        {
+          "rule_id": "ALG-SPEC-MISSING",
+          "target": "fish"
+        }
+      ]
+    }
+  ]
+}

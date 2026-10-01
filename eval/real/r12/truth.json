@@ -1,0 +1,126 @@
+{
+  "violations": [],
+  "expected_flags": [],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": "shelf photo, several packs"
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 2,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+      "text": "farine de **blé**, huile de palme, sirop de glucose, poudres à lever (carbonates d'ammonium, carbonates de sodium), sel 1,5%, épices (paprika 0,8%, poivre), exhausteur de goût (glutamate de sodium), poudre d'oignon, protéine végétale hydrolysée, poudre d'ail, arômes, agent de traitement de la farine (di**sulfite** de sodium), extrait de levure, arôme de fumée.",
+      "photo_index": 1
+    },
+    "may_contain_text": {
+      "text": "Ce produit peut contenir des traces d'œuf, de soja et de lait.",
+      "photo_index": 1
+    },
+    "nutrition": {
+      "per": "100g",
+      "portion_text": "30g ≈ 8 crackers",
+      "energy": "2071kJ/ 494kcal",
+      "fat": "23g",
+      "saturates": "10g",
+      "carbs": "63g",
+      "sugars": "4,3g",
+      "fibre": "2,5g",
+      "protein": "8,0g",
+      "salt": "2,0g",
+      "photo_index": 2
+    },
+    "other_text": [
+      {
+        "text": "TUC",
+        "photo_index": 0
+      },
+      {
+        "text": "PAPRIKA",
+        "photo_index": 0
+      },
+      {
+        "text": "OVEN BAKED",
+        "photo_index": 0
+      },
+      {
+        "text": "Mondelēz International",
+        "photo_index": 0
+      },
+      {
+        "text": "FR: Crackers au goût de paprika 100g ℮",
+        "photo_index": 1
+      },
+      {
+        "text": "À consommer de préférence avant : voir date d'emballage.",
+        "photo_index": 1
+      },
+      {
+        "text": "Conserver dans un endroit frais et sec.",
+        "photo_index": 1
+      },
+      {
+        "text": "Valeur nutritionnelle par 100g/ 30g (% AR*/ 30g)",
+        "photo_index": 2
+      },
+      {
+        "text": "*Apport de référence pour un adulte-type (8400kJ/ 2000kcal). 30g ≈ 8 crackers. Cet emballage contient environ 3x30g.",
+        "photo_index": 2
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": false,
+    "source": "Open Food Facts 5410041435900 (Tuc Paprika), CC BY-SA 3.0",
+    "quality": "clean",
+    "label_allergens": [
+      "cereals",
+      "sulphites"
+    ],
+    "label_may_contain": [
+      "eggs",
+      "soybeans",
+      "milk"
+    ],
+    "oov": [
+      "blé",
+      "disulfite"
+    ],
+    "notes": "French label, no Ukrainian. Nutrition is a running-text line with per-100 g and per-30 g values interleaved ('2071kJ/ 621kJ (7%)/ 494kcal/ 148kcal (7%)'); per-100 g values extracted. Bold covers 'blé' and 'sulfite' inside 'disulfite'. 'protéine végétale hydrolysée' source unspecified (not counted). Small print on the front (BG/RS distributor text) is unreadable and not transcribed.",
+    "semi_synthetic": "spec_variants: recipe + one allergen not on the label"
+  },
+  "spec_variants": [
+    {
+      "spec": "spec_1.json",
+      "violations": [
+        {
+          "rule_id": "ALG-SPEC-MISSING",
+          "target": "nuts"
+        }
+      ]
+    },
+    {
+      "spec": "spec_2.json",
+      "violations": [
+        {
+          "rule_id": "ALG-SPEC-MISSING",
+          "target": "lupin"
+        }
+      ]
+    }
+  ]
+}

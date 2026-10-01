@@ -1,0 +1,117 @@
+{
+  "violations": [],
+  "expected_flags": [],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": "product render, Turkish variant"
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "ok",
+        "note": "slightly blurry, readable"
+      },
+      {
+        "index": 2,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+      "text": "Carbonated Water, Sugar, Colour (Caramel E150d), Acid (Phosphoric Acid), Natural Flavourings, Caffeine Flavouring.",
+      "photo_index": 2
+    },
+    "may_contain_text": null,
+    "nutrition": {
+      "per": "100ml",
+      "portion_text": null,
+      "energy": "180kJ/ 42kcal",
+      "fat": "0g",
+      "saturates": "0g",
+      "carbs": "10.6g",
+      "sugars": "10.6g",
+      "fibre": null,
+      "protein": "0g",
+      "salt": "0g",
+      "photo_index": 2
+    },
+    "other_text": [
+      {
+        "text": "ORİJİNAL TAT",
+        "photo_index": 0
+      },
+      {
+        "text": "Coca-Cola",
+        "photo_index": 0
+      },
+      {
+        "text": "Sparkling Soft Drink with Plant Extracts",
+        "photo_index": 1
+      },
+      {
+        "text": "Best before: See base of can.",
+        "photo_index": 1
+      },
+      {
+        "text": "Store coo[…]",
+        "photo_index": 1
+      },
+      {
+        "text": "Coke® ORIGINAL TASTE",
+        "photo_index": 2
+      },
+      {
+        "text": "330ml ℮",
+        "photo_index": 2
+      },
+      {
+        "text": "*Reference intake of an average adult (8400kJ/2000kcal)",
+        "photo_index": 2
+      },
+      {
+        "text": "Best before: See base of can. Store cool and dry.",
+        "photo_index": 2
+      },
+      {
+        "text": "Best served chi[…]",
+        "photo_index": 2
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": false,
+    "source": "Open Food Facts 5449000000996 (Coca-Cola Original), CC BY-SA 3.0",
+    "quality": "blur",
+    "label_allergens": [],
+    "label_may_contain": [],
+    "oov": [],
+    "notes": "Front is a studio render of a Turkish can ('ORİJİNAL TAT'), back/nutrition are a UK 330 ml can - photos of different packs of the same product. Ingredients transcribed from photo 2 (sharper; photo 1 shows the same list, separators look like dots there). Decimal points. No allergens.",
+    "semi_synthetic": "spec_variants: recipe + one allergen not on the label"
+  },
+  "spec_variants": [
+    {
+      "spec": "spec_1.json",
+      "violations": [
+        {
+          "rule_id": "ALG-SPEC-MISSING",
+          "target": "peanuts"
+        }
+      ]
+    },
+    {
+      "spec": "spec_2.json",
+      "violations": [
+        {
+          "rule_id": "ALG-SPEC-MISSING",
+          "target": "nuts"
+        }
+      ]
+    }
+  ]
+}

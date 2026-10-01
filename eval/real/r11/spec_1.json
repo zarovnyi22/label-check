@@ -1,0 +1,36 @@
+{
+  "form": "liquid",
+  "ingredients": [
+    {
+      "name": "Carbonated Water",
+      "allergens": []
+    },
+    {
+      "name": "Sugar",
+      "allergens": []
+    },
+    {
+      "name": "арахіс подрібнений",
+      "allergens": [
+        "peanuts"
+      ]
+    },
+    {
+      "name": "Colour",
+      "allergens": []
+    },
+    {
+      "name": "Acid",
+      "allergens": []
+    },
+    {
+      "name": "Natural Flavourings",
+      "allergens": []
+    },
+    {
+      "name": "Caffeine Flavouring",
+      "allergens": []
+    }
+  ],
+  "may_contain": []
+}

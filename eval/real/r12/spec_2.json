@@ -1,0 +1,72 @@
+{
+  "form": "solid",
+  "ingredients": [
+    {
+      "name": "farine de blé",
+      "allergens": []
+    },
+    {
+      "name": "huile de palme",
+      "allergens": []
+    },
+    {
+      "name": "sirop de glucose",
+      "allergens": []
+    },
+    {
+      "name": "люпинове борошно",
+      "allergens": [
+        "lupin"
+      ]
+    },
+    {
+      "name": "poudres à lever",
+      "allergens": []
+    },
+    {
+      "name": "sel 1,5%",
+      "allergens": []
+    },
+    {
+      "name": "épices",
+      "allergens": []
+    },
+    {
+      "name": "exhausteur de goût",
+      "allergens": []
+    },
+    {
+      "name": "poudre d'oignon",
+      "allergens": []
+    },
+    {
+      "name": "protéine végétale hydrolysée",
+      "allergens": []
+    },
+    {
+      "name": "poudre d'ail",
+      "allergens": []
+    },
+    {
+      "name": "arômes",
+      "allergens": []
+    },
+    {
+      "name": "agent de traitement de la farine",
+      "allergens": []
+    },
+    {
+      "name": "extrait de levure",
+      "allergens": []
+    },
+    {
+      "name": "arôme de fumée",
+      "allergens": []
+    }
+  ],
+  "may_contain": [
+    "eggs",
+    "milk",
+    "soybeans"
+  ]
+}

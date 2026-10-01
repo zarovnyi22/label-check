@@ -1,0 +1,46 @@
+{
+  "form": "solid",
+  "ingredients": [
+    {
+      "name": "креветки сушені",
+      "allergens": [
+        "crustaceans"
+      ]
+    },
+    {
+      "name": "вода питна",
+      "allergens": []
+    },
+    {
+      "name": "паста томатна",
+      "allergens": []
+    },
+    {
+      "name": "цукор",
+      "allergens": []
+    },
+    {
+      "name": "оцет спиртовий",
+      "allergens": []
+    },
+    {
+      "name": "крохмаль модифікований кукурудзяний",
+      "allergens": []
+    },
+    {
+      "name": "сіль кухонна",
+      "allergens": []
+    },
+    {
+      "name": "прянощі сушені мелені",
+      "allergens": []
+    }
+  ],
+  "may_contain": [
+    "cereals",
+    "eggs",
+    "milk",
+    "mustard",
+    "soybeans"
+  ]
+}

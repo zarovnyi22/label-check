@@ -15,3 +15,10 @@ __pycache__/
 .idea/
 .vscode/
 .DS_Store
+
+# real photos are not committed (eval/real keeps only truth.json, spec*.json, SOURCES.md)
+eval/real/**/*.jpg
+eval/real/**/*.jpeg
+eval/real/**/*.png
+eval/real/**/*.webp
+eval/real/**/*.heic

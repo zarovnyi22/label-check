@@ -1,0 +1,44 @@
+{
+  "form": "liquid",
+  "ingredients": [
+    {
+      "name": "eau pétillante",
+      "allergens": []
+    },
+    {
+      "name": "colorant: E150d",
+      "allergens": []
+    },
+    {
+      "name": "acidifiants: E338",
+      "allergens": []
+    },
+    {
+      "name": "гірчичне насіння",
+      "allergens": [
+        "mustard"
+      ]
+    },
+    {
+      "name": "E331",
+      "allergens": []
+    },
+    {
+      "name": "édulcorants: aspartame",
+      "allergens": []
+    },
+    {
+      "name": "acésulfame-K",
+      "allergens": []
+    },
+    {
+      "name": "arômes naturels",
+      "allergens": []
+    },
+    {
+      "name": "dont caféine",
+      "allergens": []
+    }
+  ],
+  "may_contain": []
+}

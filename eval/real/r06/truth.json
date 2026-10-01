@@ -1,0 +1,158 @@
+{
+  "violations": [],
+  "expected_flags": [],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 2,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+      "text": "вода питна, паста томатна (22 %), цукор, оцет спиртовий, крохмаль модифікований кукурудзяний, сіль кухонна, прянощі сушені мелені (0,05 %) (лавровий лист, кориця, гвоздика, мускатний горіх).",
+      "photo_index": 1
+    },
+    "may_contain_text": {
+      "text": "Може містити яєчні продукти, глютен, молоко, гірчицю, сою.",
+      "photo_index": 1
+    },
+    "nutrition": {
+      "per": "100g",
+      "portion_text": null,
+      "energy": "418 кДж/kJ 98 ккал/kcal",
+      "fat": "0,2 г/g",
+      "saturates": "0 г/g",
+      "carbs": "22 г/g",
+      "sugars": "19 г/g",
+      "fibre": "0,5 г/g",
+      "protein": "1,1 г/g",
+      "salt": "2,5 г/g",
+      "photo_index": 2
+    },
+    "other_text": [
+      {
+        "text": "ЕКОНОМ УПАКОВКА",
+        "photo_index": 0
+      },
+      {
+        "text": "ТОРЧИН",
+        "photo_index": 0
+      },
+      {
+        "text": "ЛАГІДНИЙ КЕТЧУП",
+        "photo_index": 0
+      },
+      {
+        "text": "З НАТУРАЛЬНИМИ ІНГРЕДІЄНТАМИ*",
+        "photo_index": 0
+      },
+      {
+        "text": "ПОРЦІЯ 11 г ЕНЕРГЕТИЧНА ЦІННІСТЬ 46 кДж/kJ 11 ккал/kcal 1% РВС*",
+        "photo_index": 0
+      },
+      {
+        "text": "на 100 г/g: 418 кДж/kJ / 98 ккал/kcal",
+        "photo_index": 0
+      },
+      {
+        "text": "380 г/g",
+        "photo_index": 0
+      },
+      {
+        "text": "Кетчуп «Лагідний» пастеризований",
+        "photo_index": 0
+      },
+      {
+        "text": "[…] торговельних марок: Сосьєте де Продюі Нестле С.А., Веве, Швейцарія.",
+        "photo_index": 1
+      },
+      {
+        "text": "КЕТЧУП «ЛАГІДНИЙ» ПАСТЕРИЗОВАНИЙ",
+        "photo_index": 1
+      },
+      {
+        "text": "Зберігати за температури від 0 °C до 25 °C. Після розкриття упаковки продукт зберігати у холодильнику.",
+        "photo_index": 1
+      },
+      {
+        "text": "ТОВ «Нестле Україна», 03150, Україна, м. Київ, вул. Велика Васильківська, б. 139, тел.: 0 800 50 09 50.",
+        "photo_index": 1
+      },
+      {
+        "text": "[…] насичену томатну пасту",
+        "photo_index": 2
+      },
+      {
+        "text": "Ми дбаємо про майбутнє сьогодні. На фабриці встановлено сонячні панел[…] тому 11%●●● електроенергії у нашому виробництві є відновлювальною.",
+        "photo_index": 2
+      },
+      {
+        "text": "●● Частина виробничого процесу на нашій фабриці",
+        "photo_index": 2
+      },
+      {
+        "text": "*РВС - середня референсна величина добового споживання для осіб старше 18 років (8400 кДж/kJ / 2000 ккал/kcal). Особисті потреби можуть відрізнятися залежно від віку, статі та рівня фізичного навантаження. В упаковці ~ 34 порції.",
+        "photo_index": 2
+      },
+      {
+        "text": "Власник торговельних марок: Сосьєте де Продюі Нестле С.А., Веве, Швейцарія.",
+        "photo_index": 2
+      },
+      {
+        "text": "KETCHUP «NEJNII» PASTEURIZAT",
+        "photo_index": 2
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": false,
+    "source": "Open Food Facts 4820001316384 (Кетчуп лагідний), CC BY-SA 3.0",
+    "quality": "clean",
+    "label_allergens": [],
+    "label_may_contain": [
+      "eggs",
+      "cereals",
+      "milk",
+      "mustard",
+      "soybeans"
+    ],
+    "oov": [],
+    "notes": "Footnote markers (●) after 'паста томатна (22 %)', 'оцет спиртовий', 'мелені (0,05 %)' omitted from ingredients. Words at the right edge of the ingredient lines are printed condensed on the pouch curve but readable. 'З натуральними інгредієнтами*' is an unregulated claim (CLAIM-UNVERIFIABLE needs_review expected, not a violation). 'мускатний горіх' is not an allergen.",
+    "semi_synthetic": "spec_variants: recipe + one allergen not on the label"
+  },
+  "spec_variants": [
+    {
+      "spec": "spec_1.json",
+      "violations": [
+        {
+          "rule_id": "ALG-SPEC-MISSING",
+          "target": "sesame"
+        }
+      ]
+    },
+    {
+      "spec": "spec_2.json",
+      "violations": [
+        {
+          "rule_id": "ALG-SPEC-MISSING",
+          "target": "crustaceans"
+        }
+      ]
+    }
+  ]
+}

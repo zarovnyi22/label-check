@@ -1,0 +1,68 @@
+{
+  "form": "solid",
+  "ingredients": [
+    {
+      "name": "олія соняшникова рафінована дезодорована",
+      "allergens": []
+    },
+    {
+      "name": "вода питна",
+      "allergens": []
+    },
+    {
+      "name": "цукор",
+      "allergens": []
+    },
+    {
+      "name": "емульгатор",
+      "allergens": []
+    },
+    {
+      "name": "сіль кухонна",
+      "allergens": []
+    },
+    {
+      "name": "яєчний порошок",
+      "allergens": []
+    },
+    {
+      "name": "регулятор кислотності",
+      "allergens": []
+    },
+    {
+      "name": "стабілізатор",
+      "allergens": []
+    },
+    {
+      "name": "регулятор кислотності",
+      "allergens": []
+    },
+    {
+      "name": "соєвий білковий ізолят",
+      "allergens": [
+        "soybeans"
+      ]
+    },
+    {
+      "name": "консервант",
+      "allergens": []
+    },
+    {
+      "name": "ароматизатор гірчиці",
+      "allergens": []
+    },
+    {
+      "name": "натуральний ароматизатор чорного перцю",
+      "allergens": []
+    },
+    {
+      "name": "натуральний барвник",
+      "allergens": []
+    }
+  ],
+  "may_contain": [
+    "cereals",
+    "milk",
+    "mustard"
+  ]
+}

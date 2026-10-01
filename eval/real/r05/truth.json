@@ -1,0 +1,113 @@
+{
+  "violations": [],
+  "expected_flags": [],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 2,
+        "side": "back",
+        "quality": "ok",
+        "note": "near-duplicate of photo 1"
+      }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+      "text": "цукор, какао терте, глюкозно-фруктозний сироп, патока, какао-масло, олія ши, бренді, какао-порошок зі зниженим вмістом жиру, емульгатори [лецитини (містить **сою**), E476], ароматизатори.",
+      "photo_index": 1
+    },
+    "may_contain_text": {
+      "text": "Може містити фундук, мигдаль, арахіс, кунжут, молокопродукти, яєчні продукти, глютен (пшеничний).",
+      "photo_index": 1
+    },
+    "nutrition": {
+      "per": "100g",
+      "portion_text": null,
+      "energy": "1910 кДж/kJ (456 ккал/kcal)",
+      "fat": "19,3 г/g",
+      "saturates": "11,2 г/g",
+      "carbs": "63,6 г/g",
+      "sugars": "58,6 г/g",
+      "fibre": null,
+      "protein": "3,3 г/g",
+      "salt": "0,01 г/g",
+      "photo_index": 1
+    },
+    "other_text": [
+      {
+        "text": "ROSHEN",
+        "photo_index": 0
+      },
+      {
+        "text": "DARK CHOCOLATE WITH COCOA FONDANT",
+        "photo_index": 0
+      },
+      {
+        "text": "(UA) ШОКОЛАДНИЙ БАТОН З НАЧИНКОЮ \"РОШЕН\". Шоколад: мінімальний вміст какао-продуктів – 48%. МІСТИТЬ РОСЛИННІ ЖИРИ У ДОПОВНЕННІ ДО КАКАО-МАСЛА. Начинка помадна – 43% (какао-продуктів – 3%).",
+        "photo_index": 1
+      },
+      {
+        "text": "Зберігати за температури (18±3)°C і відносної вологості повітря не вище 75%. (v241224B)",
+        "photo_index": 1
+      },
+      {
+        "text": "Чорний шоколад з помадною начинкою з какао.",
+        "photo_index": 1
+      },
+      {
+        "text": "(KZ) \"РОШЕН\" ТОЛТЫРМАСЫ БАР ШОКОЛАД БАТОНЫ. […]",
+        "photo_index": 1
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": false,
+    "source": "Open Food Facts 4823077621154 (Шоколадний батон \"Dark Chocolate with Cocoa Fondant\"), CC BY-SA 3.0",
+    "quality": "clean",
+    "label_allergens": [
+      "soybeans"
+    ],
+    "label_may_contain": [
+      "nuts",
+      "peanuts",
+      "sesame",
+      "milk",
+      "eggs",
+      "cereals"
+    ],
+    "oov": [],
+    "notes": "Photos 1 and 2 show the same UA text. Brandy in the ingredients; no sulphites declared (cannot be judged without recipe). Energy check: computed ~441 kcal vs 456 declared, within tolerance.",
+    "semi_synthetic": "spec_variants: recipe + one allergen not on the label"
+  },
+  "spec_variants": [
+    {
+      "spec": "spec_1.json",
+      "violations": [
+        {
+          "rule_id": "ALG-SPEC-MISSING",
+          "target": "crustaceans"
+        }
+      ]
+    },
+    {
+      "spec": "spec_2.json",
+      "violations": [
+        {
+          "rule_id": "ALG-SPEC-MISSING",
+          "target": "mustard"
+        }
+      ]
+    }
+  ]
+}

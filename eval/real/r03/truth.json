@@ -1,0 +1,166 @@
+{
+  "violations": [],
+  "expected_flags": [
+    {
+      "rule_id": "LABEL-MISSING",
+      "target": "nutrition"
+    }
+  ],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 2,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+      "text": "борошно **пшеничне**, цукор, жир рослинний (негідрогенізована пальмова олія), емульгатор **соєвий** лецитин, розпушувачі (гідрокарбонат натрію, гідрокарбонат амонію), сіль, ароматизатори, регулятор кислотності кислота молочна, **молоко** сухе знежирене, ядра бобів **арахісу** терті, ядра горіхів **фундука** терті, ядра **мигдалю** терті, меланж **яєчний**.",
+      "photo_index": 1
+    },
+    "may_contain_text": {
+      "text": "Може містити кунжут.",
+      "photo_index": 1
+    },
+    "nutrition": {
+      "per": "portion",
+      "portion_text": "Serving size 3 pieces (33 g)",
+      "energy": "Calories per serving 150",
+      "fat": "6g",
+      "saturates": "2.5g",
+      "carbs": "23g",
+      "sugars": "7g",
+      "fibre": "<1g",
+      "protein": "2g",
+      "salt": null,
+      "photo_index": 2
+    },
+    "other_text": [
+      {
+        "text": "ROSHEN",
+        "photo_index": 0
+      },
+      {
+        "text": "До кави",
+        "photo_index": 0
+      },
+      {
+        "text": "З ароматом пряженого молока",
+        "photo_index": 0
+      },
+      {
+        "text": "185 г/g",
+        "photo_index": 0
+      },
+      {
+        "text": "БІЛЬШЕ 20 РОКІВ НЕЗМІННОЇ ЯКОСТІ!",
+        "photo_index": 0
+      },
+      {
+        "text": "(UA) ПЕЧИВО ЦУКРОВЕ \"ДО КАВИ\" З АРОМАТОМ ПРЯЖЕНОГО МОЛОКА.",
+        "photo_index": 1
+      },
+      {
+        "text": "Зберігати за температури (18±5)°C і відносній вологості повітря не вище 75%. (v190924E)",
+        "photo_index": 1
+      },
+      {
+        "text": "(BG) БИСКВИТИ \"КЪМ КАФЕ\" С МЛЕЧЕН АРОМАТ. […]",
+        "photo_index": 1
+      },
+      {
+        "text": "Nutrition Facts",
+        "photo_index": 2
+      },
+      {
+        "text": "5.5 servings per container",
+        "photo_index": 2
+      },
+      {
+        "text": "Trans Fat 0g",
+        "photo_index": 2
+      },
+      {
+        "text": "Cholesterol 0mg",
+        "photo_index": 2
+      },
+      {
+        "text": "Sodium 100mg",
+        "photo_index": 2
+      },
+      {
+        "text": "Incl. 6g Added Sugars",
+        "photo_index": 2
+      },
+      {
+        "text": "Vitamin D 0mcg",
+        "photo_index": 2
+      },
+      {
+        "text": "Calcium 6mg",
+        "photo_index": 2
+      },
+      {
+        "text": "Iron 0mg",
+        "photo_index": 2
+      },
+      {
+        "text": "Potassium 40mg",
+        "photo_index": 2
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": false,
+    "source": "Open Food Facts 4823077614675 (Печиво цукрове «До кави», з ароматом пряженого молока), CC BY-SA 3.0",
+    "quality": "clean",
+    "label_allergens": [
+      "cereals",
+      "soybeans",
+      "milk",
+      "peanuts",
+      "nuts",
+      "eggs"
+    ],
+    "label_may_contain": [
+      "sesame"
+    ],
+    "oov": [],
+    "notes": "The only nutrition panel photographed is a US-style (EN/AR) 'Nutrition Facts' per serving (33 g): no kJ, no salt (sodium only), not per 100 g -> LABEL-MISSING nutrition (and NUT-PER). Ingredient hyphenations joined ('пшенич-не', 'гідро-карбонат'). 'кислота молочна' is lactic acid, not milk. Glare on the ROSHEN logo on the front.",
+    "semi_synthetic": "spec_variants: recipe + one allergen not on the label"
+  },
+  "spec_variants": [
+    {
+      "spec": "spec_1.json",
+      "violations": [
+        {
+          "rule_id": "ALG-SPEC-MISSING",
+          "target": "molluscs"
+        }
+      ]
+    },
+    {
+      "spec": "spec_2.json",
+      "violations": [
+        {
+          "rule_id": "ALG-SPEC-MISSING",
+          "target": "fish"
+        }
+      ]
+    }
+  ]
+}

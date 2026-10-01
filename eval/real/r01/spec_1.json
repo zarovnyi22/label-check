@@ -1,0 +1,60 @@
+{
+  "form": "solid",
+  "ingredients": [
+    {
+      "name": "цукор",
+      "allergens": []
+    },
+    {
+      "name": "селера коренева сушена",
+      "allergens": [
+        "celery"
+      ]
+    },
+    {
+      "name": "патока",
+      "allergens": []
+    },
+    {
+      "name": "вода питна",
+      "allergens": []
+    },
+    {
+      "name": "концентровані фруктові соки: яблучний",
+      "allergens": []
+    },
+    {
+      "name": "апельсиновий",
+      "allergens": []
+    },
+    {
+      "name": "лимонний",
+      "allergens": []
+    },
+    {
+      "name": "желюючий агент пектин",
+      "allergens": []
+    },
+    {
+      "name": "регулятори кислотності",
+      "allergens": []
+    },
+    {
+      "name": "ароматизатори",
+      "allergens": []
+    },
+    {
+      "name": "барвники",
+      "allergens": []
+    }
+  ],
+  "may_contain": [
+    "cereals",
+    "eggs",
+    "milk",
+    "nuts",
+    "peanuts",
+    "sesame",
+    "soybeans"
+  ]
+}

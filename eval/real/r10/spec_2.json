@@ -1,0 +1,48 @@
+{
+  "form": null,
+  "ingredients": [
+    {
+      "name": "Pommes de terre déshydratées",
+      "allergens": []
+    },
+    {
+      "name": "huile végétale",
+      "allergens": []
+    },
+    {
+      "name": "арахіс подрібнений",
+      "allergens": [
+        "peanuts"
+      ]
+    },
+    {
+      "name": "graisse végétale",
+      "allergens": []
+    },
+    {
+      "name": "farine de riz",
+      "allergens": []
+    },
+    {
+      "name": "amidon de blé",
+      "allergens": []
+    },
+    {
+      "name": "émulsifiant: E471",
+      "allergens": []
+    },
+    {
+      "name": "maltodextrine",
+      "allergens": []
+    },
+    {
+      "name": "sel",
+      "allergens": []
+    },
+    {
+      "name": "amidon de riz modifié",
+      "allergens": []
+    }
+  ],
+  "may_contain": []
+}

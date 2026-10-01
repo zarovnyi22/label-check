@@ -1,5 +1,5 @@
 # Everything runs in Docker: the host needs only docker compose (no Python, no uv).
-.PHONY: up down logs health test lint fmt spike generate
+.PHONY: up down logs health test lint fmt spike generate semisynth
 
 up:      ## build and start db + api in the background
 	docker compose up --build -d
@@ -27,3 +27,6 @@ spike:   ## probe the vision model on 1-3 photos (LIVE LLM: 1 call), make spike 
 
 generate: ## synthetic eval cases (deterministic by seed) -> eval/cases/{dev,test}
 	docker compose run --rm --build test python -m eval.generate
+
+semisynth: ## recipes with a deliberate allergen mismatch for the real cases -> eval/real/*/spec_*.json
+	docker compose run --rm --build test python -m eval.semisynth

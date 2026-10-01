@@ -1,0 +1,59 @@
+{
+  "form": "solid",
+  "ingredients": [
+    {
+      "name": "цукор",
+      "allergens": []
+    },
+    {
+      "name": "какао терте",
+      "allergens": []
+    },
+    {
+      "name": "глюкозно-фруктозний сироп",
+      "allergens": []
+    },
+    {
+      "name": "патока",
+      "allergens": []
+    },
+    {
+      "name": "какао-масло",
+      "allergens": []
+    },
+    {
+      "name": "олія ши",
+      "allergens": []
+    },
+    {
+      "name": "бренді",
+      "allergens": []
+    },
+    {
+      "name": "какао-порошок зі зниженим вмістом жиру",
+      "allergens": []
+    },
+    {
+      "name": "емульгатори",
+      "allergens": []
+    },
+    {
+      "name": "ароматизатори",
+      "allergens": []
+    },
+    {
+      "name": "креветки сушені",
+      "allergens": [
+        "crustaceans"
+      ]
+    }
+  ],
+  "may_contain": [
+    "cereals",
+    "eggs",
+    "milk",
+    "nuts",
+    "peanuts",
+    "sesame"
+  ]
+}
