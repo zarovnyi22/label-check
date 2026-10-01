@@ -39,8 +39,12 @@ ProductSpec = {
 (проба B1b: модель домислювала обрізані слова). Поле, нечитабельне повністю, — `null`.
 `photos[].quality` від моделі — лише підказка (у пробі `ok` на обрізаних фото).
 
-Відповідь: `{check_id, verdict, summary, findings[], extraction, model, rules_version,
-prompt_version, duration_ms}`.
+Відповідь: `{check_id, status, verdict, summary, findings[], extraction, model,
+rules_version, prompt_version, cache_hit, duration_ms, error}`. `status`: `done` | `error`;
+при `error` (помилка моделі, збережена в БД) `verdict` = `null`, `findings` = `[]`,
+`error` = `{code, message}` — помилка моделі ніколи не дає вердикту. POST з помилкою моделі
+повертає `{"error": {...}}` з номером збереженої перевірки в `message`; `GET /checks/{id}`
+показує її зі `status=error`. `spec` валідується до виклику моделі (422 `validation_error`).
 `finding = {rule_id, target, status, message, evidence, legal_ref}`:
 - `target` — об'єкт перевірки: категорія алергену (`milk`), id твердження
   (`sugar_free`), нутрієнт (`energy`) або `null`;

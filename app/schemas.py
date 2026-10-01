@@ -148,13 +148,21 @@ class Finding(BaseModel):
     legal_ref: str
 
 
+class CheckError(BaseModel):
+    code: str
+    message: str
+
+
 class CheckOut(BaseModel):
     check_id: int
-    verdict: Verdict
+    status: Literal["done", "error"]
+    verdict: Verdict | None  # null only for status=error: a failed check is never a pass
     summary: str
     findings: list[Finding]
     extraction: LabelExtraction | None
     model: str | None
-    rules_version: str
+    rules_version: str | None
     prompt_version: str | None
+    cache_hit: bool | None
     duration_ms: int | None
+    error: CheckError | None = None

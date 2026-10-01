@@ -10,7 +10,7 @@ from app.config import get_settings
 from app.db import apply_migrations, create_pool
 from app.errors import register_error_handlers
 from app.logs import request_id_var, setup_logging
-from app.routers import health, rules
+from app.routers import checks, health, rules
 from app.vision.base import get_vision_client
 
 setup_logging(get_settings().log_level)
@@ -32,6 +32,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="Label Check", version="0.1.0", lifespan=lifespan)
 register_error_handlers(app)
+app.include_router(checks.router)
 app.include_router(health.router)
 app.include_router(rules.router)
 
