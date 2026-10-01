@@ -154,10 +154,9 @@
   Ще відкрито (не блокує): «джерело клітковини» для рідин (у Регламенті на 100 г, ми беремо
   значення таблиці як є).
 
-- (RR1 9б, ВІДКРИТЕ — рішення людини) `photos[].quality: null` → IMG-QUALITY нічого не каже,
-  а SPEC §2 пише «`quality != ok` → needs_review». Варіанти: (а) лишити (quality — лише
-  підказка, повноту ловлять LABEL-TRUNCATED/LABEL-MISSING) і уточнити SPEC; (б) null →
-  `needs_review` «модель не оцінила фото» (більше навантаження). Рекомендація: (а).
+- (RR1 9б, ВИРІШЕНО людиною: варіант (а)) `photos[].quality: null` finding не дає —
+  `quality` лише підказка, повноту ловлять LABEL-TRUNCATED/LABEL-MISSING. IMG-QUALITY →
+  `needs_review` лише при явному `blurry`/`glare`/`cropped`/`not_a_label`; SPEC §2 виправлено.
 
 - (B2b, ВІДКРИТЕ, TODO до B7) Номери статей Закону № 2639-VIII для алергенів (`catalog.py`)
   звірити з текстом закону до B7.

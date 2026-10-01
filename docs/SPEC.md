@@ -57,7 +57,8 @@ prompt_version, duration_ms}`.
 ## 2. Правила (B2b, B2c)
 
 Загальні:
-- `IMG-QUALITY` — фото з `quality != ok` → `needs_review` («перефотографуйте фото N»).
+- `IMG-QUALITY` — фото з явним `quality` `blurry`/`glare`/`cropped`/`not_a_label` →
+  `needs_review` («перефотографуйте фото N»); `ok` і `null` finding не дають (рішення RR1 9б).
   `quality: ok` — лише підказка моделі, ніщо через неї не стає `pass` (повноту складу
   перевіряє `LABEL-TRUNCATED`).
 - `LABEL-MISSING` — немає складу / таблиці нутрієнтів на жодному фото → `needs_review`;
