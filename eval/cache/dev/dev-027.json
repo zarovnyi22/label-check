@@ -1,0 +1,73 @@
+{
+ "case": "dev-027",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "3893a5812f6035299f2d89edd5bbaa0310c3d3b07a356cdd8ae405708d9cadff",
+  "0ff898aa1b54bbabc65998557e3be1f96e96ae65959af1ecb231ddff8223d6a1"
+ ],
+ "usage": {
+  "input_tokens": 3189,
+  "output_tokens": 500,
+  "reasoning_tokens": 0,
+  "total_tokens": 3689
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "борошно **пшеничне**, родзинки, **фундук** смажений, цукор, насіння соняшнику, емульгатор лецитин соняшниковий, сіль, антиоксидант токофероли.",
+   "photo_index": 1
+  },
+  "may_contain_text": null,
+  "nutrition": {
+   "per": "100g",
+   "portion_text": null,
+   "energy": "1657 кДж / 396 ккал",
+   "fat": "12 г",
+   "saturates": "2,5 г",
+   "carbs": "60 г",
+   "sugars": "22 г",
+   "fibre": "6 г",
+   "protein": "9 г",
+   "salt": "0,2 г",
+   "photo_index": 1
+  },
+  "other_text": [
+   {
+    "text": "Батончик горіховий",
+    "photo_index": 0
+   },
+   {
+    "text": "Джерело клітковини",
+    "photo_index": 0
+   },
+   {
+    "text": "Маса нетто 40 г",
+    "photo_index": 0
+   },
+   {
+    "text": "Зберігати в сухому місці при температурі не вище +25 °С.",
+    "photo_index": 1
+   },
+   {
+    "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+    "photo_index": 1
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"борошно **пшеничне**, родзинки, **фундук** смажений, цукор, насіння соняшнику, емульгатор лецитин соняшниковий, сіль, антиоксидант токофероли.\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": null,\n  \"nutrition\": {\n    \"per\": \"100g\",\n    \"portion_text\": null,\n    \"energy\": \"1657 кДж / 396 ккал\",\n    \"fat\": \"12 г\",\n    \"saturates\": \"2,5 г\",\n    \"carbs\": \"60 г\",\n    \"sugars\": \"22 г\",\n    \"fibre\": \"6 г\",\n    \"protein\": \"9 г\",\n    \"salt\": \"0,2 г\",\n    \"photo_index\": 1\n  },\n  \"other_text\": [\n    {\n      \"text\": \"Батончик горіховий\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Джерело клітковини\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Маса нетто 40 г\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Зберігати в сухому місці при температурі не вище +25 °С.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Виробник: ТОВ «Тестовий завод», Україна, м. Київ.\",\n      \"photo_index\": 1\n    }\n  ]\n}"
+}

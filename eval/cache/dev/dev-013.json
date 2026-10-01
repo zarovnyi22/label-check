@@ -1,0 +1,72 @@
+{
+ "case": "dev-013",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "dba2980a09364a96e62b050840922f1758966c90982d2fb946be228b94cd9831",
+  "79c3cd8dcf65303314c5fcbf8fbfa47330b659d82058950485b2adca62455678"
+ ],
+ "usage": {
+  "input_tokens": 3189,
+  "output_tokens": 497,
+  "reasoning_tokens": 0,
+  "total_tokens": 3686
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "сухе знежирене **молоко**, цукор, мускатний горіх, наповнювач полуничный, стабілізатор пектин, барвник кармін.",
+   "photo_index": 1
+  },
+  "may_contain_text": {
+   "text": "Може містити сліди селери, кунжуту.",
+   "photo_index": 1
+  },
+  "nutrition": {
+   "per": "100g",
+   "portion_text": null,
+   "energy": "540 кДж / 129 ккал",
+   "fat": "3,2 г",
+   "saturates": "2,1 г",
+   "carbs": "12,5 г",
+   "sugars": "11,8 г",
+   "fibre": "0 г",
+   "protein": "3,4 г",
+   "salt": "0,12 г",
+   "photo_index": 1
+  },
+  "other_text": [
+   {
+    "text": "Йогурт персиковий",
+    "photo_index": 0
+   },
+   {
+    "text": "Маса нетто 300 г",
+    "photo_index": 0
+   },
+   {
+    "text": "Зберігати при температурі від +2 до +6 °С.",
+    "photo_index": 1
+   },
+   {
+    "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+    "photo_index": 1
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"сухе знежирене **молоко**, цукор, мускатний горіх, наповнювач полуничный, стабілізатор пектин, барвник кармін.\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": {\n    \"text\": \"Може містити сліди селери, кунжуту.\",\n    \"photo_index\": 1\n  },\n  \"nutrition\": {\n    \"per\": \"100g\",\n    \"portion_text\": null,\n    \"energy\": \"540 кДж / 129 ккал\",\n    \"fat\": \"3,2 г\",\n    \"saturates\": \"2,1 г\",\n    \"carbs\": \"12,5 г\",\n    \"sugars\": \"11,8 г\",\n    \"fibre\": \"0 г\",\n    \"protein\": \"3,4 г\",\n    \"salt\": \"0,12 г\",\n    \"photo_index\": 1\n  },\n  \"other_text\": [\n    {\n      \"text\": \"Йогурт персиковий\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Маса нетто 300 г\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Зберігати при температурі від +2 до +6 °С.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Виробник: ТОВ «Тестовий завод», Україна, м. Київ.\",\n      \"photo_index\": 1\n    }\n  ]\n}"
+}

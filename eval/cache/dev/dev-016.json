@@ -1,0 +1,76 @@
+{
+ "case": "dev-016",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "02341d8a6e384243a00124d61a89362c95faacb3af2baf237619a6426ce9e861",
+  "5d59078f3f7d1a6588e85e297c915c8a416897679f92c38651ce2d42fd30a497"
+ ],
+ "usage": {
+  "input_tokens": 3194,
+  "output_tokens": 544,
+  "reasoning_tokens": 0,
+  "total_tokens": 3738
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "борошно пшеничне, цукор, яйця курячі, олія соняшникова, **рікота**, крохмаль кукурудзяний, розпушувач гідрокарбонат натрію, сіль, ароматизатор ванілін.",
+   "photo_index": 1
+  },
+  "may_contain_text": {
+   "text": "Може містити сліди горіхів, кунжуту.",
+   "photo_index": 1
+  },
+  "nutrition": {
+   "per": "100g",
+   "portion_text": null,
+   "energy": "1954 кДж / 467 ккал",
+   "fat": "18 г",
+   "saturates": "8 г",
+   "carbs": "68 г",
+   "sugars": "24 г",
+   "fibre": "2,5 г",
+   "protein": "7 г",
+   "salt": "0,6 г",
+   "photo_index": 1
+  },
+  "other_text": [
+   {
+    "text": "Печиво «Ранкове»",
+    "photo_index": 0
+   },
+   {
+    "text": "Маса нетто 200 г",
+    "photo_index": 0
+   },
+   {
+    "text": "Поживна цінність на 100 г",
+    "photo_index": 1
+   },
+   {
+    "text": "Зберігати в сухому місці при температурі не вище +25 °C.",
+    "photo_index": 1
+   },
+   {
+    "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+    "photo_index": 1
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"борошно пшеничне, цукор, яйця курячі, олія соняшникова, **рікота**, крохмаль кукурудзяний, розпушувач гідрокарбонат натрію, сіль, ароматизатор ванілін.\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": {\n    \"text\": \"Може містити сліди горіхів, кунжуту.\",\n    \"photo_index\": 1\n  },\n  \"nutrition\": {\n    \"per\": \"100g\",\n    \"portion_text\": null,\n    \"energy\": \"1954 кДж / 467 ккал\",\n    \"fat\": \"18 г\",\n    \"saturates\": \"8 г\",\n    \"carbs\": \"68 г\",\n    \"sugars\": \"24 г\",\n    \"fibre\": \"2,5 г\",\n    \"protein\": \"7 г\",\n    \"salt\": \"0,6 г\",\n    \"photo_index\": 1\n  },\n  \"other_text\": [\n    {\n      \"text\": \"Печиво «Ранкове»\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Маса нетто 200 г\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Поживна цінність на 100 г\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Зберігати в сухому місці при температурі не вище +25 °C.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Виробник: ТОВ «Тестовий завод», Україна, м. Київ.\",\n      \"photo_index\": 1\n    }\n  ]\n}"
+}

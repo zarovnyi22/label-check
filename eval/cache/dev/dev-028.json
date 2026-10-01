@@ -1,0 +1,76 @@
+{
+ "case": "dev-028",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "a1cc5803a87238d66cb7dbc7447effba1381b720d989e428951af43c76b35d84",
+  "c624b7a4dea694b519f9cce1b489341551d8e447ce3c051b9705048f94848345"
+ ],
+ "usage": {
+  "input_tokens": 3194,
+  "output_tokens": 533,
+  "reasoning_tokens": 0,
+  "total_tokens": 3727
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "борошно **житнє** обдирне, цукор, **фундук** смажений, родзинки, насіння соняшнику, емульгатор лецитин соняшниковий, сіль, антиоксидант токофероли.",
+   "photo_index": 1
+  },
+  "may_contain_text": {
+   "text": "Може містити сліди селери, сої.",
+   "photo_index": 1
+  },
+  "nutrition": {
+   "per": "100g",
+   "portion_text": null,
+   "energy": "1657 кДж / 396 ккал",
+   "fat": "12 г",
+   "saturates": "2,5 г",
+   "carbs": "60 г",
+   "sugars": "22 г",
+   "fibre": "6 г",
+   "protein": "9 г",
+   "salt": "0,2 г",
+   "photo_index": 1
+  },
+  "other_text": [
+   {
+    "text": "Батончик горіховий",
+    "photo_index": 0
+   },
+   {
+    "text": "Джерело клітковини",
+    "photo_index": 0
+   },
+   {
+    "text": "Маса нетто 40 г",
+    "photo_index": 0
+   },
+   {
+    "text": "Зберігати в сухому місці при температурі не вище +25 °С.",
+    "photo_index": 1
+   },
+   {
+    "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+    "photo_index": 1
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"борошно **житнє** обдирне, цукор, **фундук** смажений, родзинки, насіння соняшнику, емульгатор лецитин соняшниковий, сіль, антиоксидант токофероли.\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": {\n    \"text\": \"Може містити сліди селери, сої.\",\n    \"photo_index\": 1\n  },\n  \"nutrition\": {\n    \"per\": \"100g\",\n    \"portion_text\": null,\n    \"energy\": \"1657 кДж / 396 ккал\",\n    \"fat\": \"12 г\",\n    \"saturates\": \"2,5 г\",\n    \"carbs\": \"60 г\",\n    \"sugars\": \"22 г\",\n    \"fibre\": \"6 г\",\n    \"protein\": \"9 г\",\n    \"salt\": \"0,2 г\",\n    \"photo_index\": 1\n  },\n  \"other_text\": [\n    {\n      \"text\": \"Батончик горіховий\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Джерело клітковини\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Маса нетто 40 г\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Зберігати в сухому місці при температурі не вище +25 °С.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Виробник: ТОВ «Тестовий завод», Україна, м. Київ.\",\n      \"photo_index\": 1\n    }\n  ]\n}"
+}

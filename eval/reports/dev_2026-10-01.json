@@ -1,0 +1,5388 @@
+{
+ "split": "dev",
+ "date": "2026-10-01",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "rules_version": "2026-10-01.3",
+ "live": false,
+ "units": [
+  {
+   "id": "dev-001",
+   "case": "dev-001",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-001",
+   "spec": "spec.json",
+   "violations": [
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "milk"
+    }
+   ],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "clean",
+    "template": "kefir",
+    "scenario": "ALG-EMPH",
+    "oov": [
+     "рікота"
+    ]
+   },
+   "status": "done",
+   "verdict": "fail",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": null,
+     "status": "not_applicable"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "milk",
+     "status": "violation"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "pass"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "рікота, мускатний горіх, закваска бактеріальна, вітамін D3.",
+     "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": {
+     "per": "100ml",
+     "portion_text": null,
+     "energy": "209 кДж / 50 ккал",
+     "fat": "2,5 г",
+     "saturates": "1,6 г",
+     "carbs": "4 г",
+     "sugars": "4 г",
+     "fibre": "0 г",
+     "protein": "3 г",
+     "salt": "0,1 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Кефір 2,5 %",
+      "photo_index": 0
+     },
+     {
+      "text": "Об'єм 900 мл",
+      "photo_index": 0
+     },
+     {
+      "text": "Поживна цінність на 100 мл",
+      "photo_index": 1
+     },
+     {
+      "text": "Енергетична цінність",
+      "photo_index": 1
+     },
+     {
+      "text": "Жири",
+      "photo_index": 1
+     },
+     {
+      "text": "з них насичені жири",
+      "photo_index": 1
+     },
+     {
+      "text": "Вуглеводи",
+      "photo_index": 1
+     },
+     {
+      "text": "з них цукри",
+      "photo_index": 1
+     },
+     {
+      "text": "Харчові волокна",
+      "photo_index": 1
+     },
+     {
+      "text": "Білки",
+      "photo_index": 1
+     },
+     {
+      "text": "Сіль",
+      "photo_index": 1
+     },
+     {
+      "text": "Зберігати при температурі від +2 до +6 °C.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3211,
+    "total_tokens": 3888,
+    "output_tokens": 677,
+    "reasoning_tokens": 0
+   }
+  },
+  {
+   "id": "dev-002",
+   "case": "dev-002",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-002",
+   "spec": "spec.json",
+   "violations": [
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "fish"
+    }
+   ],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "blur",
+    "template": "spread",
+    "scenario": "ALG-EMPH",
+    "oov": []
+   },
+   "status": "done",
+   "verdict": "needs_review",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "fish",
+     "status": "needs_review"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "mustard",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "fish",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "mustard",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "not_checked"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "скумбрія копчена, олія соняшникова, **гірчичний** порошок, цибуля ріпчаста, сіль, перець чорний мелений, консервант бензоат натрію.",
+     "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "1113 кДж / 266 ккал",
+     "fat": "22 г",
+     "saturates": "4 г",
+     "carbs": "3 г",
+     "sugars": "1 г",
+     "fibre": "0 г",
+     "protein": "14 г",
+     "salt": "1,8 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Паштет з оселедця",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 150 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Зберігати при температурі від +2 до +6 °С.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3219,
+    "total_tokens": 3679,
+    "output_tokens": 460,
+    "reasoning_tokens": 0
+   }
+  },
+  {
+   "id": "dev-003",
+   "case": "dev-003",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-003",
+   "spec": null,
+   "violations": [
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "fish"
+    }
+   ],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "rotate",
+    "template": "spread",
+    "scenario": "ALG-EMPH",
+    "oov": []
+   },
+   "status": "done",
+   "verdict": "needs_review",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "fish",
+     "status": "needs_review"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "mustard",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "not_checked"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "скумбрія копчена, олія соняшникова, **ГІРЧИЦЯ** столова, цибуля ріпчаста, мускатний горіх, сіль, перець чорний мелений, консервант бензоат натрію.",
+     "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "1113 кДж / 266 ккал",
+     "fat": "22 г",
+     "saturates": "4 г",
+     "carbs": "3 г",
+     "sugars": "1 г",
+     "fibre": "0 г",
+     "protein": "14 г",
+     "salt": "1,8 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Паштет з оселедця",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 150 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Поживна цінність на 100 г",
+      "photo_index": 1
+     },
+     {
+      "text": "Енергетична цінність",
+      "photo_index": 1
+     },
+     {
+      "text": "Жири",
+      "photo_index": 1
+     },
+     {
+      "text": "з них насичені жири",
+      "photo_index": 1
+     },
+     {
+      "text": "Вуглеводи",
+      "photo_index": 1
+     },
+     {
+      "text": "з них цукри",
+      "photo_index": 1
+     },
+     {
+      "text": "Харчові волокна",
+      "photo_index": 1
+     },
+     {
+      "text": "Білки",
+      "photo_index": 1
+     },
+     {
+      "text": "Сіль",
+      "photo_index": 1
+     },
+     {
+      "text": "Зберігати при температурі від +2 до +6 °С.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3227,
+    "total_tokens": 3938,
+    "output_tokens": 711,
+    "reasoning_tokens": 0
+   }
+  },
+  {
+   "id": "dev-004",
+   "case": "dev-004",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-004",
+   "spec": null,
+   "violations": [
+    {
+     "rule_id": "sugar_free",
+     "target": "sugar_free"
+    }
+   ],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "jpeg40",
+    "template": "bread",
+    "scenario": "sugar_free",
+    "oov": []
+   },
+   "status": "done",
+   "verdict": "fail",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "cereals",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "sesame",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "sugar_free",
+     "target": "sugar_free",
+     "status": "violation"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "not_checked"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "борошно **житнє** обдирне, дріжджі хлібопекарські, борошно **пшеничне**, вода питна, насіння **кунжуту**, цукор, сіль, олія соняшникова, поліпшувач кислота аскорбінова.",
+     "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "1088 кДж / 260 ккал",
+     "fat": "2,5 г",
+     "saturates": "0,4 г",
+     "carbs": "48 г",
+     "sugars": "3 г",
+     "fibre": "6 г",
+     "protein": "8,5 г",
+     "salt": "1,1 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Хліб житньо-пшеничний",
+      "photo_index": 0
+     },
+     {
+      "text": "Без цукру",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 500 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Поживна цінність на 100 г",
+      "photo_index": 1
+     },
+     {
+      "text": "Зберігати в сухому місці при температурі не вище +25 °С.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3189,
+    "output_tokens": 548,
+    "reasoning_tokens": 0,
+    "total_tokens": 3737
+   }
+  },
+  {
+   "id": "dev-005",
+   "case": "dev-005",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-005",
+   "spec": null,
+   "violations": [
+    {
+     "rule_id": "sugar_free",
+     "target": "sugar_free"
+    }
+   ],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "clean",
+    "template": "cookies",
+    "scenario": "sugar_free",
+    "oov": [
+     "кус-кус",
+     "рікота"
+    ]
+   },
+   "status": "done",
+   "verdict": "fail",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "eggs",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "sugar_free",
+     "target": "sugar_free",
+     "status": "violation"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "not_checked"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "**кус-кус**, олія соняшникова, **яйця** курячі, цукор, **рікота**, крохмаль кукурудзяний, розпушувач гідрокарбонат натрію, сіль, ароматизатор ванілін.",
+     "photo_index": 1
+    },
+    "may_contain_text": {
+     "text": "Може містити сліди арахісу.",
+     "photo_index": 1
+    },
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "1954 кДж / 467 ккал",
+     "fat": "18 г",
+     "saturates": "8 г",
+     "carbs": "68 г",
+     "sugars": "24 г",
+     "fibre": "2,5 г",
+     "protein": "7 г",
+     "salt": "0,6 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Печиво «Ранкове»",
+      "photo_index": 0
+     },
+     {
+      "text": "Sugar free",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 200 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Поживна цінність на 100 г",
+      "photo_index": 1
+     },
+     {
+      "text": "Енергетична цінність",
+      "photo_index": 1
+     },
+     {
+      "text": "Жири",
+      "photo_index": 1
+     },
+     {
+      "text": "з них насичені жири",
+      "photo_index": 1
+     },
+     {
+      "text": "Вуглеводи",
+      "photo_index": 1
+     },
+     {
+      "text": "з них цукри",
+      "photo_index": 1
+     },
+     {
+      "text": "Харчові волокна",
+      "photo_index": 1
+     },
+     {
+      "text": "Білки",
+      "photo_index": 1
+     },
+     {
+      "text": "Сіль",
+      "photo_index": 1
+     },
+     {
+      "text": "Зберігати в сухому місці при температурі не вище +25 °С.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3189,
+    "output_tokens": 771,
+    "reasoning_tokens": 0,
+    "total_tokens": 3960
+   }
+  },
+  {
+   "id": "dev-006",
+   "case": "dev-006",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-006",
+   "spec": "spec.json",
+   "violations": [
+    {
+     "rule_id": "sugar_free",
+     "target": "sugar_free"
+    }
+   ],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "blur",
+    "template": "yogurt",
+    "scenario": "sugar_free",
+    "oov": []
+   },
+   "status": "done",
+   "verdict": "fail",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "milk",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "milk",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "sugar_free",
+     "target": "sugar_free",
+     "status": "violation"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "pass"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "**вершки** 10 %, цукор, наповнювач полуничний, стабілізатор пектин, барвник кармін.",
+     "photo_index": 1
+    },
+    "may_contain_text": {
+     "text": "Може містити сліди яєць, сої.",
+     "photo_index": 1
+    },
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "385 кДж / 92 ккал",
+     "fat": "3,2 г",
+     "saturates": "2,1 г",
+     "carbs": "12,5 г",
+     "sugars": "11,8 г",
+     "fibre": "0 г",
+     "protein": "3,4 г",
+     "salt": "0,12 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Йогурт полуничний",
+      "photo_index": 0
+     },
+     {
+      "text": "Sugar free",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 300 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Поживна цінність на 100 г",
+      "photo_index": 1
+     },
+     {
+      "text": "Зберігати при температурі від +2 до +6 °С.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3219,
+    "output_tokens": 540,
+    "reasoning_tokens": 0,
+    "total_tokens": 3759
+   }
+  },
+  {
+   "id": "dev-007",
+   "case": "dev-007",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-007",
+   "spec": null,
+   "violations": [
+    {
+     "rule_id": "protein_source",
+     "target": "protein_source"
+    }
+   ],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "rotate",
+    "template": "bar",
+    "scenario": "protein_source",
+    "oov": []
+   },
+   "status": "done",
+   "verdict": "fail",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "cereals",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "nuts",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "protein_source",
+     "target": "protein_source",
+     "status": "violation"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "not_checked"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "**вівсяні** пластівці, насіння соняшнику, **горіхи** **волоські**, цукор, родзинки, емульгатор лецитин соняшниковий, сіль, антиоксидант токофероли.",
+     "photo_index": 1
+    },
+    "may_contain_text": {
+     "text": "Може містити сліди сої.",
+     "photo_index": 1
+    },
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "1657 кДж / 396 ккал",
+     "fat": "12 г",
+     "saturates": "2,5 г",
+     "carbs": "60 г",
+     "sugars": "22 г",
+     "fibre": "6 г",
+     "protein": "9 г",
+     "salt": "0,2 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Батончик горіховий",
+      "photo_index": 0
+     },
+     {
+      "text": "Джерело білка",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 40 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Поживна цінність на 100 г",
+      "photo_index": 1
+     },
+     {
+      "text": "Енергетична цінність",
+      "photo_index": 1
+     },
+     {
+      "text": "Жири",
+      "photo_index": 1
+     },
+     {
+      "text": "з них насичені жири",
+      "photo_index": 1
+     },
+     {
+      "text": "Вуглеводи",
+      "photo_index": 1
+     },
+     {
+      "text": "з них цукри",
+      "photo_index": 1
+     },
+     {
+      "text": "Харчові волокна",
+      "photo_index": 1
+     },
+     {
+      "text": "Білки",
+      "photo_index": 1
+     },
+     {
+      "text": "Сіль",
+      "photo_index": 1
+     },
+     {
+      "text": "Зберігати в сухому місці при температурі не вище +25 °С.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3203,
+    "output_tokens": 768,
+    "reasoning_tokens": 0,
+    "total_tokens": 3971
+   }
+  },
+  {
+   "id": "dev-008",
+   "case": "dev-008",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-008",
+   "spec": null,
+   "violations": [
+    {
+     "rule_id": "protein_source",
+     "target": "protein_source"
+    }
+   ],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "jpeg40",
+    "template": "sauce",
+    "scenario": "protein_source",
+    "oov": []
+   },
+   "status": "done",
+   "verdict": "fail",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "eggs",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "mustard",
+     "status": "needs_review"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "protein_source",
+     "target": "protein_source",
+     "status": "violation"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "not_checked"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "**меланж яєчний**, олія соняшникова, гірчичний порошок, вода питна, мускатний горіх, цукор, оцет спиртовий, сіль, регулятор кислотності кислота лимонна, консервант сорбат калію.",
+     "photo_index": 1
+    },
+    "may_contain_text": {
+     "text": "Може містити сліди молока, арахісу.",
+     "photo_index": 1
+    },
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "1289 кДж / 308 ккал",
+     "fat": "30 г",
+     "saturates": "3 г",
+     "carbs": "8 г",
+     "sugars": "5 г",
+     "fibre": "0,5 г",
+     "protein": "1,2 г",
+     "salt": "1,5 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Майонез «Столичний»",
+      "photo_index": 0
+     },
+     {
+      "text": "Джерело білка",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 250 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Зберігати при температурі від +2 до +6 °C.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3194,
+    "output_tokens": 538,
+    "reasoning_tokens": 0,
+    "total_tokens": 3732
+   }
+  },
+  {
+   "id": "dev-009",
+   "case": "dev-009",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-009",
+   "spec": null,
+   "violations": [
+    {
+     "rule_id": "fat_low",
+     "target": "fat_low"
+    }
+   ],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "clean",
+    "template": "spread",
+    "scenario": "fat_low",
+    "oov": []
+   },
+   "status": "done",
+   "verdict": "fail",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "fish",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "mustard",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "fat_low",
+     "target": "fat_low",
+     "status": "violation"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "not_checked"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "філе **оселедця**, олія соняшникова, **гірчиця** столова, цибуля ріпчаста, сіль, перець чорний мелений, консервант бензоат натрію.",
+     "photo_index": 1
+    },
+    "may_contain_text": {
+     "text": "Може містити сліди горіхів, сої.",
+     "photo_index": 1
+    },
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "1113 кДж / 266 ккал",
+     "fat": "22 г",
+     "saturates": "4 г",
+     "carbs": "3 г",
+     "sugars": "1 г",
+     "fibre": "0 г",
+     "protein": "14 г",
+     "salt": "1,8 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Паста рибна",
+      "photo_index": 0
+     },
+     {
+      "text": "Низький вміст жиру",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 150 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Зберігати при температурі від +2 до +6 °С.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3189,
+    "output_tokens": 521,
+    "reasoning_tokens": 0,
+    "total_tokens": 3710
+   }
+  },
+  {
+   "id": "dev-010",
+   "case": "dev-010",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-010",
+   "spec": null,
+   "violations": [
+    {
+     "rule_id": "fat_low",
+     "target": "fat_low"
+    }
+   ],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "blur",
+    "template": "spread",
+    "scenario": "fat_low",
+    "oov": []
+   },
+   "status": "done",
+   "verdict": "fail",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "fish",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "mustard",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "fat_low",
+     "target": "fat_low",
+     "status": "violation"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "not_checked"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "філе **оселедця**, олія соняшникова, **гірчичний** порошок, цибуля ріпчаста, сіль, перець чорний мелений, консервант бензоат натрію.",
+     "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "1113 кДж / 266 ккал",
+     "fat": "22 г",
+     "saturates": "4 г",
+     "carbs": "3 г",
+     "sugars": "1 г",
+     "fibre": "0 г",
+     "protein": "14 г",
+     "salt": "1,8 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Паста рибна",
+      "photo_index": 0
+     },
+     {
+      "text": "Низький вміст жиру",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 150 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Зберігати при температурі від +2 до +6 °С.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3219,
+    "output_tokens": 490,
+    "reasoning_tokens": 0,
+    "total_tokens": 3709
+   }
+  },
+  {
+   "id": "dev-011",
+   "case": "dev-011",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-011",
+   "spec": "spec.json",
+   "violations": [
+    {
+     "rule_id": "no_added_sugar",
+     "target": "no_added_sugar"
+    }
+   ],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "rotate",
+    "template": "bar",
+    "scenario": "no_added_sugar",
+    "oov": []
+   },
+   "status": "done",
+   "verdict": "fail",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "cereals",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "nuts",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "cereals",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "nuts",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "no_added_sugar",
+     "target": "no_added_sugar",
+     "status": "violation"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "not_checked"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "борошно **житнє** обдирне, насіння соняшнику, **горіхи волоські**, івертний сироп, родзинки, емульгатор лецитин соняшниковий, сіль, антиоксидант токофероли.",
+     "photo_index": 1
+    },
+    "may_contain_text": {
+     "text": "Може містити сліди селери.",
+     "photo_index": 1
+    },
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "1657 кДж / 396 ккал",
+     "fat": "12 г",
+     "saturates": "2,5 г",
+     "carbs": "60 г",
+     "sugars": "22 г",
+     "fibre": "6 г",
+     "protein": "9 г",
+     "salt": "0,2 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Батончик злаковий",
+      "photo_index": 0
+     },
+     {
+      "text": "Без доданого цукру",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 40 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Поживна цінність на 100 г",
+      "photo_index": 1
+     },
+     {
+      "text": "Зберігати в сухому місці при температурі не вище +25 °С.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3232,
+    "output_tokens": 564,
+    "reasoning_tokens": 0,
+    "total_tokens": 3796
+   }
+  },
+  {
+   "id": "dev-012",
+   "case": "dev-012",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-012",
+   "spec": null,
+   "violations": [
+    {
+     "rule_id": "no_added_sugar",
+     "target": "no_added_sugar"
+    }
+   ],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "jpeg40",
+    "template": "juice",
+    "scenario": "no_added_sugar",
+    "oov": []
+   },
+   "status": "done",
+   "verdict": "fail",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": null,
+     "status": "not_applicable"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "no_added_sugar",
+     "target": "no_added_sugar",
+     "status": "violation"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "not_checked"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "пюре яблучне, сироп глюкозний, вода питна, кислота лимонна, кислота аскорбінова.",
+     "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": {
+     "per": "100ml",
+     "portion_text": null,
+     "energy": "184 кДж / 44 ккал",
+     "fat": "0 г",
+     "saturates": "0 г",
+     "carbs": "10,5 г",
+     "sugars": "9,8 г",
+     "fibre": "0,2 г",
+     "protein": "0,3 г",
+     "salt": "0,01 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Нектар грушевий",
+      "photo_index": 0
+     },
+     {
+      "text": "Без доданого цукру",
+      "photo_index": 0
+     },
+     {
+      "text": "Об'єм 1 л",
+      "photo_index": 0
+     },
+     {
+      "text": "Зберігати в сухому місці при температурі не вище +25 °C.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3211,
+    "output_tokens": 478,
+    "reasoning_tokens": 0,
+    "total_tokens": 3689
+   }
+  },
+  {
+   "id": "dev-013",
+   "case": "dev-013",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-013",
+   "spec": null,
+   "violations": [
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy"
+    }
+   ],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "clean",
+    "template": "yogurt",
+    "scenario": "NUT-ENERGY",
+    "oov": []
+   },
+   "status": "done",
+   "verdict": "needs_review",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "milk",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "needs_review"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "not_checked"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "сухе знежирене **молоко**, цукор, мускатний горіх, наповнювач полуничный, стабілізатор пектин, барвник кармін.",
+     "photo_index": 1
+    },
+    "may_contain_text": {
+     "text": "Може містити сліди селери, кунжуту.",
+     "photo_index": 1
+    },
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "540 кДж / 129 ккал",
+     "fat": "3,2 г",
+     "saturates": "2,1 г",
+     "carbs": "12,5 г",
+     "sugars": "11,8 г",
+     "fibre": "0 г",
+     "protein": "3,4 г",
+     "salt": "0,12 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Йогурт персиковий",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 300 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Зберігати при температурі від +2 до +6 °С.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3189,
+    "output_tokens": 497,
+    "reasoning_tokens": 0,
+    "total_tokens": 3686
+   }
+  },
+  {
+   "id": "dev-014",
+   "case": "dev-014",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-014",
+   "spec": null,
+   "violations": [
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy"
+    }
+   ],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "blur",
+    "template": "bread",
+    "scenario": "NUT-ENERGY",
+    "oov": []
+   },
+   "status": "done",
+   "verdict": "needs_review",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "cereals",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "sesame",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "needs_review"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "not_checked"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "борошно **пшеничне**, дріжджі хлібопекарські, борошно **житнє** обдирне, вода питна, насіння **кунжуту**, цукор, сіль, олія соняшникова, поліпшувач кислота аскорбінова.",
+     "photo_index": 1
+    },
+    "may_contain_text": {
+     "text": "Може містити сліди горіхів, сої.",
+     "photo_index": 1
+    },
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "1523 кДж / 364 ккал",
+     "fat": "2,5 г",
+     "saturates": "0,4 г",
+     "carbs": "48 г",
+     "sugars": "3 г",
+     "fibre": "6 г",
+     "protein": "8,5 г",
+     "salt": "1,1 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Хліб житньо-пшеничный",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 500 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Зберігати в сухому місці при температурі не вище +25 °С.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3194,
+    "output_tokens": 521,
+    "reasoning_tokens": 0,
+    "total_tokens": 3715
+   }
+  },
+  {
+   "id": "dev-015",
+   "case": "dev-015",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-015",
+   "spec": "spec.json",
+   "violations": [
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "fish"
+    }
+   ],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "rotate",
+    "template": "yogurt",
+    "scenario": "ALG-SPEC-MISSING",
+    "oov": []
+   },
+   "status": "done",
+   "verdict": "fail",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "milk",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "fish",
+     "status": "violation"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "milk",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "pass"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "сухе знежирене **МОЛОКО**, наповнювач полуничний, цукор, кислота молочна, стабілізатор пектин, барвник кармін.",
+     "photo_index": 1
+    },
+    "may_contain_text": {
+     "text": "Може містити сліди селери, сої.",
+     "photo_index": 1
+    },
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "385 кДж / 92 ккал",
+     "fat": "3,2 г",
+     "saturates": "2,1 г",
+     "carbs": "12,5 г",
+     "sugars": "11,8 г",
+     "fibre": "0 г",
+     "protein": "3,4 г",
+     "salt": "0,12 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Йогурт полуничний",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 300 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Зберігати при температурі від +2 до +6 °C.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3203,
+    "output_tokens": 492,
+    "reasoning_tokens": 0,
+    "total_tokens": 3695
+   }
+  },
+  {
+   "id": "dev-016",
+   "case": "dev-016",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-016",
+   "spec": "spec.json",
+   "violations": [
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "soybeans"
+    }
+   ],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "jpeg40",
+    "template": "cookies",
+    "scenario": "ALG-SPEC-MISSING",
+    "oov": [
+     "рікота"
+    ]
+   },
+   "status": "done",
+   "verdict": "fail",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "cereals",
+     "status": "needs_review"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "eggs",
+     "status": "needs_review"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "cereals",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "eggs",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "soybeans",
+     "status": "violation"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "milk",
+     "status": "violation"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "pass"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "борошно пшеничне, цукор, яйця курячі, олія соняшникова, **рікота**, крохмаль кукурудзяний, розпушувач гідрокарбонат натрію, сіль, ароматизатор ванілін.",
+     "photo_index": 1
+    },
+    "may_contain_text": {
+     "text": "Може містити сліди горіхів, кунжуту.",
+     "photo_index": 1
+    },
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "1954 кДж / 467 ккал",
+     "fat": "18 г",
+     "saturates": "8 г",
+     "carbs": "68 г",
+     "sugars": "24 г",
+     "fibre": "2,5 г",
+     "protein": "7 г",
+     "salt": "0,6 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Печиво «Ранкове»",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 200 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Поживна цінність на 100 г",
+      "photo_index": 1
+     },
+     {
+      "text": "Зберігати в сухому місці при температурі не вище +25 °C.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3194,
+    "output_tokens": 544,
+    "reasoning_tokens": 0,
+    "total_tokens": 3738
+   }
+  },
+  {
+   "id": "dev-017",
+   "case": "dev-017",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-017",
+   "spec": "spec.json",
+   "violations": [],
+   "expected_flags": [
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients"
+    },
+    {
+     "rule_id": "IMG-QUALITY",
+     "target": "photo_1"
+    }
+   ],
+   "meta": {
+    "synthetic": true,
+    "quality": "cropped",
+    "template": "cookies",
+    "scenario": "LABEL-TRUNCATED",
+    "oov": [
+     "рікота"
+    ]
+   },
+   "status": "done",
+   "verdict": "needs_review",
+   "findings": [
+    {
+     "rule_id": "IMG-QUALITY",
+     "target": "photo_1",
+     "status": "needs_review"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "needs_review"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "cereals",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "eggs",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "cereals",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "eggs",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "milk",
+     "status": "needs_review"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "pass"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "cropped",
+      "note": null
+     },
+     {
+      "index": 2,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "**вівсяні** пластівці, цукор, **яйця** курячі, кислота молочна, **рікота**, крохмаль кукурудзяний, олія соняшникова, розпушувач гідрокарбонат натрію, сіль, ароматизатор ванілін, ароматизатор ідентичний натуральному, барвник бета-каротин, вода питна[…]",
+     "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "1954 кДж / 467 ккал",
+     "fat": "18 г",
+     "saturates": "8 г",
+     "carbs": "68 г",
+     "sugars": "24 г",
+     "fibre": "2,5 г",
+     "protein": "7 г",
+     "salt": "0,6 г",
+     "photo_index": 2
+    },
+    "other_text": [
+     {
+      "text": "Печиво здобне",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 200 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Поживна цінність на 100 г",
+      "photo_index": 2
+     },
+     {
+      "text": "Зберігати в сухому місці при температурі не вище +25 °С.",
+      "photo_index": 2
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 2
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 4308,
+    "output_tokens": 579,
+    "reasoning_tokens": 0,
+    "total_tokens": 4887
+   }
+  },
+  {
+   "id": "dev-018",
+   "case": "dev-018",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-018",
+   "spec": null,
+   "violations": [],
+   "expected_flags": [
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients"
+    },
+    {
+     "rule_id": "IMG-QUALITY",
+     "target": "photo_1"
+    }
+   ],
+   "meta": {
+    "synthetic": true,
+    "quality": "cropped",
+    "template": "cookies",
+    "scenario": "LABEL-TRUNCATED",
+    "oov": []
+   },
+   "status": "done",
+   "verdict": "needs_review",
+   "findings": [
+    {
+     "rule_id": "IMG-QUALITY",
+     "target": "photo_1",
+     "status": "needs_review"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "needs_review"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "cereals",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "eggs",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "milk",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "not_checked"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "cropped",
+      "note": null
+     },
+     {
+      "index": 2,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "борошно **ЖИТНЄ** обдирне, цукор, **ЯЄЧНИЙ** порошок, олія соняшникова, **ВЕРШКИ** 10 %, крохмаль кукурудзяний, розпушувач гідрокарбонат натрію, сіль, ароматизатор ванілін, ароматизатор ідентичний натуральному, барвник бета-каротин, вода питна[…]",
+     "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "1954 кДж / 467 ккал",
+     "fat": "18 г",
+     "saturates": "8 г",
+     "carbs": "68 г",
+     "sugars": "24 г",
+     "fibre": "2,5 г",
+     "protein": "7 г",
+     "salt": "0,6 г",
+     "photo_index": 2
+    },
+    "other_text": [
+     {
+      "text": "Печиво здобне",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 200 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Зберігати в сухому місці при температурі не вище +25 °С.",
+      "photo_index": 2
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 2
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 4308,
+    "output_tokens": 551,
+    "reasoning_tokens": 0,
+    "total_tokens": 4859
+   }
+  },
+  {
+   "id": "dev-019",
+   "case": "dev-019",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-019",
+   "spec": null,
+   "violations": [],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "clean",
+    "template": "bread",
+    "scenario": "clean_sugar_free_lt",
+    "oov": []
+   },
+   "status": "done",
+   "verdict": "incomplete",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "cereals",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "sesame",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "sugar_free",
+     "target": "sugar_free",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "not_checked"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "борошно **ЖИТНЄ** обдирне, вода питна, **ВІВСЯНІ** пластівці, дріжджі хлібопекарські, насіння **КУНЖУТУ**, сіль, олія соняшникова, поліпшувач кислота аскорбінова.",
+     "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "1088 кДж / 260 ккал",
+     "fat": "2,5 г",
+     "saturates": "0,4 г",
+     "carbs": "48 г",
+     "sugars": "<0,5 г",
+     "fibre": "6 г",
+     "protein": "8,5 г",
+     "salt": "1,1 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Хліб житньо-пшеничний",
+      "photo_index": 0
+     },
+     {
+      "text": "Без цукру",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 500 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Поживна цінність на 100 г",
+      "photo_index": 1
+     },
+     {
+      "text": "Енергетична цінність",
+      "photo_index": 1
+     },
+     {
+      "text": "Жири",
+      "photo_index": 1
+     },
+     {
+      "text": "з них насичені жири",
+      "photo_index": 1
+     },
+     {
+      "text": "Вуглеводи",
+      "photo_index": 1
+     },
+     {
+      "text": "з них цукри",
+      "photo_index": 1
+     },
+     {
+      "text": "Харчові волокна",
+      "photo_index": 1
+     },
+     {
+      "text": "Білки",
+      "photo_index": 1
+     },
+     {
+      "text": "Сіль",
+      "photo_index": 1
+     },
+     {
+      "text": "Зберігати в сухому місці при температурі не вище +25 °С.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3189,
+    "output_tokens": 760,
+    "reasoning_tokens": 0,
+    "total_tokens": 3949
+   }
+  },
+  {
+   "id": "dev-020",
+   "case": "dev-020",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-020",
+   "spec": null,
+   "violations": [],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "blur",
+    "template": "bread",
+    "scenario": "clean_sugar_free_lt",
+    "oov": [
+     "кус-кус"
+    ]
+   },
+   "status": "done",
+   "verdict": "incomplete",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "cereals",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "sesame",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "sugar_free",
+     "target": "sugar_free",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "not_checked"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "КУС-КУС, вода питна, борошно **ПШЕНИЧНЕ**, дріжджі хлібопекарські, насіння **КУНЖУТУ**, сіль, олія соняшникова, поліпшувач кислота аскорбінова.",
+     "photo_index": 1
+    },
+    "may_contain_text": {
+     "text": "Може містити сліди арахісу.",
+     "photo_index": 1
+    },
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "1088 кДж / 260 ккал",
+     "fat": "2,5 г",
+     "saturates": "0,4 г",
+     "carbs": "48 г",
+     "sugars": "<0,5 г",
+     "fibre": "6 г",
+     "protein": "8,5 г",
+     "salt": "1,1 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Батон нарізний",
+      "photo_index": 0
+     },
+     {
+      "text": "Sugar free",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 500 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Поживна цінність на 100 г",
+      "photo_index": 1
+     },
+     {
+      "text": "Зберігати в сухому місці при температурі не вище +25 °С.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3189,
+    "output_tokens": 568,
+    "reasoning_tokens": 0,
+    "total_tokens": 3757
+   }
+  },
+  {
+   "id": "dev-021",
+   "case": "dev-021",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-021",
+   "spec": "spec.json",
+   "violations": [],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "rotate",
+    "template": "sauce",
+    "scenario": "clean_sugar_free_lt",
+    "oov": []
+   },
+   "status": "done",
+   "verdict": "needs_review",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "eggs",
+     "status": "needs_review"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "mustard",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "eggs",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "mustard",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "sugar_free",
+     "target": "sugar_free",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "pass"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "яйця курячі, олія соняшникова, **гірчиця** столова, вода питна, оцет спиртовий, сіль, регулятор кислотності кислота лимонна, консервант сорбат калію.",
+     "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "1289 кДж / 308 ккал",
+     "fat": "30 г",
+     "saturates": "3 г",
+     "carbs": "8 г",
+     "sugars": "<0,5 г",
+     "fibre": "0,5 г",
+     "protein": "1,2 г",
+     "salt": "1,5 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Майонез «Столичний»",
+      "photo_index": 0
+     },
+     {
+      "text": "Sugar free",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 250 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Поживна цінність на 100 г",
+      "photo_index": 1
+     },
+     {
+      "text": "Енергетична цінність",
+      "photo_index": 1
+     },
+     {
+      "text": "Жири",
+      "photo_index": 1
+     },
+     {
+      "text": "з них насичені жири",
+      "photo_index": 1
+     },
+     {
+      "text": "Вуглеводи",
+      "photo_index": 1
+     },
+     {
+      "text": "з них цукри",
+      "photo_index": 1
+     },
+     {
+      "text": "Харчові волокна",
+      "photo_index": 1
+     },
+     {
+      "text": "Білки",
+      "photo_index": 1
+     },
+     {
+      "text": "Сіль",
+      "photo_index": 1
+     },
+     {
+      "text": "Зберігати при температурі від +2 до +6 °С.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3227,
+    "output_tokens": 737,
+    "reasoning_tokens": 0,
+    "total_tokens": 3964
+   }
+  },
+  {
+   "id": "dev-022",
+   "case": "dev-022",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-022",
+   "spec": "spec.json",
+   "violations": [],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "jpeg40",
+    "template": "kefir",
+    "scenario": "clean_protein",
+    "oov": []
+   },
+   "status": "done",
+   "verdict": "needs_review",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "milk",
+     "status": "needs_review"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "milk",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "protein_source",
+     "target": "protein_source",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "pass"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "сироватка молочна суха, закваска бактеріальна, мускатний горіх, вітамін D3.",
+     "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": {
+     "per": "100ml",
+     "portion_text": null,
+     "energy": "209 кДж / 50 ккал",
+     "fat": "2,5 г",
+     "saturates": "1,6 г",
+     "carbs": "4 г",
+     "sugars": "4 г",
+     "fibre": "0 г",
+     "protein": "3 г",
+     "salt": "0,1 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Ряжанка 2,5 %",
+      "photo_index": 0
+     },
+     {
+      "text": "Джерело білка",
+      "photo_index": 0
+     },
+     {
+      "text": "Об'єм 900 мл",
+      "photo_index": 0
+     },
+     {
+      "text": "Поживна цінність на 100 мл",
+      "photo_index": 1
+     },
+     {
+      "text": "Енергетична цінність",
+      "photo_index": 1
+     },
+     {
+      "text": "Жири",
+      "photo_index": 1
+     },
+     {
+      "text": "з них насичені жири",
+      "photo_index": 1
+     },
+     {
+      "text": "Вуглеводи",
+      "photo_index": 1
+     },
+     {
+      "text": "з них цукри",
+      "photo_index": 1
+     },
+     {
+      "text": "Харчові волокна",
+      "photo_index": 1
+     },
+     {
+      "text": "Білки",
+      "photo_index": 1
+     },
+     {
+      "text": "Сіль",
+      "photo_index": 1
+     },
+     {
+      "text": "Зберігати при температурі від +2 до +6 °С.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3211,
+    "output_tokens": 708,
+    "reasoning_tokens": 0,
+    "total_tokens": 3919
+   }
+  },
+  {
+   "id": "dev-023",
+   "case": "dev-023",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-023",
+   "spec": "spec.json",
+   "violations": [],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "clean",
+    "template": "spread",
+    "scenario": "clean_protein",
+    "oov": []
+   },
+   "status": "done",
+   "verdict": "pass",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "fish",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "mustard",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "fish",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "mustard",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "protein_source",
+     "target": "protein_source",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "pass"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "**скумбрія** копчена, олія соняшникова, **гірчичний** порошок, цибуля ріпчаста, сіль, перець чорний мелений, консервант бензоат натрію.",
+     "photo_index": 1
+    },
+    "may_contain_text": {
+     "text": "Може містити сліди селери, сої.",
+     "photo_index": 1
+    },
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "1113 кДж / 266 ккал",
+     "fat": "22 г",
+     "saturates": "4 г",
+     "carbs": "3 г",
+     "sugars": "1 г",
+     "fibre": "0 г",
+     "protein": "14 г",
+     "salt": "1,8 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Паста рибна",
+      "photo_index": 0
+     },
+     {
+      "text": "Джерело білка",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 150 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Зберігати при температурі від +2 до +6 °C.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3189,
+    "output_tokens": 516,
+    "reasoning_tokens": 0,
+    "total_tokens": 3705
+   }
+  },
+  {
+   "id": "dev-024",
+   "case": "dev-024",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-024",
+   "spec": null,
+   "violations": [],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "blur",
+    "template": "bread",
+    "scenario": "clean_fat_low",
+    "oov": [
+     "кус-кус"
+    ]
+   },
+   "status": "done",
+   "verdict": "incomplete",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "cereals",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "sesame",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "fat_low",
+     "target": "fat_low",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "not_checked"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "борошно **пшеничне**, вода питна, **кус-кус**, дріжджі хлібопекарські, насіння **кунжуту**, цукор, сіль, олія соняшникова, поліпшувач кислота аскорбінова.",
+     "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "1088 кДж / 260 ккал",
+     "fat": "2,5 г",
+     "saturates": "0,4 г",
+     "carbs": "48 г",
+     "sugars": "3 г",
+     "fibre": "6 г",
+     "protein": "8,5 г",
+     "salt": "1,1 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Батон нарізний",
+      "photo_index": 0
+     },
+     {
+      "text": "Низький вміст жиру",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 500 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Зберігати в сухому місці при температурі не вище +25 °С.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3219,
+    "output_tokens": 510,
+    "reasoning_tokens": 0,
+    "total_tokens": 3729
+   }
+  },
+  {
+   "id": "dev-025",
+   "case": "dev-025",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-025",
+   "spec": null,
+   "violations": [],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "rotate",
+    "template": "bread",
+    "scenario": "clean_fat_low",
+    "oov": [
+     "кус-кус"
+    ]
+   },
+   "status": "done",
+   "verdict": "incomplete",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "cereals",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "sesame",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "fat_low",
+     "target": "fat_low",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "not_checked"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "КУС-КУС, цукор, ВІВСЯНІ пластівці, вода питна, насіння КУНЖУТУ, дріжджі хлібопекарські, сіль, олія соняшникова, поліпшувач кислота аскорбінова.",
+     "photo_index": 1
+    },
+    "may_contain_text": {
+     "text": "Може містити сліди яєць, горіхів.",
+     "photo_index": 1
+    },
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "1088 кДж / 260 ккал",
+     "fat": "2,5 г",
+     "saturates": "0,4 г",
+     "carbs": "48 г",
+     "sugars": "3 г",
+     "fibre": "6 г",
+     "protein": "8,5 г",
+     "salt": "1,1 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Батон нарізний",
+      "photo_index": 0
+     },
+     {
+      "text": "Низький вміст жиру",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 500 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Зберігати в сухому місці при температурі не вище +25 °С.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3232,
+    "output_tokens": 546,
+    "reasoning_tokens": 0,
+    "total_tokens": 3778
+   }
+  },
+  {
+   "id": "dev-026",
+   "case": "dev-026",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-026",
+   "spec": null,
+   "violations": [],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "jpeg40",
+    "template": "juice",
+    "scenario": "clean_no_added_sugar",
+    "oov": []
+   },
+   "status": "done",
+   "verdict": "incomplete",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": null,
+     "status": "not_applicable"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "no_added_sugar",
+     "target": "no_added_sugar",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "not_checked"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "пюре яблучне, вода питна, кислота лимонна, кислота аскорбінова.",
+     "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": {
+     "per": "100ml",
+     "portion_text": null,
+     "energy": "184 кДж / 44 ккал",
+     "fat": "0 г",
+     "saturates": "0 г",
+     "carbs": "10,5 г",
+     "sugars": "9,8 г",
+     "fibre": "0,2 г",
+     "protein": "0,3 г",
+     "salt": "0,01 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Сік яблучний",
+      "photo_index": 0
+     },
+     {
+      "text": "Без доданого цукру",
+      "photo_index": 0
+     },
+     {
+      "text": "Містить природні цукри.",
+      "photo_index": 0
+     },
+     {
+      "text": "Об'єм 1 л",
+      "photo_index": 0
+     },
+     {
+      "text": "Зберігати в сухому місці при температурі не вище +25 °С.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3211,
+    "output_tokens": 498,
+    "reasoning_tokens": 0,
+    "total_tokens": 3709
+   }
+  },
+  {
+   "id": "dev-027",
+   "case": "dev-027",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-027",
+   "spec": null,
+   "violations": [],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "clean",
+    "template": "bar",
+    "scenario": "clean_fibre",
+    "oov": []
+   },
+   "status": "done",
+   "verdict": "incomplete",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "cereals",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "nuts",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "fibre_source",
+     "target": "fibre_source",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "not_checked"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "борошно **пшеничне**, родзинки, **фундук** смажений, цукор, насіння соняшнику, емульгатор лецитин соняшниковий, сіль, антиоксидант токофероли.",
+     "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "1657 кДж / 396 ккал",
+     "fat": "12 г",
+     "saturates": "2,5 г",
+     "carbs": "60 г",
+     "sugars": "22 г",
+     "fibre": "6 г",
+     "protein": "9 г",
+     "salt": "0,2 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Батончик горіховий",
+      "photo_index": 0
+     },
+     {
+      "text": "Джерело клітковини",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 40 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Зберігати в сухому місці при температурі не вище +25 °С.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3189,
+    "output_tokens": 500,
+    "reasoning_tokens": 0,
+    "total_tokens": 3689
+   }
+  },
+  {
+   "id": "dev-028",
+   "case": "dev-028",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-028",
+   "spec": null,
+   "violations": [],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "blur",
+    "template": "bar",
+    "scenario": "clean_fibre",
+    "oov": []
+   },
+   "status": "done",
+   "verdict": "incomplete",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "cereals",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "nuts",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "not_checked"
+    },
+    {
+     "rule_id": "fibre_source",
+     "target": "fibre_source",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "not_checked"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "борошно **житнє** обдирне, цукор, **фундук** смажений, родзинки, насіння соняшнику, емульгатор лецитин соняшниковий, сіль, антиоксидант токофероли.",
+     "photo_index": 1
+    },
+    "may_contain_text": {
+     "text": "Може містити сліди селери, сої.",
+     "photo_index": 1
+    },
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "1657 кДж / 396 ккал",
+     "fat": "12 г",
+     "saturates": "2,5 г",
+     "carbs": "60 г",
+     "sugars": "22 г",
+     "fibre": "6 г",
+     "protein": "9 г",
+     "salt": "0,2 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Батончик горіховий",
+      "photo_index": 0
+     },
+     {
+      "text": "Джерело клітковини",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 40 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Зберігати в сухому місці при температурі не вище +25 °С.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3194,
+    "output_tokens": 533,
+    "reasoning_tokens": 0,
+    "total_tokens": 3727
+   }
+  },
+  {
+   "id": "dev-029",
+   "case": "dev-029",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-029",
+   "spec": "spec.json",
+   "violations": [],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "rotate",
+    "template": "cookies",
+    "scenario": "clean_plain",
+    "oov": [
+     "кус-кус",
+     "рікота"
+    ]
+   },
+   "status": "done",
+   "verdict": "fail",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "eggs",
+     "status": "needs_review"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "cereals",
+     "status": "violation"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "eggs",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "milk",
+     "status": "violation"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "pass"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "**кус-кус**, цукор, яєчний порошок, олія соняшникова, **рікота**, крохмаль кукурудзяний, розпушувач гідрокарбонат натрію, сіль, ароматизатор ванілін.",
+     "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "1954 кДж / 467 ккал",
+     "fat": "18 г",
+     "saturates": "8 г",
+     "carbs": "68 г",
+     "sugars": "24 г",
+     "fibre": "2,5 г",
+     "protein": "7 г",
+     "salt": "0,6 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Печиво здобне",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 200 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Поживна цінність на 100 г",
+      "photo_index": 1
+     },
+     {
+      "text": "Зберігати в сухому місці при температурі не вище +25 °С.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3203,
+    "output_tokens": 506,
+    "reasoning_tokens": 0,
+    "total_tokens": 3709
+   }
+  },
+  {
+   "id": "dev-030",
+   "case": "dev-030",
+   "group": "synthetic",
+   "in_trust_number": true,
+   "folder": "eval/cases/dev/dev-030",
+   "spec": "spec.json",
+   "violations": [],
+   "expected_flags": [],
+   "meta": {
+    "synthetic": true,
+    "quality": "jpeg40",
+    "template": "spread",
+    "scenario": "clean_plain",
+    "oov": []
+   },
+   "status": "done",
+   "verdict": "pass",
+   "findings": [
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-MISSING",
+     "target": "nutrition",
+     "status": "pass"
+    },
+    {
+     "rule_id": "LABEL-TRUNCATED",
+     "target": "ingredients",
+     "status": "pass"
+    },
+    {
+     "rule_id": "SIDE-FRONT-MISSING",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-PER",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "fish",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-EMPH",
+     "target": "mustard",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "fish",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-MISSING",
+     "target": "mustard",
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-SPEC-EXTRA",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "ALG-MAY-CONTAIN",
+     "target": null,
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-ENERGY",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-KJ",
+     "target": "energy",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "sugars",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SUBSETS",
+     "target": "saturates",
+     "status": "pass"
+    },
+    {
+     "rule_id": "NUT-SPEC",
+     "target": null,
+     "status": "pass"
+    }
+   ],
+   "extraction": {
+    "photos": [
+     {
+      "index": 0,
+      "side": "front",
+      "quality": "ok",
+      "note": null
+     },
+     {
+      "index": 1,
+      "side": "back",
+      "quality": "ok",
+      "note": null
+     }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+     "text": "філе **оселедця**, олія соняшникова, **гірчичний** порошок, цибуля ріпчаста, кокосове молоко, сіль, перець чорний мелений, консервант бензоат натрію.",
+     "photo_index": 1
+    },
+    "may_contain_text": {
+     "text": "Може містити сліди яєць.",
+     "photo_index": 1
+    },
+    "nutrition": {
+     "per": "100g",
+     "portion_text": null,
+     "energy": "1113 кДж / 266 ккал",
+     "fat": "22 г",
+     "saturates": "4 г",
+     "carbs": "3 г",
+     "sugars": "1 г",
+     "fibre": "0 г",
+     "protein": "14 г",
+     "salt": "1,8 г",
+     "photo_index": 1
+    },
+    "other_text": [
+     {
+      "text": "Паштет з оселедця",
+      "photo_index": 0
+     },
+     {
+      "text": "Маса нетто 150 г",
+      "photo_index": 0
+     },
+     {
+      "text": "Поживна цінність на 100 г",
+      "photo_index": 1
+     },
+     {
+      "text": "Зберігати при температурі від +2 до +6 °С.",
+      "photo_index": 1
+     },
+     {
+      "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+      "photo_index": 1
+     }
+    ]
+   },
+   "model": "gemini/gemini-3.5-flash-lite",
+   "source": "file",
+   "usage": {
+    "input_tokens": 3189,
+    "output_tokens": 530,
+    "reasoning_tokens": 0,
+    "total_tokens": 3719
+   }
+  }
+ ],
+ "errors": 0
+}

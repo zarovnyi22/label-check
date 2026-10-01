@@ -1,0 +1,72 @@
+{
+ "case": "dev-014",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "4c3bfcb034ed33bb1fcf15e5fc1a3e797a951cbef98f1b7b48dc740f8c4e6646",
+  "37c64bb66f823ce22a0f79070a37774e50518cf0e7718ea1284cd7d5cacaac71"
+ ],
+ "usage": {
+  "input_tokens": 3194,
+  "output_tokens": 521,
+  "reasoning_tokens": 0,
+  "total_tokens": 3715
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "борошно **пшеничне**, дріжджі хлібопекарські, борошно **житнє** обдирне, вода питна, насіння **кунжуту**, цукор, сіль, олія соняшникова, поліпшувач кислота аскорбінова.",
+   "photo_index": 1
+  },
+  "may_contain_text": {
+   "text": "Може містити сліди горіхів, сої.",
+   "photo_index": 1
+  },
+  "nutrition": {
+   "per": "100g",
+   "portion_text": null,
+   "energy": "1523 кДж / 364 ккал",
+   "fat": "2,5 г",
+   "saturates": "0,4 г",
+   "carbs": "48 г",
+   "sugars": "3 г",
+   "fibre": "6 г",
+   "protein": "8,5 г",
+   "salt": "1,1 г",
+   "photo_index": 1
+  },
+  "other_text": [
+   {
+    "text": "Хліб житньо-пшеничный",
+    "photo_index": 0
+   },
+   {
+    "text": "Маса нетто 500 г",
+    "photo_index": 0
+   },
+   {
+    "text": "Зберігати в сухому місці при температурі не вище +25 °С.",
+    "photo_index": 1
+   },
+   {
+    "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+    "photo_index": 1
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"борошно **пшеничне**, дріжджі хлібопекарські, борошно **житнє** обдирне, вода питна, насіння **кунжуту**, цукор, сіль, олія соняшникова, поліпшувач кислота аскорбінова.\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": {\n    \"text\": \"Може містити сліди горіхів, сої.\",\n    \"photo_index\": 1\n  },\n  \"nutrition\": {\n    \"per\": \"100g\",\n    \"portion_text\": null,\n    \"energy\": \"1523 кДж / 364 ккал\",\n    \"fat\": \"2,5 г\",\n    \"saturates\": \"0,4 г\",\n    \"carbs\": \"48 г\",\n    \"sugars\": \"3 г\",\n    \"fibre\": \"6 г\",\n    \"protein\": \"8,5 г\",\n    \"salt\": \"1,1 г\",\n    \"photo_index\": 1\n  },\n  \"other_text\": [\n    {\n      \"text\": \"Хліб житньо-пшеничный\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Маса нетто 500 г\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Зберігати в сухому місці при температурі не вище +25 °С.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Виробник: ТОВ «Тестовий завод», Україна, м. Київ.\",\n      \"photo_index\": 1\n    }\n  ]\n}"
+}

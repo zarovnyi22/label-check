@@ -1,0 +1,76 @@
+{
+ "case": "dev-030",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "220dda5c5d0ce5a24587d0a31b1d079a676d91ef84e960a595075af8c8e9b5d3",
+  "4f5c94dd6c8b3fc5aec107d8a273e0e741d59cb15506f737e8e2bb579ecb34d6"
+ ],
+ "usage": {
+  "input_tokens": 3189,
+  "output_tokens": 530,
+  "reasoning_tokens": 0,
+  "total_tokens": 3719
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "філе **оселедця**, олія соняшникова, **гірчичний** порошок, цибуля ріпчаста, кокосове молоко, сіль, перець чорний мелений, консервант бензоат натрію.",
+   "photo_index": 1
+  },
+  "may_contain_text": {
+   "text": "Може містити сліди яєць.",
+   "photo_index": 1
+  },
+  "nutrition": {
+   "per": "100g",
+   "portion_text": null,
+   "energy": "1113 кДж / 266 ккал",
+   "fat": "22 г",
+   "saturates": "4 г",
+   "carbs": "3 г",
+   "sugars": "1 г",
+   "fibre": "0 г",
+   "protein": "14 г",
+   "salt": "1,8 г",
+   "photo_index": 1
+  },
+  "other_text": [
+   {
+    "text": "Паштет з оселедця",
+    "photo_index": 0
+   },
+   {
+    "text": "Маса нетто 150 г",
+    "photo_index": 0
+   },
+   {
+    "text": "Поживна цінність на 100 г",
+    "photo_index": 1
+   },
+   {
+    "text": "Зберігати при температурі від +2 до +6 °С.",
+    "photo_index": 1
+   },
+   {
+    "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+    "photo_index": 1
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"філе **оселедця**, олія соняшникова, **гірчичний** порошок, цибуля ріпчаста, кокосове молоко, сіль, перець чорний мелений, консервант бензоат натрію.\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": {\n    \"text\": \"Може містити сліди яєць.\",\n    \"photo_index\": 1\n  },\n  \"nutrition\": {\n    \"per\": \"100g\",\n    \"portion_text\": null,\n    \"energy\": \"1113 кДж / 266 ккал\",\n    \"fat\": \"22 г\",\n    \"saturates\": \"4 г\",\n    \"carbs\": \"3 г\",\n    \"sugars\": \"1 г\",\n    \"fibre\": \"0 г\",\n    \"protein\": \"14 г\",\n    \"salt\": \"1,8 г\",\n    \"photo_index\": 1\n  },\n  \"other_text\": [\n    {\n      \"text\": \"Паштет з оселедця\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Маса нетто 150 г\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Поживна цінність на 100 г\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Зберігати при температурі від +2 до +6 °С.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Виробник: ТОВ «Тестовий завод», Україна, м. Київ.\",\n      \"photo_index\": 1\n    }\n  ]\n}"
+}

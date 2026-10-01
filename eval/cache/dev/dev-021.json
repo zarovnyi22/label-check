@@ -1,0 +1,109 @@
+{
+ "case": "dev-021",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "b19ccbe82661aa64e20aff0addb4806ebf55c931a4d0a42aa55022f41d896eec",
+  "594672037bd1b57b391d9bb492373c9224cb66e727c8bc0f435083a7b5a3973c"
+ ],
+ "usage": {
+  "input_tokens": 3227,
+  "output_tokens": 737,
+  "reasoning_tokens": 0,
+  "total_tokens": 3964
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "яйця курячі, олія соняшникова, **гірчиця** столова, вода питна, оцет спиртовий, сіль, регулятор кислотності кислота лимонна, консервант сорбат калію.",
+   "photo_index": 1
+  },
+  "may_contain_text": null,
+  "nutrition": {
+   "per": "100g",
+   "portion_text": null,
+   "energy": "1289 кДж / 308 ккал",
+   "fat": "30 г",
+   "saturates": "3 г",
+   "carbs": "8 г",
+   "sugars": "<0,5 г",
+   "fibre": "0,5 г",
+   "protein": "1,2 г",
+   "salt": "1,5 г",
+   "photo_index": 1
+  },
+  "other_text": [
+   {
+    "text": "Майонез «Столичний»",
+    "photo_index": 0
+   },
+   {
+    "text": "Sugar free",
+    "photo_index": 0
+   },
+   {
+    "text": "Маса нетто 250 г",
+    "photo_index": 0
+   },
+   {
+    "text": "Поживна цінність на 100 г",
+    "photo_index": 1
+   },
+   {
+    "text": "Енергетична цінність",
+    "photo_index": 1
+   },
+   {
+    "text": "Жири",
+    "photo_index": 1
+   },
+   {
+    "text": "з них насичені жири",
+    "photo_index": 1
+   },
+   {
+    "text": "Вуглеводи",
+    "photo_index": 1
+   },
+   {
+    "text": "з них цукри",
+    "photo_index": 1
+   },
+   {
+    "text": "Харчові волокна",
+    "photo_index": 1
+   },
+   {
+    "text": "Білки",
+    "photo_index": 1
+   },
+   {
+    "text": "Сіль",
+    "photo_index": 1
+   },
+   {
+    "text": "Зберігати при температурі від +2 до +6 °С.",
+    "photo_index": 1
+   },
+   {
+    "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+    "photo_index": 1
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"яйця курячі, олія соняшникова, **гірчиця** столова, вода питна, оцет спиртовий, сіль, регулятор кислотності кислота лимонна, консервант сорбат калію.\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": null,\n  \"nutrition\": {\n    \"per\": \"100g\",\n    \"portion_text\": null,\n    \"energy\": \"1289 кДж / 308 ккал\",\n    \"fat\": \"30 г\",\n    \"saturates\": \"3 г\",\n    \"carbs\": \"8 г\",\n    \"sugars\": \"<0,5 г\",\n    \"fibre\": \"0,5 г\",\n    \"protein\": \"1,2 г\",\n    \"salt\": \"1,5 г\",\n    \"photo_index\": 1\n  },\n  \"other_text\": [\n    {\n      \"text\": \"Майонез «Столичний»\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Sugar free\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Маса нетто 250 г\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Поживна цінність на 100 г\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Енергетична цінність\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Жири\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"з них насичені жири\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Вуглеводи\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"з них цукри\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Харчові волокна\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Білки\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Сіль\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Зберігати при температурі від +2 до +6 °С.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Виробник: ТОВ «Тестовий завод», Україна, м. Київ.\",\n      \"photo_index\": 1\n    }\n  ]\n}"
+}

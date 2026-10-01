@@ -1,0 +1,112 @@
+{
+ "case": "dev-005",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "5c7e972d3f2fc627cb1de73fb92f62355649ffef661c07fae12efc01a5900697",
+  "c77daeb4d616fd279043be71af717a48b1bc25acdea08877826e02d1b4f68f55"
+ ],
+ "usage": {
+  "input_tokens": 3189,
+  "output_tokens": 771,
+  "reasoning_tokens": 0,
+  "total_tokens": 3960
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "**кус-кус**, олія соняшникова, **яйця** курячі, цукор, **рікота**, крохмаль кукурудзяний, розпушувач гідрокарбонат натрію, сіль, ароматизатор ванілін.",
+   "photo_index": 1
+  },
+  "may_contain_text": {
+   "text": "Може містити сліди арахісу.",
+   "photo_index": 1
+  },
+  "nutrition": {
+   "per": "100g",
+   "portion_text": null,
+   "energy": "1954 кДж / 467 ккал",
+   "fat": "18 г",
+   "saturates": "8 г",
+   "carbs": "68 г",
+   "sugars": "24 г",
+   "fibre": "2,5 г",
+   "protein": "7 г",
+   "salt": "0,6 г",
+   "photo_index": 1
+  },
+  "other_text": [
+   {
+    "text": "Печиво «Ранкове»",
+    "photo_index": 0
+   },
+   {
+    "text": "Sugar free",
+    "photo_index": 0
+   },
+   {
+    "text": "Маса нетто 200 г",
+    "photo_index": 0
+   },
+   {
+    "text": "Поживна цінність на 100 г",
+    "photo_index": 1
+   },
+   {
+    "text": "Енергетична цінність",
+    "photo_index": 1
+   },
+   {
+    "text": "Жири",
+    "photo_index": 1
+   },
+   {
+    "text": "з них насичені жири",
+    "photo_index": 1
+   },
+   {
+    "text": "Вуглеводи",
+    "photo_index": 1
+   },
+   {
+    "text": "з них цукри",
+    "photo_index": 1
+   },
+   {
+    "text": "Харчові волокна",
+    "photo_index": 1
+   },
+   {
+    "text": "Білки",
+    "photo_index": 1
+   },
+   {
+    "text": "Сіль",
+    "photo_index": 1
+   },
+   {
+    "text": "Зберігати в сухому місці при температурі не вище +25 °С.",
+    "photo_index": 1
+   },
+   {
+    "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+    "photo_index": 1
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"**кус-кус**, олія соняшникова, **яйця** курячі, цукор, **рікота**, крохмаль кукурудзяний, розпушувач гідрокарбонат натрію, сіль, ароматизатор ванілін.\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": {\n    \"text\": \"Може містити сліди арахісу.\",\n    \"photo_index\": 1\n  },\n  \"nutrition\": {\n    \"per\": \"100g\",\n    \"portion_text\": null,\n    \"energy\": \"1954 кДж / 467 ккал\",\n    \"fat\": \"18 г\",\n    \"saturates\": \"8 г\",\n    \"carbs\": \"68 г\",\n    \"sugars\": \"24 г\",\n    \"fibre\": \"2,5 г\",\n    \"protein\": \"7 г\",\n    \"salt\": \"0,6 г\",\n    \"photo_index\": 1\n  },\n  \"other_text\": [\n    {\n      \"text\": \"Печиво «Ранкове»\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Sugar free\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Маса нетто 200 г\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Поживна цінність на 100 г\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Енергетична цінність\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Жири\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"з них насичені жири\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Вуглеводи\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"з них цукри\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Харчові волокна\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Білки\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Сіль\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Зберігати в сухому місці при температурі не вище +25 °С.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Виробник: ТОВ «Тестовий завод», Україна, м. Київ.\",\n      \"photo_index\": 1\n    }\n  ]\n}"
+}

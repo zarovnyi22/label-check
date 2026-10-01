@@ -1,0 +1,105 @@
+{
+ "case": "dev-003",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "85672c2327ad4b8a4a979819555c9f9c91af3d12d93b053a2c10528b2fbe2bec",
+  "65ae2ebaecf64c891a9d7abfeabcf167cadc3fb786f95ad2e68c145d3bbaafd9"
+ ],
+ "usage": {
+  "input_tokens": 3227,
+  "total_tokens": 3938,
+  "output_tokens": 711,
+  "reasoning_tokens": 0
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "скумбрія копчена, олія соняшникова, **ГІРЧИЦЯ** столова, цибуля ріпчаста, мускатний горіх, сіль, перець чорний мелений, консервант бензоат натрію.",
+   "photo_index": 1
+  },
+  "may_contain_text": null,
+  "nutrition": {
+   "per": "100g",
+   "portion_text": null,
+   "energy": "1113 кДж / 266 ккал",
+   "fat": "22 г",
+   "saturates": "4 г",
+   "carbs": "3 г",
+   "sugars": "1 г",
+   "fibre": "0 г",
+   "protein": "14 г",
+   "salt": "1,8 г",
+   "photo_index": 1
+  },
+  "other_text": [
+   {
+    "text": "Паштет з оселедця",
+    "photo_index": 0
+   },
+   {
+    "text": "Маса нетто 150 г",
+    "photo_index": 0
+   },
+   {
+    "text": "Поживна цінність на 100 г",
+    "photo_index": 1
+   },
+   {
+    "text": "Енергетична цінність",
+    "photo_index": 1
+   },
+   {
+    "text": "Жири",
+    "photo_index": 1
+   },
+   {
+    "text": "з них насичені жири",
+    "photo_index": 1
+   },
+   {
+    "text": "Вуглеводи",
+    "photo_index": 1
+   },
+   {
+    "text": "з них цукри",
+    "photo_index": 1
+   },
+   {
+    "text": "Харчові волокна",
+    "photo_index": 1
+   },
+   {
+    "text": "Білки",
+    "photo_index": 1
+   },
+   {
+    "text": "Сіль",
+    "photo_index": 1
+   },
+   {
+    "text": "Зберігати при температурі від +2 до +6 °С.",
+    "photo_index": 1
+   },
+   {
+    "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+    "photo_index": 1
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"скумбрія копчена, олія соняшникова, **ГІРЧИЦЯ** столова, цибуля ріпчаста, мускатний горіх, сіль, перець чорний мелений, консервант бензоат натрію.\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": null,\n  \"nutrition\": {\n    \"per\": \"100g\",\n    \"portion_text\": null,\n    \"energy\": \"1113 кДж / 266 ккал\",\n    \"fat\": \"22 г\",\n    \"saturates\": \"4 г\",\n    \"carbs\": \"3 г\",\n    \"sugars\": \"1 г\",\n    \"fibre\": \"0 г\",\n    \"protein\": \"14 г\",\n    \"salt\": \"1,8 г\",\n    \"photo_index\": 1\n  },\n  \"other_text\": [\n    {\n      \"text\": \"Паштет з оселедця\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Маса нетто 150 г\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Поживна цінність на 100 г\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Енергетична цінність\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Жири\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"з них насичені жири\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Вуглеводи\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"з них цукри\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Харчові волокна\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Білки\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Сіль\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Зберігати при температурі від +2 до +6 °С.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Виробник: ТОВ «Тестовий завод», Україна, м. Київ.\",\n      \"photo_index\": 1\n    }\n  ]\n}"
+}

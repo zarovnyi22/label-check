@@ -228,6 +228,9 @@ CREATE TABLE extraction_cache (
     oov-словах; це pytest-тест, без LLM);
   - помічені проблеми фото: частка `expected_flags`, які сервіс показав (`needs_review`);
   - розбивка за типом порушення, якістю фото, синтетика/справжні.
+- Кеш екстракцій комітиться: `eval/cache/<split>/<case_id>.json` (extraction, raw_text,
+  usage, model, prompt_version, sha256 фото); ключ — case_id + PROMPT_VERSION + модель,
+  sha256 — контроль, якщо фото є. Чистий клон відтворює число без ключа і без справжніх фото.
 - `make eval SPLIT=dev` — з кешу екстракцій; `make eval-live SPLIT=dev` — з живим LLM
   (пауза між викликами під ліміт, `EVAL_PAUSE_SECONDS`). Звіти й сирі результати —
   `eval/reports/<split>_<дата>.md|json`, комітяться.

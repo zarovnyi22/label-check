@@ -1,0 +1,73 @@
+{
+ "case": "dev-012",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "2e1f8285f3f12a1c389d88ec48fa31978d821ff9fded647f978dcc08391cdf97",
+  "d547de6210b36f1be81020b844aeb58bc5b557f9be73560afe25916c0ef2b42b"
+ ],
+ "usage": {
+  "input_tokens": 3211,
+  "output_tokens": 478,
+  "reasoning_tokens": 0,
+  "total_tokens": 3689
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "пюре яблучне, сироп глюкозний, вода питна, кислота лимонна, кислота аскорбінова.",
+   "photo_index": 1
+  },
+  "may_contain_text": null,
+  "nutrition": {
+   "per": "100ml",
+   "portion_text": null,
+   "energy": "184 кДж / 44 ккал",
+   "fat": "0 г",
+   "saturates": "0 г",
+   "carbs": "10,5 г",
+   "sugars": "9,8 г",
+   "fibre": "0,2 г",
+   "protein": "0,3 г",
+   "salt": "0,01 г",
+   "photo_index": 1
+  },
+  "other_text": [
+   {
+    "text": "Нектар грушевий",
+    "photo_index": 0
+   },
+   {
+    "text": "Без доданого цукру",
+    "photo_index": 0
+   },
+   {
+    "text": "Об'єм 1 л",
+    "photo_index": 0
+   },
+   {
+    "text": "Зберігати в сухому місці при температурі не вище +25 °C.",
+    "photo_index": 1
+   },
+   {
+    "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+    "photo_index": 1
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"пюре яблучне, сироп глюкозний, вода питна, кислота лимонна, кислота аскорбінова.\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": null,\n  \"nutrition\": {\n    \"per\": \"100ml\",\n    \"portion_text\": null,\n    \"energy\": \"184 кДж / 44 ккал\",\n    \"fat\": \"0 г\",\n    \"saturates\": \"0 г\",\n    \"carbs\": \"10,5 г\",\n    \"sugars\": \"9,8 г\",\n    \"fibre\": \"0,2 г\",\n    \"protein\": \"0,3 г\",\n    \"salt\": \"0,01 г\",\n    \"photo_index\": 1\n  },\n  \"other_text\": [\n    {\n      \"text\": \"Нектар грушевий\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Без доданого цукру\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Об'єм 1 л\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Зберігати в сухому місці при температурі не вище +25 °C.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Виробник: ТОВ «Тестовий завод», Україна, м. Київ.\",\n      \"photo_index\": 1\n    }\n  ]\n}"
+}

@@ -1,0 +1,72 @@
+{
+ "case": "dev-015",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "cce4a2052642117d1283268b4bc597f6226218649d8192cc5a85fd76c77d6365",
+  "9f46532f5e388ce615f9f53a8a14a8e1ceb1b4d7bfd0084af0c4e6c083747c2b"
+ ],
+ "usage": {
+  "input_tokens": 3203,
+  "output_tokens": 492,
+  "reasoning_tokens": 0,
+  "total_tokens": 3695
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "сухе знежирене **МОЛОКО**, наповнювач полуничний, цукор, кислота молочна, стабілізатор пектин, барвник кармін.",
+   "photo_index": 1
+  },
+  "may_contain_text": {
+   "text": "Може містити сліди селери, сої.",
+   "photo_index": 1
+  },
+  "nutrition": {
+   "per": "100g",
+   "portion_text": null,
+   "energy": "385 кДж / 92 ккал",
+   "fat": "3,2 г",
+   "saturates": "2,1 г",
+   "carbs": "12,5 г",
+   "sugars": "11,8 г",
+   "fibre": "0 г",
+   "protein": "3,4 г",
+   "salt": "0,12 г",
+   "photo_index": 1
+  },
+  "other_text": [
+   {
+    "text": "Йогурт полуничний",
+    "photo_index": 0
+   },
+   {
+    "text": "Маса нетто 300 г",
+    "photo_index": 0
+   },
+   {
+    "text": "Зберігати при температурі від +2 до +6 °C.",
+    "photo_index": 1
+   },
+   {
+    "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+    "photo_index": 1
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"сухе знежирене **МОЛОКО**, наповнювач полуничний, цукор, кислота молочна, стабілізатор пектин, барвник кармін.\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": {\n    \"text\": \"Може містити сліди селери, сої.\",\n    \"photo_index\": 1\n  },\n  \"nutrition\": {\n    \"per\": \"100g\",\n    \"portion_text\": null,\n    \"energy\": \"385 кДж / 92 ккал\",\n    \"fat\": \"3,2 г\",\n    \"saturates\": \"2,1 г\",\n    \"carbs\": \"12,5 г\",\n    \"sugars\": \"11,8 г\",\n    \"fibre\": \"0 г\",\n    \"protein\": \"3,4 г\",\n    \"salt\": \"0,12 г\",\n    \"photo_index\": 1\n  },\n  \"other_text\": [\n    {\n      \"text\": \"Йогурт полуничний\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Маса нетто 300 г\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Зберігати при температурі від +2 до +6 °C.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Виробник: ТОВ «Тестовий завод», Україна, м. Київ.\",\n      \"photo_index\": 1\n    }\n  ]\n}"
+}

@@ -1,0 +1,105 @@
+{
+ "case": "dev-001",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "5d264800f71c05a9376e1c02dbae66764c460b1747e4743510d53814d9b4e4ac",
+  "79e7bf2143d2c4768f27772737a13f3f31e55aa2a17766a2ffae214e4d251757"
+ ],
+ "usage": {
+  "input_tokens": 3211,
+  "total_tokens": 3888,
+  "output_tokens": 677,
+  "reasoning_tokens": 0
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "рікота, мускатний горіх, закваска бактеріальна, вітамін D3.",
+   "photo_index": 1
+  },
+  "may_contain_text": null,
+  "nutrition": {
+   "per": "100ml",
+   "portion_text": null,
+   "energy": "209 кДж / 50 ккал",
+   "fat": "2,5 г",
+   "saturates": "1,6 г",
+   "carbs": "4 г",
+   "sugars": "4 г",
+   "fibre": "0 г",
+   "protein": "3 г",
+   "salt": "0,1 г",
+   "photo_index": 1
+  },
+  "other_text": [
+   {
+    "text": "Кефір 2,5 %",
+    "photo_index": 0
+   },
+   {
+    "text": "Об'єм 900 мл",
+    "photo_index": 0
+   },
+   {
+    "text": "Поживна цінність на 100 мл",
+    "photo_index": 1
+   },
+   {
+    "text": "Енергетична цінність",
+    "photo_index": 1
+   },
+   {
+    "text": "Жири",
+    "photo_index": 1
+   },
+   {
+    "text": "з них насичені жири",
+    "photo_index": 1
+   },
+   {
+    "text": "Вуглеводи",
+    "photo_index": 1
+   },
+   {
+    "text": "з них цукри",
+    "photo_index": 1
+   },
+   {
+    "text": "Харчові волокна",
+    "photo_index": 1
+   },
+   {
+    "text": "Білки",
+    "photo_index": 1
+   },
+   {
+    "text": "Сіль",
+    "photo_index": 1
+   },
+   {
+    "text": "Зберігати при температурі від +2 до +6 °C.",
+    "photo_index": 1
+   },
+   {
+    "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+    "photo_index": 1
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"рікота, мускатний горіх, закваска бактеріальна, вітамін D3.\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": null,\n  \"nutrition\": {\n    \"per\": \"100ml\",\n    \"portion_text\": null,\n    \"energy\": \"209 кДж / 50 ккал\",\n    \"fat\": \"2,5 г\",\n    \"saturates\": \"1,6 г\",\n    \"carbs\": \"4 г\",\n    \"sugars\": \"4 г\",\n    \"fibre\": \"0 г\",\n    \"protein\": \"3 г\",\n    \"salt\": \"0,1 г\",\n    \"photo_index\": 1\n  },\n  \"other_text\": [\n    {\n      \"text\": \"Кефір 2,5 %\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Об'єм 900 мл\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Поживна цінність на 100 мл\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Енергетична цінність\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Жири\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"з них насичені жири\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Вуглеводи\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"з них цукри\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Харчові волокна\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Білки\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Сіль\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Зберігати при температурі від +2 до +6 °C.\",\n      \"photo_index\": 1\n    },\n    {\n      \"text\": \"Виробник: ТОВ «Тестовий завод», Україна, м. Київ.\",\n      \"photo_index\": 1\n    }\n  ]\n}"
+}

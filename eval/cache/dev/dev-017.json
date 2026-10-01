@@ -1,0 +1,80 @@
+{
+ "case": "dev-017",
+ "model": "gemini/gemini-3.5-flash-lite",
+ "prompt_version": "2026-10-01.1",
+ "photo_sha256": [
+  "367790be657c2d0c2c895bbadbb1273caa3c0489d0eb533bd3b028238d9bc072",
+  "26eac212e30dfb5470f03972967158b1ac035848832de47efd6bfb2ff7c965f6",
+  "7e37649c00c9898692bff42f8f30a687888e7da82e5c38be20c6b02a2565b160"
+ ],
+ "usage": {
+  "input_tokens": 4308,
+  "output_tokens": 579,
+  "reasoning_tokens": 0,
+  "total_tokens": 4887
+ },
+ "extraction": {
+  "photos": [
+   {
+    "index": 0,
+    "side": "front",
+    "quality": "ok",
+    "note": null
+   },
+   {
+    "index": 1,
+    "side": "back",
+    "quality": "cropped",
+    "note": null
+   },
+   {
+    "index": 2,
+    "side": "back",
+    "quality": "ok",
+    "note": null
+   }
+  ],
+  "emphasis_resolvable": true,
+  "ingredients_marked": {
+   "text": "**вівсяні** пластівці, цукор, **яйця** курячі, кислота молочна, **рікота**, крохмаль кукурудзяний, олія соняшникова, розпушувач гідрокарбонат натрію, сіль, ароматизатор ванілін, ароматизатор ідентичний натуральному, барвник бета-каротин, вода питна[…]",
+   "photo_index": 1
+  },
+  "may_contain_text": null,
+  "nutrition": {
+   "per": "100g",
+   "portion_text": null,
+   "energy": "1954 кДж / 467 ккал",
+   "fat": "18 г",
+   "saturates": "8 г",
+   "carbs": "68 г",
+   "sugars": "24 г",
+   "fibre": "2,5 г",
+   "protein": "7 г",
+   "salt": "0,6 г",
+   "photo_index": 2
+  },
+  "other_text": [
+   {
+    "text": "Печиво здобне",
+    "photo_index": 0
+   },
+   {
+    "text": "Маса нетто 200 г",
+    "photo_index": 0
+   },
+   {
+    "text": "Поживна цінність на 100 г",
+    "photo_index": 2
+   },
+   {
+    "text": "Зберігати в сухому місці при температурі не вище +25 °С.",
+    "photo_index": 2
+   },
+   {
+    "text": "Виробник: ТОВ «Тестовий завод», Україна, м. Київ.",
+    "photo_index": 2
+   }
+  ]
+ },
+ "raw_text": "{\n  \"photos\": [\n    {\n      \"index\": 0,\n      \"side\": \"front\",\n      \"quality\": \"ok\",\n      \"note\": null\n    },\n    {\n      \"index\": 1,\n      \"side\": \"back\",\n      \"quality\": \"cropped\",\n      \"note\": null\n    },\n    {\n      \"index\": 2,\n      \"side\": \"back\",\n      \"quality\": \"ok\",\n      \"note\": null\n    }\n  ],\n  \"emphasis_resolvable\": true,\n  \"ingredients_marked\": {\n    \"text\": \"**вівсяні** пластівці, цукор, **яйця** курячі, кислота молочна, **рікота**, крохмаль кукурудзяний, олія соняшникова, розпушувач гідрокарбонат натрію, сіль, ароматизатор ванілін, ароматизатор ідентичний натуральному, барвник бета-каротин, вода питна[…]\",\n    \"photo_index\": 1\n  },\n  \"may_contain_text\": null,\n  \"nutrition\": {\n    \"per\": \"100g\",\n    \"portion_text\": null,\n    \"energy\": \"1954 кДж / 467 ккал\",\n    \"fat\": \"18 г\",\n    \"saturates\": \"8 г\",\n    \"carbs\": \"68 г\",\n    \"sugars\": \"24 г\",\n    \"fibre\": \"2,5 г\",\n    \"protein\": \"7 г\",\n    \"salt\": \"0,6 г\",\n    \"photo_index\": 2\n  },\n  \"other_text\": [\n    {\n      \"text\": \"Печиво здобне\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Маса нетто 200 г\",\n      \"photo_index\": 0\n    },\n    {\n      \"text\": \"Поживна цінність на 100 г\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Зберігати в сухому місці при температурі не вище +25 °С.\",\n      \"photo_index\": 2\n    },\n    {\n      \"text\": \"Виробник: ТОВ «Тестовий завод», Україна, м. Київ.\",\n      \"photo_index\": 2\n    }\n  ]\n}"
+}
