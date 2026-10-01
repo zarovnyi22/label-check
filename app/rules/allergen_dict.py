@@ -10,7 +10,8 @@ is copper, not mussels). The text is not lowercased
 (' ’ ʼ) are interchangeable. "е"/"є" are not folded: "яєчний" and "яйце" are both listed.
 
 EXCLUSIONS mask the false word of a phrase that is not that allergen ("кокосове молоко",
-"мускатний горіх", "кислота молочна" = lactic acid, "сульфітно-аміачна карамель" = E150d).
+"мускатний горіх", "кедровий горіх", "кислота молочна" = lactic acid, "сульфітно-аміачна
+карамель" = E150d).
 Not listed because no stem matches them anyway: гречка, какао-масло, соняшникова олія.
 """
 
@@ -116,7 +117,16 @@ TERMS: dict[AllergenCategory, list[str]] = {
         r"tuna",
         r"cod" + _END,
     ],
-    "peanuts": [r"арахіс\w*", r"землян\w*(?=\s+горіх)", r"peanuts?" + _END, r"groundnuts?"],
+    "peanuts": [
+        r"арахіс\w*",
+        # "земляний горіх" / "горіхи земляні": only the "земл-" word, since the "горіх" word
+        # is masked by an exclusion (it is not a tree nut). Python lookbehind is fixed-width,
+        # hence one per form.
+        r"землян\w*(?=\s+горіх)",
+        r"(?:(?<=горіх\s)|(?<=горіха\s)|(?<=горіхи\s)|(?<=горіхів\s))землян\w*",
+        r"peanuts?" + _END,
+        r"groundnuts?",
+    ],
     "soybeans": [
         rf"со(?:я|ї|єю|ю){_END}",
         r"соє\w*",
@@ -183,9 +193,11 @@ EXCLUSIONS: list[str] = [
     r"(?P<x>молочн\w*)\s+кислот\w*",
     r"кислот\w*\s+(?P<x>молочн\w*)",
     r"(?P<x>lactic)",
-    # nutmeg, coconut, peanut ("земляний горіх" is peanuts, not tree nuts)
-    r"(?P<x>горіх\w*)\s+(?:мускатн|кокосов|землян)\w*",
-    r"(?:мускатн|кокосов|землян)\w*\s+(?P<x>горіх\w*)",
+    # nutmeg, coconut, peanut ("земляний горіх" is peanuts, not tree nuts), pine nut (not in
+    # Annex II)
+    r"(?P<x>горіх\w*)\s+(?:мускатн|кокосов|землян|кедров)\w*",
+    r"(?:мускатн|кокосов|землян|кедров)\w*\s+(?P<x>горіх\w*)",
+    r"pine\s+(?P<x>nuts?)",
     # butter that is not dairy
     r"(?:cocoa|shea|peanut|nut|coconut)\s+(?P<x>butter)",
     r"(?P<x>cream)\s+of\s+tartar",

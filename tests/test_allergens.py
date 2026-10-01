@@ -69,6 +69,9 @@ def by_rule(findings, rule_id):
         ("сою", ["soybeans"]),
         ("арахіс смажений", ["peanuts"]),
         ("земляний горіх", ["peanuts"]),  # not tree nuts
+        ("горіх земляний", ["peanuts"]),  # reversed order: a missed allergen otherwise
+        ("горіхи земляні смажені", ["peanuts"]),
+        ("ГОРІХИ ЗЕМЛЯНІ", ["peanuts"]),
         ("фундук", ["nuts"]),
         ("ядра горіха волоського", ["nuts"]),
         ("кеш'ю", ["nuts"]),
@@ -122,6 +125,9 @@ def test_dictionary_finds(text, expected):
         "cocoa butter",
         "cream of tartar",
         "nutmeg",
+        "кедровий горіх",  # pine nut: not in Annex II
+        "горіхи кедрові",
+        "pine nuts",
         "coconut",
         "lactic acid",
         "сіль, цукор, вода питна",
