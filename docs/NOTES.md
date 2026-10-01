@@ -72,9 +72,32 @@
 - Категорії алергенів (`AllergenCategory`, `app/schemas.py`): cereals, crustaceans, eggs, fish,
   peanuts, soybeans, milk, nuts, celery, mustard, sesame, sulphites, lupin, molluscs.
 
+## B2b — алергени
+
+- `check_allergens(extraction, spec) -> list[Finding]` (`app/rules/allergens.py`) — для
+  рушія B2c. Одна finding на категорію (`target`); `pass`/`not_checked`/`not_applicable`
+  без категорії мають `target: null`. Порядок категорій — як у `AllergenCategory`.
+- ALG-EMPH: згадка зараховується виділеною і тоді, коли одразу за нею вкладена згадка того
+  самого алергену виділена — «сироватковий пермеат (з **молока**)» (p16). Без складу
+  ALG-EMPH не видає нічого (це LABEL-MISSING, B2c); склад без алергенів → `not_applicable`.
+- ALG-SPEC-MISSING: склад не прочитано або є `[…]` → `needs_review`, не `violation`;
+  алерген лише в «може містити» не зараховується як наявний у складі.
+- ALG-MAY-CONTAIN: якщо `may_contain_text` null — речення з `tail` складу.
+- На пробі: p16 — cereals/soybeans pass, milk needs_review («молоко сухе незбиране», яке
+  модель пропустила); p17 — milk/nuts/soybeans needs_review (0 з 6 жирних розпізнано);
+  p02 «мускатний горіх» і p03 «сульфітно-аміачна карамель» — не алергени.
+- Відомі межі словника (кандидати для dev-тюнінгу в B4/B5): «горіх земляний» (зворотний
+  порядок) не дає peanuts, лише виключається з nuts; кедровий горіх → nuts (у дод. II його
+  немає, хибна тривога); речення після складу без маркера («Мінімум 25 % молочних
+  продуктів…», p17) лишається згадкою і може дати зайвий needs_review або «знайти» алерген.
+- Статті Закону 2639-VIII у `catalog.py` не звірені (TODO); статті Регл. 1169/2011 — точні.
+
 ## B3b — живі перевірки
 
 ## Відкриті питання
+
+- (B2b, ВІДКРИТЕ, не блокує) Номери статей Закону № 2639-VIII для алергенів (`catalog.py`)
+  звірити з текстом закону до B7.
 
 - (B1b, ВИРІШЕНО) Маркер `[…]` і `emphasis_resolvable` замість `emphasis_visible` —
   погоджено людиною, внесено в SPEC §1–§2 і CLAUDE.md; нове правило `LABEL-TRUNCATED`.
