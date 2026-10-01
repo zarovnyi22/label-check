@@ -1,5 +1,5 @@
 # Everything runs in Docker: the host needs only docker compose (no Python, no uv).
-.PHONY: up down logs health test lint fmt spike generate semisynth
+.PHONY: up down logs health test lint fmt spike generate semisynth eval eval-live
 
 up:      ## build and start db + api in the background
 	docker compose up --build -d
@@ -30,3 +30,9 @@ generate: ## synthetic eval cases (deterministic by seed) -> eval/cases/{dev,tes
 
 semisynth: ## recipes with a deliberate allergen mismatch for the real cases -> eval/real/*/spec_*.json
 	docker compose run --rm --build test python -m eval.semisynth
+
+eval:      ## eval from the extraction cache only, no model calls: make eval SPLIT=dev [LIMIT=3]
+	docker compose run --rm --build tools python -m eval.run --split $(SPLIT) $(if $(LIMIT),--limit $(LIMIT))
+
+eval-live: ## eval, LIVE model for the cases missing from the cache: make eval-live SPLIT=dev [LIMIT=3]
+	docker compose run --rm --build tools python -m eval.run --split $(SPLIT) --live $(if $(LIMIT),--limit $(LIMIT))

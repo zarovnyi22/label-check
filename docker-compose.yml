@@ -66,8 +66,13 @@ services:
     environment:
       # Scripts import `app` (settings): the repo root must be on the path.
       PYTHONPATH: /src
+      # The eval runner reads/writes the extraction cache in the demo database (as the api).
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/label_check
     volumes:
       - .:/src
+    depends_on:
+      db:
+        condition: service_healthy
     command: ["python", "-u", "scripts/spike_vision.py", "--help"]
 
 networks:
