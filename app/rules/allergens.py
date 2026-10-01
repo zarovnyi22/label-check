@@ -12,8 +12,8 @@ from typing import get_args
 
 from app.parsing import Ingredients, Mention, parse_ingredients
 from app.rules.allergen_dict import CATEGORY_NAMES_UK, EXCLUSION_PATTERNS, PATTERNS
-from app.rules.catalog import legal_ref
-from app.schemas import AllergenCategory, Evidence, Finding, LabelExtraction, ProductSpec, Status
+from app.rules.catalog import finding
+from app.schemas import AllergenCategory, Finding, LabelExtraction, ProductSpec, Status
 
 CATEGORIES: tuple[AllergenCategory, ...] = get_args(AllergenCategory)
 _MAY_CONTAIN_RE = re.compile(r"(?:може\s+(?:містити|вміщувати)|may\s+contain)[^.]*", re.I)
@@ -43,27 +43,6 @@ def find_allergens(text: str | None) -> list[AllergenHit]:
 
 def _name(category: AllergenCategory) -> str:
     return f"«{CATEGORY_NAMES_UK[category]}» ({category})"
-
-
-def _finding(
-    rule_id: str,
-    target: str | None,
-    status: Status,
-    message: str,
-    photo_index: int | None = None,
-    fragment: str | None = None,
-) -> Finding:
-    evidence = None
-    if photo_index is not None or fragment is not None:
-        evidence = Evidence(photo_index=photo_index, fragment=fragment)
-    return Finding(
-        rule_id=rule_id,
-        target=target,
-        status=status,
-        message=message,
-        evidence=evidence,
-        legal_ref=legal_ref(rule_id),
-    )
 
 
 @dataclass(frozen=True)
@@ -122,7 +101,7 @@ def check_emphasis(
         return []  # no ingredient list on the photos: LABEL-MISSING
     if not found:
         return [
-            _finding(
+            finding(
                 "ALG-EMPH",
                 None,
                 "not_applicable",
@@ -135,7 +114,7 @@ def check_emphasis(
         plain = [item for item in items if not item.emphasized]
         if not plain:
             findings.append(
-                _finding(
+                finding(
                     "ALG-EMPH",
                     category,
                     "pass",
@@ -156,7 +135,7 @@ def check_emphasis(
         if ing.marks_are_body:
             message += " Майже весь склад розмічено однаково — це стиль тексту, не виділення."
         findings.append(
-            _finding("ALG-EMPH", category, "needs_review", message, photo_index, _fragments(plain))
+            finding("ALG-EMPH", category, "needs_review", message, photo_index, _fragments(plain))
         )
     return findings
 
@@ -170,7 +149,7 @@ def check_spec_missing(
     """ALG-SPEC-MISSING: every allergen of the recipe is in the label's ingredient list."""
     if spec is None:
         return [
-            _finding(
+            finding(
                 "ALG-SPEC-MISSING",
                 None,
                 "not_checked",
@@ -183,7 +162,7 @@ def check_spec_missing(
             recipe.setdefault(category, []).append(ingredient.name)
     if not recipe:
         return [
-            _finding("ALG-SPEC-MISSING", None, "pass", "У рецептурі алергенів немає.", photo_index)
+            finding("ALG-SPEC-MISSING", None, "pass", "У рецептурі алергенів немає.", photo_index)
         ]
     findings = []
     for category in (c for c in CATEGORIES if c in recipe):
@@ -214,7 +193,7 @@ def check_spec_missing(
             )
             fragment = None
         findings.append(
-            _finding("ALG-SPEC-MISSING", category, status, message, photo_index, fragment)
+            finding("ALG-SPEC-MISSING", category, status, message, photo_index, fragment)
         )
     return findings
 
@@ -228,7 +207,7 @@ def check_spec_extra(
     """ALG-SPEC-EXTRA: an allergen on the label that the recipe does not have."""
     if spec is None:
         return [
-            _finding(
+            finding(
                 "ALG-SPEC-EXTRA",
                 None,
                 "not_checked",
@@ -241,7 +220,7 @@ def check_spec_extra(
     extra = [c for c in found if c not in recipe]
     if not extra:
         return [
-            _finding(
+            finding(
                 "ALG-SPEC-EXTRA",
                 None,
                 "pass",
@@ -250,7 +229,7 @@ def check_spec_extra(
             )
         ]
     return [
-        _finding(
+        finding(
             "ALG-SPEC-EXTRA",
             category,
             "needs_review",
@@ -280,7 +259,7 @@ def check_may_contain(
     """ALG-MAY-CONTAIN: the label's "may contain" vs the recipe's may_contain."""
     if spec is None:
         return [
-            _finding(
+            finding(
                 "ALG-MAY-CONTAIN",
                 None,
                 "not_checked",
@@ -296,7 +275,7 @@ def check_may_contain(
             if recipe
             else "«Може містити» немає ні на етикетці, ні в рецептурі."
         )
-        return [_finding("ALG-MAY-CONTAIN", None, "pass", message, photo_index, text)]
+        return [finding("ALG-MAY-CONTAIN", None, "pass", message, photo_index, text)]
     findings = []
     for category in CATEGORIES:
         if category in label and category not in recipe:
@@ -310,7 +289,7 @@ def check_may_contain(
         else:
             continue
         findings.append(
-            _finding("ALG-MAY-CONTAIN", category, "needs_review", message, photo_index, text)
+            finding("ALG-MAY-CONTAIN", category, "needs_review", message, photo_index, text)
         )
     return findings
 
