@@ -97,8 +97,12 @@ Groq `qwen/qwen3.8-27b`, знайдений у B0 (див. «Рішення», �
   як на фото; `parse_amount` у коді дає `{value, qualifier: "lt"|"eq"|"trace"}`. Кома —
   десятковий роздільник. Нерозбірне → `null` → `needs_review`.
 - **Виділення — markdown-розміткою в тексті складу** (`сухе **молоко**`), не булевими
-  прапорцями по сегментах. ВЕЛИКІ ЛІТЕРИ визначає код. Якщо модель взагалі не може
-  розрізнити шрифт (`emphasis_visible: false|null`) → `ALG-EMPH` = `needs_review`.
+  прапорцями по сегментах. ВЕЛИКІ ЛІТЕРИ визначає код. `emphasis_resolvable` — лише чи
+  дозволяє фото розрізнити шрифт; алерген без виділення: `true` → `violation`,
+  `false|null` → `needs_review`.
+- **Обрізане/нечитабельне — маркер `[…]`** на його місці, ніколи не дописувати й не
+  пропускати мовчки; `[…]` у складі → `LABEL-TRUNCATED` = `needs_review`. `quality` від
+  моделі — лише підказка.
 - **Твердження шукає код**, а не модель: модель транскрибує весь текст упаковки поза складом
   і таблицею (`other_text`), правила знаходять твердження регулярками (uk + en).
 - **«Невідомо ≠ можна».** Нечитабельне поле, погане фото, відсутній бік упаковки, таблиця
@@ -147,7 +151,7 @@ Groq `qwen/qwen3.8-27b`, знайдений у B0 (див. «Рішення», �
 - `POST /checks` (multipart: `images` 1–4, `spec` — необов'язковий JSON `ProductSpec`),
   `GET /checks/{id}`, `GET /rules`, `GET /health`.
 - `LabelExtraction` — лише транскрипція: `photos[{index, side, quality}]`,
-  `emphasis_visible`, `ingredients_marked` (склад з `**…**`), `may_contain_text`,
+  `emphasis_resolvable`, `ingredients_marked` (склад з `**…**`, `[…]`), `may_contain_text`,
   `nutrition` (рядки як на фото + `per`), `other_text[]`; усе з `photo_index`, усе може
   бути `null`.
 - `finding = {rule_id, target, status, message, evidence, legal_ref}`; статуси
@@ -156,7 +160,8 @@ Groq `qwen/qwen3.8-27b`, знайдений у B0 (див. «Рішення», �
 
 ## Правила (перелік; пороги, словник і деталі — `docs/SPEC.md` §2)
 
-- Загальні: `IMG-QUALITY`, `LABEL-MISSING`, `SIDE-FRONT-MISSING`, `NUT-PER`.
+- Загальні: `IMG-QUALITY`, `LABEL-MISSING`, `LABEL-TRUNCATED`, `SIDE-FRONT-MISSING`,
+  `NUT-PER`.
 - Алергени: `ALG-EMPH`, `ALG-SPEC-MISSING`, `ALG-SPEC-EXTRA`, `ALG-MAY-CONTAIN`.
 - Твердження: 13 id (`sugar_free`, `protein_source`…) + `CLAIM-UNVERIFIABLE`.
 - Узгодженість: `NUT-ENERGY`, `NUT-KJ`, `NUT-SUBSETS`, `NUT-SPEC`.

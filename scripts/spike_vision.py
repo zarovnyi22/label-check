@@ -36,7 +36,7 @@ Return ONE JSON object with exactly these keys (any value may be null):
 {
   "photos": [{"index": 0, "side": "front|back|side|unknown",
               "quality": "ok|blurry|glare|cropped|not_a_label", "note": "short or null"}],
-  "emphasis_visible": true | false | null,
+  "emphasis_resolvable": true | false | null,
   "ingredients_marked": {"text": "...", "photo_index": 0} | null,
   "may_contain_text": {"text": "...", "photo_index": 0} | null,
   "nutrition": {"per": "100g|100ml|portion|prepared|null", "portion_text": "... or null",
@@ -50,18 +50,25 @@ Rules:
 - Language: if the ingredients are printed in several languages, transcribe the Ukrainian
   block only (other languages are ignored).
 - ingredients_marked: the ingredient list verbatim, starting after "Склад:", letter case
-  as printed. Wrap every fragment printed in a DIFFERENT font weight or style (bold,
-  underlined, coloured) in **double asterisks**. Mark nothing else. Do not mark words
-  just because they are allergens. Do not mark text that is in capitals but same weight.
-- emphasis_visible: true if you can tell font weights apart in the ingredient list,
-  false if the photo does not let you see it, null if there is no ingredient list.
+  as printed. Compare each word with the surrounding plain text: wrap every fragment
+  printed in a different weight or style - bold (thicker strokes), italic, bold italic,
+  underlined, a different colour - in **double asterisks**, even a single word inside a
+  phrase ("борошно **пшеничне**"). Mark nothing else. Do not mark words just because they
+  are allergens. Capitals in the same weight are not emphasis: keep the case, no stars.
+- emphasis_resolvable: can this photo show font weight/style differences in the
+  ingredient list at all? true if sharp enough to tell bold from regular (whether or not
+  anything is bold), false if blur, glare or low resolution make it impossible, null if
+  there is no ingredient list. It is about the photo, not about the label.
 - may_contain_text: the "may contain / може містити" sentence verbatim, or null.
 - nutrition: values as STRINGS exactly as printed, with units and signs ("0,5 г", "<0,5 г",
   "120 кДж / 28 ккал"). Keep the comma. Use the per-100 g/ml column if there is one;
   "per" says which column you copied. A value you cannot read is null; never guess.
 - other_text: every other printed line (name, claims, slogans, storage, producer), one
   item per line or phrase, verbatim. Do not repeat the ingredients or nutrition table.
-- Anything unreadable, cut off or hidden: null (or omit the fragment) - never invent.
+- Cut off by the photo edge, hidden by a fold or glare, or unreadable: write "[…]" in
+  its place, exactly where the missing text is ("[…]укор, борошно", "кислот[…]"). Never
+  complete a word or list from memory, from another language block or from what is
+  typical; never skip a gap silently. A field unreadable as a whole is null.
 - photos.quality: "cropped" if text needed above runs off the edge.
 """
 

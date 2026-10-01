@@ -8,7 +8,8 @@
   порозі 0.5 — pass); CLAIM-UNVERIFIABLE; твердження без потрібного нутрієнта →
   needs_review.
 - `app/rules/nutrition.py`: NUT-ENERGY, NUT-KJ, NUT-SUBSETS, NUT-SPEC.
-- `app/rules/general.py`: IMG-QUALITY, LABEL-MISSING, SIDE-FRONT-MISSING, NUT-PER.
+- `app/rules/general.py`: IMG-QUALITY, LABEL-MISSING, LABEL-TRUNCATED, SIDE-FRONT-MISSING,
+  NUT-PER.
 - `app/rules/engine.py`: run_rules(extraction, spec|None) -> (findings, verdict);
   fail > needs_review > incomplete > pass; RULES_VERSION.
 - catalog.py доповнити; `GET /rules`.

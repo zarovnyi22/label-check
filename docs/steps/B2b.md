@@ -10,7 +10,7 @@
   ALG-SPEC-MISSING, ALG-SPEC-EXTRA, ALG-MAY-CONTAIN; target = категорія; evidence з
   дослівним фрагментом і photo_index; message українською з коду.
 - `app/rules/catalog.py`: rule_id → назва, legal_ref (поки алергени).
-- Тести: кожне правило × (pass / violation / needs_review при emphasis_visible≠true /
+- Тести: кожне правило × (pass / violation / violation при emphasis_resolvable=true і needs_review при false/null /
   not_checked без spec); виключення; «сироватка», «лактоза», «меланж», «пшеничне
   борошно», «борошно пшеничне», «Wheat flour»; алерген лише в «може містити» не вимагає
   виділення; склад з проби (NOTES.md).

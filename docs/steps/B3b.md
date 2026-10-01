@@ -3,8 +3,8 @@
 Прочитай `docs/SPEC.md` §1 і §3, `docs/NOTES.md`.
 - `app/vision/prompt.py`: промпт зі spike, доведений до ладу з урахуванням NOTES.md;
   PROMPT_VERSION. Модель ЛИШЕ транскрибує: дослівно, без перекладу і «виправлень», числа
-  як на фото, виділене шрифтом — у `**…**`, нечитабельне → null, emphasis_visible чесно,
-  side і quality для кожного фото.
+  як на фото, виділене шрифтом — у `**…**`, обрізане/нечитабельне → `[…]` (поле повністю
+  → null), emphasis_resolvable чесно, side і quality для кожного фото.
 - `app/extraction.py`: кеш (ключ з SPEC §3); валідація Pydantic; невалідний JSON — один
   повтор з текстом помилки, далі vision_bad_output.
 - `app/checks.py`: run_check(images, spec) — кроки 1–5; її ж викличе eval.
