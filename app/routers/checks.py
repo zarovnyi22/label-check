@@ -47,7 +47,7 @@ ERROR_RESPONSES = {
     },
     504: {
         "description": "Модель не відповіла за VISION_DEADLINE_SECONDS",
-        **_error("vision_timeout", "Модель не відповіла за 90 с (VISION_DEADLINE_SECONDS)"),
+        **_error("vision_timeout", "Модель не відповіла за 120 с (VISION_DEADLINE_SECONDS)"),
     },
 }
 

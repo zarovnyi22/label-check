@@ -16,8 +16,8 @@ class Settings(BaseSettings):
     vision_model: str = "gemini-3.5-flash-lite"
     groq_api_key: str = ""
     groq_vision_model: str = "qwen/qwen3.8-27b"
-    vision_timeout_seconds: float = 30.0  # one HTTP attempt
-    vision_deadline_seconds: float = 90.0  # the whole extraction: retries, fallback, re-ask
+    vision_timeout_seconds: float = 45.0  # one HTTP attempt
+    vision_deadline_seconds: float = 120.0  # the whole extraction: retries, fallback, re-ask
     log_level: Literal["DEBUG", "INFO", "WARNING", "ERROR"] = "INFO"
 
     @model_validator(mode="after")
