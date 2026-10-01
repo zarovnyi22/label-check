@@ -1,0 +1,17 @@
+# secrets
+.env
+
+# real packaging photos stay local
+samples/
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# editors / OS
+.idea/
+.vscode/
+.DS_Store

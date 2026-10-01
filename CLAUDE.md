@@ -40,6 +40,14 @@
    порівняльні («на 30 % менше», «легкий») і нерегульовані («натуральний», «корисний») →
    `needs_review` з поясненням, не автоматичний вердикт.
 6. Фронтенду немає — демо через Swagger UI (`/docs`).
+7. **Моделі** (B0, перевірено в AI Studio і Groq 01.10.2026):
+   - основна — `VISION_MODEL=gemini-3.5-flash-lite` (free tier: 15 RPM, 250K TPM, 500 RPD;
+     `gemini-2.5-flash` не беремо — лише 20 RPD);
+   - запасна — Groq `qwen/qwen3.8-27b` (`GROQ_VISION_MODEL`; єдина vision-модель на Groq,
+     ≤ 3 фото на запит, ≈ 2048 токенів на фото) — лише для запитів з ≤ 3 фото; 4 фото +
+     основна недоступна → `vision_rate_limited`. `VISION_FALLBACK_PROVIDER` за
+     замовчуванням порожній; сам fallback — у B3a;
+   - число довіри міряється лише на основній моделі; пауза між запитами eval ≥ 5 с.
 
 ## Архітектура: модель читає, код вирішує
 
@@ -78,9 +86,7 @@
 Vision — за інтерфейсом `VisionClient.extract(images, prompt) -> VisionResult`
 (`data`, `raw_text`, `usage`, `model`). Провайдер через `VISION_PROVIDER`.
 **Запасний провайдер** (`VISION_FALLBACK_PROVIDER`, як `LLM_FALLBACK_PROVIDER` у `pet`) —
-лише якщо в B0 знайдено безкоштовну vision-модель без картки (перевірити наживо, не
-вигадувати; у `pet` Llama на Groq уже недоступна, `gpt-oss` не бачить зображень).
-Не знайшли — чесно в README.
+Groq `qwen/qwen3.8-27b`, знайдений у B0 (див. «Рішення», п. 7).
 
 ## Жорсткі правила (не порушувати)
 

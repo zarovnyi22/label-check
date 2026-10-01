@@ -1,0 +1,63 @@
+services:
+  db:
+    # Pinned minor version (16-bookworm floats): bump deliberately.
+    image: postgres:16.15-bookworm
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: label_check
+    ports:
+      # Host access for local tools only: not published on the LAN with the default password.
+      # 5433, not 5432: the pet project's database already listens there.
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks: [default, offline]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d label_check"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+
+  api:
+    build: .
+    env_file: .env
+    environment:
+      # .env points at localhost:5433 for host-side runs; inside compose the DB host is `db`.
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/label_check
+    ports:
+      - "127.0.0.1:8010:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # ruff + pytest: `docker compose run --rm test` (append a command to override, e.g.
+  # `docker compose run --rm test pytest -q tests/test_health.py`).
+  # Behind a profile, so `docker compose up` never starts it. Runs offline and keyless: only the
+  # `offline` network (internal: db reachable, internet not), vision keys forced empty.
+  test:
+    profiles: ["test"]
+    build:
+      context: .
+      target: dev
+    environment:
+      # Env vars win over the mounted .env (which points at localhost and holds real keys).
+      # A separate *_test database: the fixtures create it and truncate it before each test.
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/label_check_test
+      GEMINI_API_KEY: ""
+      GROQ_API_KEY: ""
+      VISION_FALLBACK_PROVIDER: ""
+      TEST_NETWORK_ISOLATED: "1"
+    networks: [offline]
+    volumes:
+      - .:/src
+    depends_on:
+      db:
+        condition: service_healthy
+
+networks:
+  offline:
+    internal: true
+
+volumes:
+  pgdata:

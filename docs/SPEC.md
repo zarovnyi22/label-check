@@ -121,6 +121,8 @@ CREATE TABLE checks (
   prompt_version TEXT,
   rules_version  TEXT,
   usage          JSONB,                  -- токени з відповіді моделі
+  raw_text       TEXT,                   -- сира відповідь моделі; зберігається і при помилці
+                                         -- моделі (vision_bad_output), для аудиту
   cache_hit      BOOLEAN,
   duration_ms    INT
 );
@@ -131,7 +133,9 @@ CREATE TABLE check_images (
   PRIMARY KEY (check_id, idx)
 );
 CREATE TABLE extraction_cache (
-  cache_key TEXT PRIMARY KEY,            -- sha256(фото) + PROMPT_VERSION + модель
+  cache_key TEXT PRIMARY KEY,            -- sha256(конкатенація sha256 фото в порядку
+                                         -- завантаження) + PROMPT_VERSION + модель;
+                                         -- порядок важливий: від нього залежить photo_index
   prompt_version TEXT, model TEXT,
   extraction JSONB NOT NULL, raw_text TEXT, usage JSONB,
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
