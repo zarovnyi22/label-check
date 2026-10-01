@@ -1,0 +1,27 @@
+{
+  "form": "solid",
+  "ingredients": [
+    {
+      "name": "шоколад молочний",
+      "allergens": []
+    },
+    {
+      "name": "кунжут білий",
+      "allergens": [
+        "sesame"
+      ]
+    },
+    {
+      "name": "начинка 36%",
+      "allergens": []
+    },
+    {
+      "name": "печиво з какао",
+      "allergens": []
+    }
+  ],
+  "may_contain": [
+    "nuts",
+    "peanuts"
+  ]
+}

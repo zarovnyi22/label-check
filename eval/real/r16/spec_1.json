@@ -1,0 +1,38 @@
+{
+  "form": "solid",
+  "ingredients": [
+    {
+      "name": "начинка",
+      "allergens": []
+    },
+    {
+      "name": "стружка м'якоті кокосу",
+      "allergens": []
+    },
+    {
+      "name": "глюкозний сироп",
+      "allergens": []
+    },
+    {
+      "name": "цукор",
+      "allergens": []
+    },
+    {
+      "name": "діоксид сірки E220",
+      "allergens": [
+        "sulphites"
+      ]
+    },
+    {
+      "name": "емульгатор",
+      "allergens": []
+    },
+    {
+      "name": "регулятор вологості",
+      "allergens": []
+    }
+  ],
+  "may_contain": [
+    "cereals"
+  ]
+}

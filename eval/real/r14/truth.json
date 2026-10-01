@@ -1,0 +1,87 @@
+{
+  "violations": [],
+  "expected_flags": [],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "ok",
+        "note": "strip with the ingredients line"
+      },
+      {
+        "index": 2,
+        "side": "back",
+        "quality": "ok",
+        "note": "strip with nutrition in running text"
+      }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+      "text": "**СИР** КИСЛОМОЛОЧНИЙ, **МАСЛО** ВЕРШКОВЕ, ВОДА ПИТНА, СУХЕ ЗНЕЖИРЕНЕ **МОЛОКО**, СІЛЬ КУХОННА, ЕМУЛЬГАТОР ПОЛІФОСФАТ НАТРІЮ, СТАБІЛІЗАТОР (КАРРАГІНАН, ЦЕЛЮЛОЗНА КАМІДЬ, ХЛОРИД НАТРІЮ), КОНСЕРВАНТ СОРБІНОВА КИСЛОТА.",
+      "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": {
+      "per": "100g",
+      "portion_text": null,
+      "energy": "1048 кДж (kJ) (253 ккал (kcal))",
+      "fat": "22,5 г (g)",
+      "saturates": "15,5 г (g)",
+      "carbs": "3,9 г (g)",
+      "sugars": "3,9 г (g)",
+      "fibre": null,
+      "protein": "8,8 г (g)",
+      "salt": "0,73 г (g)",
+      "photo_index": 2
+    },
+    "other_text": [
+      {
+        "text": "Біло",
+        "photo_index": 0
+      },
+      {
+        "text": "FILLADEL ORIGINAL",
+        "photo_index": 0
+      },
+      {
+        "text": "CREAM CHEESE",
+        "photo_index": 0
+      },
+      {
+        "text": "УМОВИ ЗБЕРІГАННЯ: ЗА ТЕМПЕРАТУРИ ВІД 0°C ДО 4°C ПРИ ВІДНОСНІЙ ВОЛОГОСТІ ПОВІТРЯ НЕ БІЛЬШЕ 85%. ДАТА «ВЖИТИ ДО» ТА НОМЕР ПАРТІЇ ВКАЗАНІ НА БОКОВІЙ ЧАСТИНІ УПАКОВКИ.",
+        "photo_index": 2
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": false,
+    "source": "Open Food Facts 4820019493855 (Крем-сир 60% Original Filladel), CC BY-SA 3.0, https://world.openfoodfacts.org/product/4820019493855",
+    "quality": "clean",
+    "label_allergens": [
+      "milk"
+    ],
+    "label_may_contain": [],
+    "oov": [],
+    "ambiguous": [],
+    "notes": "All-caps label; allergen words additionally bold (СИР, МАСЛО, МОЛОКО). Nutrition is running text after the ingredients, not a table. Product name on the front only in English (Ukrainian name presumably on the side, not photographed) - not judged.",
+    "semi_synthetic": "spec_variants: recipe + one allergen not on the label"
+  },
+  "spec_variants": [
+    {
+      "spec": "spec_1.json",
+      "violations": [
+        {
+          "rule_id": "ALG-SPEC-MISSING",
+          "target": "lupin"
+        }
+      ]
+    }
+  ]
+}

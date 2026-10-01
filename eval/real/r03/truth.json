@@ -141,7 +141,8 @@
     ],
     "oov": [],
     "notes": "The only nutrition panel photographed is a US-style (EN/AR) 'Nutrition Facts' per serving (33 g): no kJ, no salt (sodium only), not per 100 g -> LABEL-MISSING nutrition (and NUT-PER). Ingredient hyphenations joined ('пшенич-не', 'гідро-карбонат'). 'кислота молочна' is lactic acid, not milk. Glare on the ROSHEN logo on the front.",
-    "semi_synthetic": "spec_variants: recipe + one allergen not on the label"
+    "semi_synthetic": "spec_variants: recipe + one allergen not on the label",
+    "ambiguous": []
   },
   "spec_variants": [
     {

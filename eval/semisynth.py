@@ -2,7 +2,7 @@
 
     python -m eval.semisynth                                     (make semisynth)
 
-For every eval/real/<id>/truth.json: 1–2 recipes spec_<k>.json = the label's own ingredients
+For every eval/real*/<id>/truth.json: 1–2 recipes spec_<k>.json = the label's own ingredients
 + ONE allergen the label does not have (meta.label_allergens / label_may_contain, set by the
 human labeller). With that recipe the label really misses the allergen, so truth.spec_variants
 gets {spec, violations: [ALG-SPEC-MISSING / <category>]} — added to truth.violations when the
@@ -18,7 +18,8 @@ from app.parsing import parse_ingredients
 from app.schemas import AllergenCategory, ProductSpec
 from eval.generate import write_json
 
-REAL = Path(__file__).resolve().parent / "real"
+# the main real set and the out-of-market group (informational, not in the trust number)
+REAL_DIRS = [Path(__file__).resolve().parent / d for d in ("real", "real_out_of_scope")]
 # The recipe ingredient that brings the missing allergen: its `allergens` declares it, so the
 # name never decides (recipe_allergens reads both).
 EXTRA: dict[AllergenCategory, str] = {
@@ -50,6 +51,8 @@ def label_ingredients(extraction: dict) -> list[dict]:
 def variants(case_id: str, truth: dict) -> list[tuple[dict, AllergenCategory]]:
     meta = truth["meta"]
     present = set(meta.get("label_allergens", [])) | set(meta.get("label_may_contain", []))
+    # a disputed allergen (meta.ambiguous, e.g. "ароматизатор гірчиці") is not "absent"
+    present |= {a["target"] for a in meta.get("ambiguous", [])}
     absent = [c for c in EXTRA if c not in present]
     rng = random.Random(f"semisynth:{case_id}")
     out = []
@@ -67,7 +70,7 @@ def variants(case_id: str, truth: dict) -> list[tuple[dict, AllergenCategory]]:
 
 
 def main() -> None:
-    cases = sorted(p.parent for p in REAL.glob("*/truth.json"))
+    cases = sorted(p.parent for real in REAL_DIRS for p in real.glob("*/truth.json"))
     for folder in cases:
         truth = json.loads((folder / "truth.json").read_text(encoding="utf-8"))
         for old in folder.glob("spec_*.json"):

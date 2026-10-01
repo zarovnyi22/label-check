@@ -1,0 +1,114 @@
+{
+  "violations": [],
+  "expected_flags": [],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": "whole bottle, label text small"
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "ok",
+        "note": "crop of ingredients, top line cut"
+      },
+      {
+        "index": 2,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+      "text": "ВОДА, СИРОП ГЛЮКОЗНО-ФРУКТОЗНИЙ З ЦУКРОМ БІЛИМ (G**) АБО ЦУКОР БІЛИЙ, СІК ЯБЛУЧНИЙ КОНЦЕНТРОВАНИЙ (ВМІСТ СОКУ В ГОТОВОМУ НАПОЇ 10 %), РЕГУЛЯТОР КИСЛОТНОСТІ КИСЛОТА ЛИМОННА, НАТУРАЛЬНА АРОМАТИЧНА РЕЧОВИНА «АРОМА» ЯБЛУЧНА НАТУРАЛЬНА, НАСТОЯНКА ЕХІНАЦЕЇ ПУРПУРОВОЇ, КОНСЕРВАНТ БЕНЗОАТ НАТРІЮ, АНТИОКСИДАНТ КИСЛОТА АСКОРБІНОВА.",
+      "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": {
+      "per": "100g",
+      "portion_text": null,
+      "energy": "155 кДж (kJ) (37 ккал (kcal))",
+      "fat": "0 г (g)",
+      "saturates": "0 г (g)",
+      "carbs": "9,6 г (g)",
+      "sugars": "9,6 г (g)",
+      "fibre": null,
+      "protein": "0 г (g)",
+      "salt": "< 0,1 г (g)",
+      "photo_index": 2
+    },
+    "other_text": [
+      {
+        "text": "Живчик",
+        "photo_index": 0
+      },
+      {
+        "text": "З СОКОМ ЯБЛУКА",
+        "photo_index": 0
+      },
+      {
+        "text": "МІСТИТЬ СІК ТА ЕХІНАЦЕЮ ВІТАМІНИ ТА МІКРОЕЛЕМЕНТИ",
+        "photo_index": 0
+      },
+      {
+        "text": "НАПІЙ БЕЗАЛКОГОЛЬНИЙ СОКОВИЙ СИЛЬНОГАЗОВАНИЙ",
+        "photo_index": 0
+      },
+      {
+        "text": "[…] ПРЯМИХ ПРОМЕНІВ, ДОПУСКАЄТЬСЯ ОСАД НАТУРАЛЬНОЇ СИРОВИНИ.",
+        "photo_index": 1
+      },
+      {
+        "text": "* НАЯВНІСТЬ ЛІТЕРИ (G) В КОДУВАННІ СВІДЧИТЬ ПРО […]",
+        "photo_index": 1
+      },
+      {
+        "text": "ГАРЯЧА ЛІНІЯ (ТЕЛЕФОН ВИРОБНИКІВ): 0 800 507 300. УСІ ДЗВІНКИ ЗІ СТАЦІОНАРНИХ ТЕЛЕФОНІВ В МЕЖАХ УКРАЇНИ БЕЗКОШТОВНІ. ПРОДУКТ СЕРТИФІКОВАНИЙ.",
+        "photo_index": 2
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": false,
+    "source": "Open Food Facts 4820000195423 (Напій безалкогольний сильногазований соковий з соком яблука), CC BY-SA 3.0, https://world.openfoodfacts.org/product/4820000195423",
+    "quality": "clean",
+    "label_allergens": [],
+    "label_may_contain": [],
+    "oov": [
+      "МІСТИТЬ ... ВІТАМІНИ ТА МІКРОЕЛЕМЕНТИ (nutrition claim not matched by claims.py)"
+    ],
+    "ambiguous": [
+      {
+        "rule_id": "CLAIM-UNVERIFIABLE",
+        "target": "nutrition_other",
+        "why": "'contains vitamins and microelements' with no vitamins in the table; claim type outside the 13 automated ones"
+      }
+    ],
+    "notes": "Drink, table per 100 g of drink. No allergens. Liquid but table header says 100 г - per kept as 100g.",
+    "semi_synthetic": "spec_variants: recipe + one allergen not on the label"
+  },
+  "spec_variants": [
+    {
+      "spec": "spec_1.json",
+      "violations": [
+        {
+          "rule_id": "ALG-SPEC-MISSING",
+          "target": "lupin"
+        }
+      ]
+    },
+    {
+      "spec": "spec_2.json",
+      "violations": [
+        {
+          "rule_id": "ALG-SPEC-MISSING",
+          "target": "mustard"
+        }
+      ]
+    }
+  ]
+}

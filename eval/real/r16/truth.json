@@ -1,0 +1,122 @@
+{
+  "violations": [],
+  "expected_flags": [
+    {
+      "rule_id": "LABEL-TRUNCATED",
+      "target": "ingredients"
+    },
+    {
+      "rule_id": "IMG-QUALITY",
+      "target": "photo_1"
+    }
+  ],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": "small energy block at the left end, low resolution"
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "cropped",
+        "note": "crumpled wrapper, right end of every ingredient line cut"
+      },
+      {
+        "index": 2,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+      "text": "начинка (64%): стружка м'якоті кокосу (21%), глюкозний сироп, цукор, емульгатор (моно- і дигліцериди жирних кислот), регулятор вологості (гліце[…] молочний шоколад (36%): цукор, какао-масло, какао терте, сухе знежирене **молоко**, **молочний перміат**, **молочний** жир, олія пальмова, емульгатор (соєвий […]",
+      "photo_index": 1
+    },
+    "may_contain_text": {
+      "text": "МОЖЕ МІСТИТИ НЕЗНАЧНУ КІЛЬКІСТЬ ГЛЮТЕНУ.",
+      "photo_index": 1
+    },
+    "nutrition": {
+      "per": "100g",
+      "portion_text": "на порцію 28,5 g(г) (*)",
+      "energy": "2036 kJ(кДж) / 487 kcal(ккал)",
+      "fat": "26 g(г)",
+      "saturates": "21 g(г)",
+      "carbs": "60 g(г)",
+      "sugars": "48 g(г)",
+      "fibre": "1,6 g(г)",
+      "protein": "3,8 g(г)",
+      "salt": "0,25 g(г)",
+      "photo_index": 2
+    },
+    "other_text": [
+      {
+        "text": "BOUNTY",
+        "photo_index": 0
+      },
+      {
+        "text": "1 Bounty = 28,5 g(г)",
+        "photo_index": 0
+      },
+      {
+        "text": "[…] 100 g(г) […] / 487 kcal(ккал)",
+        "photo_index": 0
+      },
+      {
+        "text": "Молочний шоколад містить: загальна кількість сухих какао-продуктів — не менше 25%, в т.ч. сухих знежирених какао-продуктів — не менше 2,5%; […] — не менше 14%; молочного жиру — не менше 3,5%.",
+        "photo_index": 1
+      },
+      {
+        "text": "Без ГМО.",
+        "photo_index": 1
+      },
+      {
+        "text": "Молочний шоколад містить рослинні жири у доповненні до какао-масла.",
+        "photo_index": 1
+      },
+      {
+        "text": "[…] нетто: (2 x 28,5 g(г)) = 57 g(г)",
+        "photo_index": 2
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": false,
+    "source": "Open Food Facts 5000159558259 (Шоколадний батончик Bounty молочний), CC BY-SA 3.0, https://world.openfoodfacts.org/product/5000159558259",
+    "quality": "degraded",
+    "label_allergens": [
+      "milk",
+      "soybeans"
+    ],
+    "label_may_contain": [
+      "cereals"
+    ],
+    "oov": [
+      "глютену (may contain: cereal not named)"
+    ],
+    "ambiguous": [
+      {
+        "rule_id": "ALG-EMPH",
+        "target": "soybeans",
+        "why": "'соєвий' sits at the cut, crumpled edge in italic-looking print; bold cannot be confirmed"
+      }
+    ],
+    "notes": "Real photo problem: ingredient lines run off the crumpled right edge -> LABEL-TRUNCATED + IMG-QUALITY photo_1 expected. Nutrition per 100 g and per portion; transcribed the 100 g column, energy kJ and kcal are separate rows (joined here). 'Без ГМО' is an unregulated statement (CLAIM-UNVERIFIABLE needs_review is load, not a violation).",
+    "semi_synthetic": "spec_variants: recipe + one allergen not on the label"
+  },
+  "spec_variants": [
+    {
+      "spec": "spec_1.json",
+      "violations": [
+        {
+          "rule_id": "ALG-SPEC-MISSING",
+          "target": "sulphites"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "violations": [],
+  "expected_flags": [],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "ok",
+        "note": "crop of the ingredients block"
+      },
+      {
+        "index": 2,
+        "side": "back",
+        "quality": "ok",
+        "note": "crop of the nutrition table"
+      }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+      "text": "молоко коров'яче нормалізоване, закваска для йогурту (Streptococcus thermophilus, Lactobacillus delbrueckii підвид bulgaricus).",
+      "photo_index": 1
+    },
+    "may_contain_text": null,
+    "nutrition": {
+      "per": "100g",
+      "portion_text": null,
+      "energy": "207/49",
+      "fat": "1,6",
+      "saturates": "1,0",
+      "carbs": "4,7",
+      "sugars": "4,7",
+      "fibre": null,
+      "protein": "4,0",
+      "salt": "0,1",
+      "photo_index": 2
+    },
+    "other_text": [
+      {
+        "text": "МОЛОКІЯ",
+        "photo_index": 0
+      },
+      {
+        "text": "ЙОГУРТ БІЛИЙ ГУСТИЙ",
+        "photo_index": 0
+      },
+      {
+        "text": "1,6% ЖИРУ",
+        "photo_index": 0
+      },
+      {
+        "text": "БЕЗ ДОДАВАННЯ ЦУКРУ",
+        "photo_index": 0
+      },
+      {
+        "text": "сила жити в ресурсі",
+        "photo_index": 0
+      },
+      {
+        "text": "300g(г)",
+        "photo_index": 0
+      },
+      {
+        "text": "ЙОГУРТ \"БІЛИЙ\" 1,6 % ЖИРУ, ТУ У 15.5-25422297-004:2011. ГУСТИЙ",
+        "photo_index": 1
+      },
+      {
+        "text": "* Наяв[…]",
+        "photo_index": 2
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": false,
+    "source": "Open Food Facts 4820045704130 (Йогурт \"Білий\" густий, 1.6% жиру), CC BY-SA 3.0, https://world.openfoodfacts.org/product/4820045704130",
+    "quality": "clean",
+    "label_allergens": [
+      "milk"
+    ],
+    "label_may_contain": [],
+    "oov": [],
+    "ambiguous": [
+      {
+        "rule_id": "ALG-EMPH",
+        "target": "milk",
+        "why": "whole ingredient list printed in the same heavy font; emphasis of milk cannot be judged, product name is itself the allergen"
+      },
+      {
+        "rule_id": "no_added_sugar",
+        "target": "no_added_sugar",
+        "why": "'містить природні цукри' not on the cropped photos; may be elsewhere on the cup"
+      }
+    ],
+    "notes": "Energy printed as '207/49' (kJ/kcal) per header. Footnote under the table (salt from natural sodium) cut. No-added-sugar claim with 4.7 g natural lactose sugars; natural-sugars statement not visible on these crops -> ambiguous, not a violation.",
+    "semi_synthetic": "spec_variants: recipe + one allergen not on the label"
+  },
+  "spec_variants": [
+    {
+      "spec": "spec_1.json",
+      "violations": [
+        {
+          "rule_id": "ALG-SPEC-MISSING",
+          "target": "soybeans"
+        }
+      ]
+    }
+  ]
+}

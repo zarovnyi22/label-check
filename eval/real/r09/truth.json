@@ -114,7 +114,8 @@
     "label_may_contain": [],
     "oov": [],
     "notes": "Natural mineral water (Georgian label only): shows mineral composition, no ingredient list and no nutrition table. Legally natural mineral water is exempt from the nutrition declaration (Reg. 1169/2011 Annex V) and arguably from the ingredient list, but the service has no exemption logic, so LABEL-MISSING is the expected (and safe) output. Georgian transcription is approximate. Photo 1 is a blurry duplicate of photo 2.",
-    "semi_synthetic": "spec_variants: recipe + one allergen not on the label"
+    "semi_synthetic": "spec_variants: recipe + one allergen not on the label",
+    "ambiguous": []
   },
   "spec_variants": [
     {

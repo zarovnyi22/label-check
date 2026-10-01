@@ -1,0 +1,44 @@
+{
+  "form": "solid",
+  "ingredients": [
+    {
+      "name": "СИР КИСЛОМОЛОЧНИЙ",
+      "allergens": []
+    },
+    {
+      "name": "МАСЛО ВЕРШКОВЕ",
+      "allergens": []
+    },
+    {
+      "name": "ВОДА ПИТНА",
+      "allergens": []
+    },
+    {
+      "name": "люпинове борошно",
+      "allergens": [
+        "lupin"
+      ]
+    },
+    {
+      "name": "СУХЕ ЗНЕЖИРЕНЕ МОЛОКО",
+      "allergens": []
+    },
+    {
+      "name": "СІЛЬ КУХОННА",
+      "allergens": []
+    },
+    {
+      "name": "ЕМУЛЬГАТОР ПОЛІФОСФАТ НАТРІЮ",
+      "allergens": []
+    },
+    {
+      "name": "СТАБІЛІЗАТОР",
+      "allergens": []
+    },
+    {
+      "name": "КОНСЕРВАНТ СОРБІНОВА КИСЛОТА",
+      "allergens": []
+    }
+  ],
+  "may_contain": []
+}

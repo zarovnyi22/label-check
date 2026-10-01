@@ -1,0 +1,131 @@
+{
+  "violations": [],
+  "expected_flags": [],
+  "extraction": {
+    "photos": [
+      {
+        "index": 0,
+        "side": "front",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 1,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      },
+      {
+        "index": 2,
+        "side": "back",
+        "quality": "ok",
+        "note": null
+      }
+    ],
+    "emphasis_resolvable": true,
+    "ingredients_marked": {
+      "text": "шоколад молочний (цукор, какао-масло, **молоко** сухе незбиране, какао терте, **молоко** сухе знежирене, сироватка **молочна** суха, емульгатор лецитин **соєвий**, сіль кухонна, ароматизатор ванілін. Мінімальний вміст какао-продуктів 30%, молочних продуктів 17%); начинка 36% (цукор, жир рослинний (олії пальмова, пальмоядрова), **молоко** сухе знежирене, **молоко** сухе незбиране, жир **молочний**, емульгатор лецитин **соєвий**), **печиво** з какао (14%) (борошно **пшеничне**, цукор, олія соняшникова, какао порошок зі зниженим вмістом жиру (5,2%), сироватка **молочна** суха, розпушувачі тіста (бікарбонат амонію, бікарбонат натрію), емульгатор (концентрат фосфатидний соняшниковий), сіль кухонна, ароматизатор ванілін, регулятор кислотності (кислота лимонна), агенти для обробки борошна (натрій фосфорнокислий, **метабісульфіт** натрію)).",
+      "photo_index": 1
+    },
+    "may_contain_text": {
+      "text": "Може містити сліди **горіхів (фундук, мигдаль, кеш'ю)**, **арахіс**.",
+      "photo_index": 1
+    },
+    "nutrition": {
+      "per": "100g",
+      "portion_text": null,
+      "energy": "2240 kJ (кДж) / 536 kcal (ккал)",
+      "fat": "30,6 g (г)",
+      "saturates": "18,0 g (г)",
+      "carbs": "56,4 g (г)",
+      "sugars": "45,8 g (г)",
+      "fibre": "1,7 g (г)",
+      "protein": "7,9 g (г)",
+      "salt": "0,2 g (г)",
+      "photo_index": 2
+    },
+    "other_text": [
+      {
+        "text": "NEW Product",
+        "photo_index": 0
+      },
+      {
+        "text": "MILLENNIUM",
+        "photo_index": 0
+      },
+      {
+        "text": "CHOCOLATE FACTORY",
+        "photo_index": 0
+      },
+      {
+        "text": "Chocolate Cookies",
+        "photo_index": 0
+      },
+      {
+        "text": "MILK CHOCOLATE",
+        "photo_index": 0
+      },
+      {
+        "text": "VERY Chocolate PERI",
+        "photo_index": 0
+      },
+      {
+        "text": "(UA) ШОКОЛАД «MILLENNIUM VERY PERI» МОЛОЧНИЙ З НАЧИНКОЮ ТА ПЕЧИВОМ.",
+        "photo_index": 1
+      },
+      {
+        "text": "Строк придатності: 13 місяців. Зберігати при температурі від 15 °C до 24 °C та відносній вологості повітря не більше 75%.",
+        "photo_index": 1
+      },
+      {
+        "text": "Виробник, адреса потужностей виробництва: ТОВ «МАЛБІ ФУДС», вул. Марії Кюрі, 5, м. Дніпро, 49010, Україна. Тел.: +38 (056) 7945505, 7946505. Маса нетто: 270 g(г). Допустимий від'ємний відхил 9,0 g(г). Кінцевий термін реалізації вказаний на упаковці. Номер партії визначається кінцевим терміном реалізації.",
+        "photo_index": 1
+      }
+    ]
+  },
+  "meta": {
+    "synthetic": false,
+    "source": "Open Food Facts 4820240032953 (Шоколад молочний \"Very Peri Chocolate Cookies\"), CC BY-SA 3.0, https://world.openfoodfacts.org/product/4820240032953",
+    "quality": "clean",
+    "label_allergens": [
+      "milk",
+      "soybeans",
+      "cereals",
+      "sulphites"
+    ],
+    "label_may_contain": [
+      "nuts",
+      "peanuts"
+    ],
+    "oov": [],
+    "ambiguous": [
+      {
+        "rule_id": "ALG-EMPH",
+        "target": "milk",
+        "why": "'молочних продуктів 17%' is a quantity statement, not an ingredient name, and is not bold; every milk ingredient is emphasized"
+      }
+    ],
+    "notes": "Emphasis is bold, clearly visible. 'сироватка молочна' has only 'молочна' bold (accepted). Nutrition table UA/EN/PL per 100 g.",
+    "semi_synthetic": "spec_variants: recipe + one allergen not on the label"
+  },
+  "spec_variants": [
+    {
+      "spec": "spec_1.json",
+      "violations": [
+        {
+          "rule_id": "ALG-SPEC-MISSING",
+          "target": "eggs"
+        }
+      ]
+    },
+    {
+      "spec": "spec_2.json",
+      "violations": [
+        {
+          "rule_id": "ALG-SPEC-MISSING",
+          "target": "sesame"
+        }
+      ]
+    }
+  ]
+}

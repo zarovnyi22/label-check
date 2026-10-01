@@ -99,7 +99,8 @@
     ],
     "oov": [],
     "notes": "Nutrition table photographed only in Italian/Czech (no Ukrainian table visible); values per 100 g with decimal points. Ingredient list contains no allergens. Bottom line of the back photo (next language) is cut, not part of the UA text.",
-    "semi_synthetic": "spec_variants: recipe + one allergen not on the label"
+    "semi_synthetic": "spec_variants: recipe + one allergen not on the label",
+    "ambiguous": []
   },
   "spec_variants": [
     {

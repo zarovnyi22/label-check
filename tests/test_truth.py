@@ -86,7 +86,8 @@ def test_the_oov_patch_is_needed_somewhere():
 
 # --- real photos (test only) + semi-synthetic recipes ------------------------------------------
 
-REAL = sorted((ROOT / "real").glob("*/truth.json"))
+# the main real set (Ukrainian labels) and the out-of-market group (informational)
+REAL = sorted(p for d in ("real", "real_out_of_scope") for p in (ROOT / d).glob("*/truth.json"))
 
 
 @pytest.mark.parametrize("path", REAL, ids=lambda p: p.parent.name)

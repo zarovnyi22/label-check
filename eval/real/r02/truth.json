@@ -121,7 +121,14 @@
     ],
     "oov": [],
     "notes": "'ароматизатор гірчиці' (mustard flavouring) is not emphasized: if the flavouring is derived from mustard this would be an ALG-EMPH mustard violation, but a flavouring 'of mustard' may be synthetic -> not counted (code will likely give ALG-EMPH mustard needs_review). EN/RO duplicates of ingredients/storage on photo 2 are not transcribed in full.",
-    "semi_synthetic": "spec_variants: recipe + one allergen not on the label"
+    "semi_synthetic": "spec_variants: recipe + one allergen not on the label",
+    "ambiguous": [
+      {
+        "rule_id": "ALG-EMPH",
+        "target": "mustard",
+        "why": "'ароматизатор гірчиці' may be a synthetic flavouring, not mustard-derived; origin disputed"
+      }
+    ]
   },
   "spec_variants": [
     {

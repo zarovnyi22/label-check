@@ -88,7 +88,8 @@
     ],
     "oov": [],
     "notes": "Photos 1 and 2 show the same UA text. Brandy in the ingredients; no sulphites declared (cannot be judged without recipe). Energy check: computed ~441 kcal vs 456 declared, within tolerance.",
-    "semi_synthetic": "spec_variants: recipe + one allergen not on the label"
+    "semi_synthetic": "spec_variants: recipe + one allergen not on the label",
+    "ambiguous": []
   },
   "spec_variants": [
     {

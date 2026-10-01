@@ -1,0 +1,20 @@
+{
+  "form": "solid",
+  "ingredients": [
+    {
+      "name": "молоко коров'яче нормалізоване",
+      "allergens": []
+    },
+    {
+      "name": "соєвий білковий ізолят",
+      "allergens": [
+        "soybeans"
+      ]
+    },
+    {
+      "name": "закваска для йогурту",
+      "allergens": []
+    }
+  ],
+  "may_contain": []
+}
