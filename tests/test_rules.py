@@ -167,6 +167,46 @@ def test_same_claim_twice_is_one_finding():
     assert found[0].evidence.fragment == "БЕЗ ЦУКРУ; Sugar free"
 
 
+# Review 02.10.2026: the prompt asks for one item per line, so a badge "БЕЗ" / "ЦУКРУ" comes
+# as two items; searched one by one, the claim was lost and a full recipe gave pass.
+@pytest.mark.parametrize(
+    ("lines", "claim_id"),
+    [
+        (["БЕЗ", "ЦУКРУ"], "sugar_free"),
+        (["0%", "цукру"], "sugar_free"),
+        (["Sugar", "free"], "sugar_free"),
+        (["Без доданого", "цукру"], "no_added_sugar"),
+        (["БЕЗ", "ДОДАНОГО", "ЦУКРУ"], "no_added_sugar"),
+        (["ДЖЕРЕЛО", "БІЛКА"], "protein_source"),
+    ],
+)
+def test_claim_split_over_lines_is_found(lines, claim_id):
+    claims, _ = find_claims(label(lines))
+    assert list(claims) == [claim_id]
+    # The shortest run of lines is the evidence, not the product name before it.
+    assert [i.text for i in claims[claim_id].items] == lines
+
+
+def test_split_sugar_free_is_never_pass_with_a_full_recipe():
+    findings, verdict = run_rules(label(["БЕЗ", "ЦУКРУ"]), recipe())  # sugars "3,1 г"
+    assert rule(findings, "sugar_free", "sugar_free").status == "violation"
+    assert verdict == "fail"
+
+
+def test_lines_of_different_photos_are_not_joined():
+    data = label().model_dump()
+    data["other_text"] = [{"text": "БЕЗ", "photo_index": 0}, {"text": "ЦУКРУ", "photo_index": 1}]
+    claims, _ = find_claims(LabelExtraction.model_validate(data))
+    assert not claims
+
+
+def test_a_run_adds_only_claims_no_single_line_has():
+    claims, _ = find_claims(label(["Без цукру", "та жиру"]))
+    assert list(claims) == ["sugar_free", "fat_free"]
+    assert [i.text for i in claims["sugar_free"].items] == ["Без цукру"]
+    assert [i.text for i in claims["fat_free"].items] == ["Без цукру", "та жиру"]
+
+
 # --- thresholds ------------------------------------------------------------------------------
 
 

@@ -188,13 +188,28 @@ class _Found:
         return self.items[0].photo_index
 
 
+# A claim printed over several lines ("БЕЗ" / "ЦУКРУ" on a badge) arrives as several items:
+# the prompt asks for one item per line. Up to this many consecutive items of one photo are
+# also searched joined, so a split claim is never silently skipped (review 02.10.2026).
+CLAIM_WINDOW = 3
+
+
+def _windows(items: list[TextItem]) -> list[list[TextItem]]:
+    """Runs of 2..CLAIM_WINDOW consecutive items of the same photo, shortest first."""
+    return [
+        items[start : start + size]
+        for size in range(2, CLAIM_WINDOW + 1)
+        for start in range(len(items) - size + 1)
+        if len({i.photo_index for i in items[start : start + size]}) == 1
+    ]
+
+
 def find_claims(extraction: LabelExtraction) -> tuple[dict[str, _Found], dict[str, _Found]]:
     """Claims and unverifiable wording in other_text -> ({claim_id: found}, {kind: found})."""
     claims: dict[str, _Found] = {}
     unverifiable: dict[str, _Found] = {}
-    for item in extraction.other_text or []:
-        if not item.text:
-            continue
+    items = [item for item in extraction.other_text or [] if item.text]
+    for item in items:
         text = normalize(item.text)
         for claim_id, regex in _CLAIM_RES.items():
             if regex.search(text):
@@ -203,6 +218,12 @@ def find_claims(extraction: LabelExtraction) -> tuple[dict[str, _Found], dict[st
         for kind, regex in _UNVERIFIABLE_RES.items():
             if regex.search(rest):
                 unverifiable.setdefault(kind, _Found([])).items.append(item)
+    # A claim not found in any single item, found across consecutive lines: the shortest run.
+    for window in _windows(items):
+        text = normalize(" ".join(i.text for i in window))
+        for claim_id, regex in _CLAIM_RES.items():
+            if claim_id not in claims and regex.search(text):
+                claims[claim_id] = _Found(window)
     order = list(CLAIM_PATTERNS)
     return dict(sorted(claims.items(), key=lambda kv: order.index(kv[0]))), unverifiable
 

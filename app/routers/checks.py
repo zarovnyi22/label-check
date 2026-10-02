@@ -4,7 +4,7 @@ import asyncio
 import time
 from typing import Annotated
 
-from fastapi import APIRouter, File, Form, Request, UploadFile
+from fastapi import APIRouter, File, Form, Path, Request, UploadFile
 from pydantic import ValidationError
 
 from app.checks import load_check, run_check, save_check, save_error
@@ -122,7 +122,11 @@ async def create_check(
 
 
 @router.get("/checks/{check_id}", response_model=CheckOut, responses={404: ERROR_RESPONSES[404]})
-async def get_check(request: Request, check_id: int) -> CheckOut:
+async def get_check(
+    request: Request,
+    # BIGSERIAL range: a larger id is a 422, not an asyncpg overflow (500) (review 02.10.2026).
+    check_id: Annotated[int, Path(ge=1, le=2**63 - 1)],
+) -> CheckOut:
     """Збережена перевірка, зокрема та, що завершилась помилкою моделі (`status=error`)."""
     check = await load_check(request.app.state.pool, check_id)
     if check is None:

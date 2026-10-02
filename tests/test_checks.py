@@ -201,6 +201,14 @@ async def test_get_unknown_check_is_404(db_client):
     assert resp.json()["error"]["code"] == "not_found"
 
 
+@pytest.mark.parametrize("check_id", ["0", "-1", "99999999999999999999"])
+async def test_get_check_id_out_of_range_is_422_not_500(db_client, check_id):
+    # Review 02.10.2026: an id past BIGINT reached asyncpg and gave 500 internal_error.
+    resp = await db_client.get(f"/checks/{check_id}")
+    assert resp.status_code == 422
+    assert resp.json()["error"]["code"] == "validation_error"
+
+
 async def test_openapi_documents_the_errors(db_client):
     spec = (await db_client.get("/openapi.json")).json()
     post_op = spec["paths"]["/checks"]["post"]
