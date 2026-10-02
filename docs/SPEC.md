@@ -45,6 +45,10 @@ rules_version, prompt_version, cache_hit, duration_ms, error}`. `status`: `done`
 `error` = `{code, message}` — помилка моделі ніколи не дає вердикту. POST з помилкою моделі
 повертає `{"error": {...}}` з номером збереженої перевірки в `message`; `GET /checks/{id}`
 показує її зі `status=error`. `spec` валідується до виклику моделі (422 `validation_error`).
+Коди помилок (`{"error": {"code", "message"}}`): фото — 422 `image_too_large`,
+`image_unsupported`, `too_many_images`; vision — `vision_not_configured`,
+`vision_invalid_key`, `vision_rate_limited`, `vision_unavailable`, `vision_timeout` (504),
+`vision_bad_output`, `vision_error` (інша 4xx-відповідь провайдера); `not_found` (404).
 `finding = {rule_id, target, status, message, evidence, legal_ref}`:
 - `target` — об'єкт перевірки: категорія алергену (`milk`), id твердження
   (`sugar_free`), нутрієнт (`energy`) або `null`;

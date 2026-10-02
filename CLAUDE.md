@@ -122,7 +122,7 @@ Groq `qwen/qwen3.8-27b`, знайдений у B0 (див. «Рішення», �
 - **Помилки:** `{"error": {"code": "...", "message": "..."}}`. Коди vision:
   `vision_not_configured`, `vision_invalid_key` (не ретраїться), `vision_rate_limited`,
   `vision_unavailable`, `vision_timeout`, `vision_bad_output` (невалідний JSON після одного
-  повтору); фото: `image_too_large`, `image_unsupported`, `too_many_images` (422: > 4 фото
+  повтору), `vision_error` (інша 4xx-відповідь провайдера); фото: `image_too_large`, `image_unsupported`, `too_many_images` (422: > 4 фото
   або > 3 при `VISION_PROVIDER=groq`).
 - **Повтори** на 500/502/503/504/таймаут: 2, 4, 8 с + джиттер, повтор починається лише в
   межах 60 с; одна спроба ≤ `VISION_TIMEOUT_SECONDS` (45). 429 — без повторів у межах запиту

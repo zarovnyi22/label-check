@@ -10,9 +10,9 @@ class RuleInfo(NamedTuple):
     legal_ref: str
 
 
-# Article numbers of Law 2639-VIII are not verified yet (TODO, docs/NOTES.md): the EU
-# regulation it transposes is cited precisely. Order 1145 reproduces the annex of Reg.
-# 1924/2006; its full text was not reachable when the thresholds were written (TODO).
+# Article numbers of Law 2639-VIII checked against zakon.rada.gov.ua/laws/show/2639-19 (B7,
+# 2026-10-02); the EU regulation it transposes is cited too. Order 1145 reproduces the annex
+# of Reg. 1924/2006; its full text was not reachable when the thresholds were written.
 _LAW = "Закон України № 2639-VIII «Про інформацію для споживачів щодо харчових продуктів»"
 _ORDER = "Наказ МОЗ № 1145 від 15.05.2020, перелік тверджень про поживну цінність"
 _SERVICE = "Вимога сервісу (без неї перевірку не виконати), не норма закону"
@@ -27,12 +27,12 @@ RULES: dict[str, RuleInfo] = {
     "IMG-QUALITY": RuleInfo("Фото придатне для читання", _SERVICE),
     "LABEL-MISSING": RuleInfo(
         "На фото є склад і таблиця поживної цінності",
-        f"{_LAW} (обов'язкова інформація); Регл. (ЄС) 1169/2011 ст. 9(1)(b), 9(1)(l), ст. 30(1), "
-        "ст. 32(1), дод. XV",
+        f"{_LAW} ст. 6 ч. 1 пп. 2, 3, ст. 23, ст. 25; Регл. (ЄС) 1169/2011 ст. 9(1)(b), 9(1)(l), "
+        "ст. 30(1), ст. 32(1), дод. XV",
     ),
     "LABEL-TRUNCATED": RuleInfo(
         "Склад прочитано повністю",
-        f"{_LAW} (перелік інгредієнтів); Регл. (ЄС) 1169/2011 ст. 9(1)(b), ст. 18",
+        f"{_LAW} ст. 6 ч. 1 п. 2, ст. 12; Регл. (ЄС) 1169/2011 ст. 9(1)(b), ст. 18",
     ),
     "SIDE-FRONT-MISSING": RuleInfo("Є фото лицьового боку (твердження)", _SERVICE),
     "NUT-PER": RuleInfo(
@@ -42,21 +42,20 @@ RULES: dict[str, RuleInfo] = {
     # allergens
     "ALG-EMPH": RuleInfo(
         "Алергени у складі виділені шрифтом",
-        f"{_LAW} (виділення алергенів у переліку інгредієнтів); "
-        "Регл. (ЄС) 1169/2011 ст. 21(1)(b), дод. II",
+        f"{_LAW} ст. 15 ч. 1 п. 2, дод. 1; Регл. (ЄС) 1169/2011 ст. 21(1)(b), дод. II",
     ),
     "ALG-SPEC-MISSING": RuleInfo(
         "Алерген з рецептури зазначено на етикетці",
-        f"{_LAW} (обов'язкове зазначення алергенів); "
+        f"{_LAW} ст. 6 ч. 1 п. 3, ст. 15 ч. 1, дод. 1; "
         "Регл. (ЄС) 1169/2011 ст. 9(1)(c), ст. 21(1), дод. II",
     ),
     "ALG-SPEC-EXTRA": RuleInfo(
         "Алерген на етикетці є в рецептурі",
-        f"{_LAW} (точність інформації); Регл. (ЄС) 1169/2011 ст. 7(1)",
+        f"{_LAW} ст. 4 (точність інформації); Регл. (ЄС) 1169/2011 ст. 7(1)",
     ),
     "ALG-MAY-CONTAIN": RuleInfo(
         "«Може містити» відповідає рецептурі",
-        f"{_LAW} (добровільна інформація); Регл. (ЄС) 1169/2011 ст. 36(2), 36(3)(a)",
+        f"{_LAW} ст. 28 (добровільна інформація); Регл. (ЄС) 1169/2011 ст. 36(2), 36(3)(a)",
     ),
     # nutrition claims
     "sugar_free": _claim("без цукру"),

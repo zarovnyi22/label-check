@@ -14,7 +14,7 @@ from app.rules.nutrition import check_nutrition, read_nutrition
 from app.schemas import Finding, LabelExtraction, ProductSpec, Verdict
 
 # Bump on any change of a rule, threshold or dictionary: stored with every check (audit).
-RULES_VERSION = "2026-10-01.3"
+RULES_VERSION = "2026-10-02.1"
 
 
 def verdict_of(findings: list[Finding]) -> Verdict:
